@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 35 25% 97%;
+    --foreground: 30 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 20% 15%;
+
+    --primary: 28 75% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-glow: 28 85% 60%;
+
+    --secondary: 140 40% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 35 20% 92%;
+    --muted-foreground: 30 15% 45%;
+
+    --accent: 40 85% 55%;
+    --accent-foreground: 30 20% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 28 75% 50%;
+
+    --radius: 0.75rem;
+
+    /* Custom brand colors */
+    --earth-brown: 30 40% 35%;
+    --warm-terracotta: 20 60% 55%;
+    --rich-soil: 25 35% 25%;
+    --golden-harvest: 40 85% 55%;
+    --forest-deep: 140 40% 35%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--warm-terracotta)) 0%, hsl(var(--golden-harvest)) 100%);
+    --gradient-earth: linear-gradient(180deg, hsl(var(--earth-brown)) 0%, hsl(var(--rich-soil)) 100%);
+    --gradient-growth: linear-gradient(120deg, hsl(var(--golden-harvest)) 0%, hsl(var(--warm-terracotta)) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 30 20% 10%;
+    --foreground: 35 25% 96%;
+
+    --card: 30 18% 14%;
+    --card-foreground: 35 25% 96%;
+
+    --popover: 30 18% 14%;
+    --popover-foreground: 35 25% 96%;
+
+    --primary: 28 75% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 140 40% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 30 15% 22%;
+    --muted-foreground: 35 15% 65%;
+
+    --accent: 40 85% 55%;
+    --accent-foreground: 35 25% 96%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 28 75% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
