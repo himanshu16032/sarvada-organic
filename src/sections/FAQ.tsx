@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import SectionBg from "../components/SectionBg";
+import { track } from "../lib/analytics";
 
 const FAQS: { q: string; a: string }[] = [
   {
@@ -83,6 +84,7 @@ export default function FAQ() {
             </p>
             <a
               href="mailto:hello@sarvadaorganic.com"
+              onClick={() => track("faq_ask_us_clicked")}
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-forest-700 px-5 py-2.5 text-sm font-semibold text-cream-50 hover:bg-forest-800"
             >
               Ask us anything →
@@ -101,7 +103,15 @@ export default function FAQ() {
                     <button
                       type="button"
                       aria-expanded={isOpen}
-                      onClick={() => setOpenIdx(isOpen ? null : i)}
+                      onClick={() => {
+                        const willOpen = !isOpen;
+                        setOpenIdx(willOpen ? i : null);
+                        track("faq_question_toggled", {
+                          index: i,
+                          question: f.q,
+                          open: willOpen,
+                        });
+                      }}
                       className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left text-sm font-semibold text-forest-800 md:px-6 md:py-5 md:text-base"
                     >
                       <span>{f.q}</span>

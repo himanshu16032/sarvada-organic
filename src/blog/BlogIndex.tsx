@@ -3,6 +3,7 @@ import { ArrowUpRight, Clock, Heart } from "lucide-react";
 import { POSTS_META, type Category } from "./posts";
 import { BlogHeader, BlogFooter, useDocumentMeta } from "./BlogChrome";
 import { useState } from "react";
+import { track } from "../lib/analytics";
 
 const CATEGORIES: ("All" | Category)[] = [
   "All",
@@ -117,7 +118,10 @@ export default function BlogIndex() {
             {CATEGORIES.map((c) => (
               <button
                 key={c}
-                onClick={() => setActive(c)}
+                onClick={() => {
+                  setActive(c);
+                  track("blog_index_category_filtered", { category: c });
+                }}
                 className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors md:text-[15px] ${
                   active === c
                     ? "border-forest-700 bg-forest-700 text-cream-50"
@@ -137,6 +141,13 @@ export default function BlogIndex() {
           <div className="container-wide">
             <Link
               to={`/blog/${featured.slug}`}
+              onClick={() =>
+                track("blog_index_featured_clicked", {
+                  slug: featured.slug,
+                  title: featured.title,
+                  category: featured.category,
+                })
+              }
               className="group grid items-center gap-6 overflow-hidden rounded-[2rem] border border-cream-300/60 bg-cream-50 transition-all hover:shadow-soft md:grid-cols-2 md:gap-10 md:rounded-[2.5rem]"
             >
               <div className="aspect-[5/4] overflow-hidden bg-sage-100 md:aspect-auto md:h-full">
@@ -181,12 +192,24 @@ export default function BlogIndex() {
             </p>
           ) : (
             <div className="grid gap-5 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
-              {(active === "All" ? rest : filtered).map((p) => (
+              {(active === "All" ? rest : filtered).map((p, idx) => (
                 <article
                   key={p.slug}
                   className="group overflow-hidden rounded-3xl border border-cream-300/60 bg-cream-50 transition-all hover:-translate-y-1 hover:shadow-soft"
                 >
-                  <Link to={`/blog/${p.slug}`} className="block">
+                  <Link
+                    to={`/blog/${p.slug}`}
+                    onClick={() =>
+                      track("blog_index_post_clicked", {
+                        slug: p.slug,
+                        title: p.title,
+                        category: p.category,
+                        position: idx,
+                        active_filter: active,
+                      })
+                    }
+                    className="block"
+                  >
                     <div className="aspect-[5/3] overflow-hidden bg-sage-100">
                       <img
                         src={p.cover}

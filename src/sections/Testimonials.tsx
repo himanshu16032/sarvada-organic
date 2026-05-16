@@ -1,5 +1,6 @@
 import { Star, BadgeCheck } from "lucide-react";
 import SectionBg from "../components/SectionBg";
+import { useTrackVisible } from "../lib/analytics";
 
 const REVIEWS = [
   {
@@ -45,8 +46,13 @@ const REVIEWS = [
 ];
 
 export default function Testimonials() {
+  const ref = useTrackVisible<HTMLElement>("testimonials_section_viewed");
   return (
-    <section id="testimonials" className="relative overflow-hidden bg-cream-100 py-12 md:py-20">
+    <section
+      ref={ref}
+      id="testimonials"
+      className="relative overflow-hidden bg-cream-100 py-12 md:py-20"
+    >
       <SectionBg variant="split" />
       <div className="container-wide relative">
         <div className="grid items-end gap-6 md:grid-cols-12 md:gap-10">

@@ -1,5 +1,6 @@
 import { Sprout, ShieldCheck, HandHeart, Quote } from "lucide-react";
 import SectionBg from "../components/SectionBg";
+import { useTrackVisible } from "../lib/analytics";
 
 const PILLARS = [
   {
@@ -23,8 +24,13 @@ const PILLARS = [
 ];
 
 export default function About() {
+  const ref = useTrackVisible<HTMLElement>("about_section_viewed");
   return (
-    <section id="about" className="relative overflow-hidden bg-cream-100 py-14 md:py-20">
+    <section
+      ref={ref}
+      id="about"
+      className="relative overflow-hidden bg-cream-100 py-14 md:py-20"
+    >
       <SectionBg variant="sage" />
       <div className="container-wide relative">
         <div className="grid items-end gap-6 md:grid-cols-12 md:gap-12">

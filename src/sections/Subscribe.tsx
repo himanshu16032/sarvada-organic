@@ -1,4 +1,5 @@
 import { Repeat, Truck, Percent, ArrowRight } from "lucide-react";
+import { track } from "../lib/analytics";
 
 const PERKS = [
   { icon: Repeat, title: "Skip or cancel anytime", sub: "Full flexibility, no lock-in" },
@@ -50,6 +51,13 @@ export default function Subscribe() {
               <div className="mt-6 flex flex-wrap items-center gap-3">
                 <a
                   href="#products"
+                  onClick={() =>
+                    track("subscribe_section_cta_clicked", {
+                      plan: "monthly_5kg",
+                      price: 509,
+                      mrp: 599,
+                    })
+                  }
                   className="inline-flex items-center gap-2 rounded-full bg-forest-700 px-6 py-3 text-sm font-semibold text-cream-50 hover:bg-forest-800 md:text-base"
                 >
                   Start subscription <ArrowRight className="h-4 w-4" />

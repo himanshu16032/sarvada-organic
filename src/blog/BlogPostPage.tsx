@@ -1,13 +1,27 @@
 import { Link, Navigate, useParams } from "react-router-dom";
-import { Suspense } from "react";
+import { Suspense, useEffect } from "react";
 import { ArrowUpRight, Clock, ArrowLeft, ShoppingBag } from "lucide-react";
 import { getPostBySlug, getRelatedPosts } from "./posts";
 import { BlogHeader, BlogFooter, useDocumentMeta } from "./BlogChrome";
 import BlogLoader from "./BlogLoader";
+import { track } from "../lib/analytics";
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
   const post = slug ? getPostBySlug(slug) : undefined;
+
+  useEffect(() => {
+    if (!post) return;
+    track("blog_post_viewed", {
+      slug: post.slug,
+      title: post.title,
+      category: post.category,
+      read_time: post.readTime,
+      published: post.date,
+      author: post.author,
+      keywords: post.keywords,
+    });
+  }, [post]);
 
   if (!post) return <Navigate to="/" replace />;
 
@@ -31,6 +45,9 @@ export default function BlogPostPage() {
             <div className="container-wide">
               <Link
                 to="/blog"
+                onClick={() =>
+                  track("blog_post_back_clicked", { from_slug: post.slug })
+                }
                 className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-forest-700 hover:text-peach-500 md:text-sm"
               >
                 <ArrowLeft className="h-3.5 w-3.5" /> Back to blog
@@ -98,6 +115,12 @@ export default function BlogPostPage() {
                 </p>
                 <Link
                   to="/#products"
+                  onClick={() =>
+                    track("blog_post_shop_cta_clicked", {
+                      from_slug: post.slug,
+                      from_title: post.title,
+                    })
+                  }
                   className="mt-6 inline-flex items-center gap-2 rounded-full bg-forest-700 px-6 py-3 text-sm font-semibold text-cream-50 hover:bg-forest-800 md:text-base"
                 >
                   <ShoppingBag className="h-4 w-4" /> Shop now
@@ -114,10 +137,18 @@ export default function BlogPostPage() {
                 Keep reading
               </h2>
               <div className="mt-8 grid gap-5 md:grid-cols-3 md:gap-6">
-                {related.map((r) => (
+                {related.map((r, idx) => (
                   <Link
                     key={r.slug}
                     to={`/blog/${r.slug}`}
+                    onClick={() =>
+                      track("blog_post_related_clicked", {
+                        from_slug: post.slug,
+                        to_slug: r.slug,
+                        to_title: r.title,
+                        position: idx,
+                      })
+                    }
                     className="group overflow-hidden rounded-3xl border border-cream-300/60 bg-cream-100 transition-all hover:-translate-y-1 hover:shadow-soft"
                   >
                     <div className="aspect-[5/3] overflow-hidden bg-sage-100">

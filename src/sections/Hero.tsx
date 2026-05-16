@@ -1,5 +1,6 @@
 import { ArrowRight, Star, Truck, ShieldCheck } from "lucide-react";
 import SectionBg from "../components/SectionBg";
+import { track } from "../lib/analytics";
 
 export default function Hero() {
   return (
@@ -31,6 +32,12 @@ export default function Hero() {
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <a
                     href="#products"
+                    onClick={() =>
+                      track("hero_cta_clicked", {
+                        cta: "shop_now",
+                        location: "hero_main",
+                      })
+                    }
                     className="inline-flex items-center gap-2 rounded-full bg-peach-400 px-6 py-3 text-sm font-semibold text-cream-50 transition-colors hover:bg-peach-500 md:text-base"
                   >
                     Shop now <ArrowRight className="h-4 w-4" />
@@ -83,6 +90,12 @@ export default function Hero() {
           <div className="grid gap-3 md:gap-4">
             <a
               href="#products"
+              onClick={() =>
+                track("hero_side_tile_clicked", {
+                  tile: "vermicompost_5kg_bestseller",
+                  offer: "flat_20_off_599",
+                })
+              }
               className="group relative flex h-44 items-end overflow-hidden rounded-3xl bg-peach-200 p-5 md:h-auto md:flex-1 md:rounded-[2rem] md:p-6"
             >
               <img
@@ -105,6 +118,12 @@ export default function Hero() {
             </a>
             <a
               href="#products"
+              onClick={() =>
+                track("hero_side_tile_clicked", {
+                  tile: "subscribe_and_save",
+                  offer: "monthly_15_off",
+                })
+              }
               className="group relative flex h-44 items-end overflow-hidden rounded-3xl bg-forest-100 p-5 md:h-auto md:flex-1 md:rounded-[2rem] md:p-6"
             >
               <img

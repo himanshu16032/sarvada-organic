@@ -1,5 +1,6 @@
 import { Star, ShoppingBag, Heart } from "lucide-react";
 import SectionBg from "../components/SectionBg";
+import { track, useTrackVisible } from "../lib/analytics";
 
 type Product = {
   name: string;
@@ -90,6 +91,9 @@ export default function Products() {
           </div>
           <a
             href="#"
+            onClick={() =>
+              track("products_view_all_clicked", { device: "desktop" })
+            }
             className="hidden text-sm font-semibold text-forest-700 hover:text-peach-500 md:inline"
           >
             View all →
@@ -98,12 +102,15 @@ export default function Products() {
 
         <div className="mt-8 grid grid-cols-2 gap-3 md:mt-12 md:grid-cols-3 md:gap-5 lg:grid-cols-3">
           {PRODUCTS.map((p, idx) => (
-            <ProductCard key={idx} product={p} />
+            <ProductCard key={idx} product={p} position={idx} />
           ))}
         </div>
 
         <a
           href="#"
+          onClick={() =>
+            track("products_view_all_clicked", { device: "mobile" })
+          }
           className="mx-auto mt-8 flex w-fit items-center gap-2 rounded-full border border-forest-700/20 bg-cream-50 px-6 py-3 text-sm font-semibold text-forest-700 hover:border-forest-700/40 md:hidden"
         >
           View all products →
@@ -113,7 +120,13 @@ export default function Products() {
   );
 }
 
-function ProductCard({ product }: { product: Product }) {
+function ProductCard({
+  product,
+  position,
+}: {
+  product: Product;
+  position: number;
+}) {
   const discount = Math.round(((product.mrp - product.price) / product.mrp) * 100);
   const toneClass = {
     peach: "bg-peach-400 text-cream-50",
@@ -121,8 +134,25 @@ function ProductCard({ product }: { product: Product }) {
     sage: "bg-sage-200 text-forest-700",
   }[product.badge?.tone || "peach"];
 
+  const baseProps = {
+    name: product.name,
+    weight: product.weight,
+    price: product.price,
+    mrp: product.mrp,
+    discount_pct: discount,
+    rating: product.rating,
+    reviews: product.reviews,
+    badge: product.badge?.label,
+    position,
+  };
+
+  const ref = useTrackVisible<HTMLElement>("product_card_viewed", baseProps);
+
   return (
-    <article className="group relative overflow-hidden rounded-2xl border border-cream-200 bg-cream-50 transition-all hover:-translate-y-1 hover:shadow-soft md:rounded-3xl">
+    <article
+      ref={ref}
+      className="group relative overflow-hidden rounded-2xl border border-cream-200 bg-cream-50 transition-all hover:-translate-y-1 hover:shadow-soft md:rounded-3xl"
+    >
       <div className="relative aspect-square overflow-hidden bg-sage-100">
         <img
           src={product.image}
@@ -139,6 +169,7 @@ function ProductCard({ product }: { product: Product }) {
         )}
         <button
           aria-label="Add to wishlist"
+          onClick={() => track("product_wishlist_added", baseProps)}
           className="absolute right-2.5 top-2.5 grid h-8 w-8 place-items-center rounded-full bg-cream-50/95 text-forest-700 transition-colors hover:bg-peach-100 hover:text-peach-500 md:right-3 md:top-3 md:h-9 md:w-9"
         >
           <Heart className="h-3.5 w-3.5 md:h-4 md:w-4" />
@@ -174,7 +205,10 @@ function ProductCard({ product }: { product: Product }) {
           </p>
         </div>
 
-        <button className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-full bg-forest-700 px-3 py-2 text-[11px] font-semibold text-cream-50 transition-colors hover:bg-forest-800 md:py-2.5 md:text-sm">
+        <button
+          onClick={() => track("product_add_to_cart_clicked", baseProps)}
+          className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-full bg-forest-700 px-3 py-2 text-[11px] font-semibold text-cream-50 transition-colors hover:bg-forest-800 md:py-2.5 md:text-sm"
+        >
           <ShoppingBag className="h-3.5 w-3.5 md:h-4 md:w-4" />
           Add to cart
         </button>

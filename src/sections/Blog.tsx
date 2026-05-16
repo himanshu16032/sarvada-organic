@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight, Clock } from "lucide-react";
 import { POSTS_META } from "../blog/posts";
 import SectionBg from "../components/SectionBg";
+import { track } from "../lib/analytics";
 
 export default function Blog() {
   const posts = POSTS_META.slice(0, 3);
@@ -20,6 +21,9 @@ export default function Blog() {
           </div>
           <Link
             to="/blog"
+            onClick={() =>
+              track("blog_section_all_articles_clicked", { device: "desktop" })
+            }
             className="hidden text-sm font-semibold text-forest-700 hover:text-peach-500 md:inline"
           >
             All articles →
@@ -27,10 +31,18 @@ export default function Blog() {
         </div>
 
         <div className="mt-8 grid gap-4 md:mt-12 md:grid-cols-3 md:gap-5">
-          {posts.map((p) => (
+          {posts.map((p, idx) => (
             <Link
               key={p.slug}
               to={`/blog/${p.slug}`}
+              onClick={() =>
+                track("blog_section_card_clicked", {
+                  slug: p.slug,
+                  title: p.title,
+                  category: p.category,
+                  position: idx,
+                })
+              }
               className="group overflow-hidden rounded-3xl border border-cream-200 bg-cream-50 transition-all hover:-translate-y-1 hover:shadow-soft"
             >
               <div className="aspect-[5/3] overflow-hidden bg-sage-100">
@@ -63,6 +75,9 @@ export default function Blog() {
         <div className="mt-8 flex justify-center md:hidden">
           <Link
             to="/blog"
+            onClick={() =>
+              track("blog_section_all_articles_clicked", { device: "mobile" })
+            }
             className="inline-flex items-center gap-2 rounded-full border border-forest-700/20 bg-cream-50 px-6 py-3 text-sm font-semibold text-forest-700"
           >
             Read the blog →

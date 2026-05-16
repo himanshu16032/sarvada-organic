@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { Mail, Sparkles } from "lucide-react";
+import { identifyVisitor, track } from "../lib/analytics";
 
 export default function Newsletter() {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <section className="py-12 md:py-16">
       <div className="container-wide">
@@ -19,13 +24,38 @@ export default function Newsletter() {
               </p>
             </div>
             <form
-              onSubmit={(e) => e.preventDefault()}
+              onSubmit={(e) => {
+                e.preventDefault();
+                const value = email.trim();
+                if (!value) {
+                  track("newsletter_submit_blocked", { reason: "empty_email" });
+                  return;
+                }
+                const domain = value.split("@")[1] || "unknown";
+                track("newsletter_submitted", {
+                  email_domain: domain,
+                  source: "footer_banner",
+                  offer: "first_order_10_off",
+                });
+                identifyVisitor(value, {
+                  email: value,
+                  newsletter_opt_in: true,
+                  signup_source: "newsletter_banner",
+                });
+                setSubmitted(true);
+                setEmail("");
+              }}
               className="flex flex-col gap-3 sm:flex-row"
             >
               <div className="flex flex-1 items-center gap-2 rounded-full bg-cream-50 px-4 py-3 text-forest-800">
                 <Mail className="h-4 w-4 text-muted" />
                 <input
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onFocus={() =>
+                    track("newsletter_field_focused", { field: "email" })
+                  }
                   placeholder="your@email.com"
                   className="w-full bg-transparent text-sm outline-none placeholder:text-muted md:text-base"
                 />
@@ -34,7 +64,7 @@ export default function Newsletter() {
                 type="submit"
                 className="rounded-full bg-peach-400 px-6 py-3 text-sm font-semibold text-cream-50 hover:bg-peach-500 md:text-base"
               >
-                Subscribe
+                {submitted ? "Subscribed ✓" : "Subscribe"}
               </button>
             </form>
           </div>

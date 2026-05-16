@@ -1,4 +1,5 @@
 import SectionBg from "../components/SectionBg";
+import { useTrackVisible } from "../lib/analytics";
 
 const PRESS = [
   "The Hindu",
@@ -17,8 +18,12 @@ const STATS = [
 ];
 
 export default function PressStats() {
+  const ref = useTrackVisible<HTMLElement>("press_stats_section_viewed");
   return (
-    <section className="relative overflow-hidden bg-cream-100 py-10 md:py-14">
+    <section
+      ref={ref}
+      className="relative overflow-hidden bg-cream-100 py-10 md:py-14"
+    >
       <SectionBg variant="cool" />
       <div className="container-wide relative">
         <p className="text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-muted md:text-xs">

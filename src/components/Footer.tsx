@@ -7,6 +7,7 @@ import {
   Phone,
   MapPin,
 } from "lucide-react";
+import { track } from "../lib/analytics";
 
 const COLS = [
   {
@@ -72,6 +73,7 @@ export default function Footer() {
                 </span>
                 <a
                   href="tel:+910000000000"
+                  onClick={() => track("footer_contact_clicked", { kind: "phone" })}
                   className="text-cream-200/90 hover:text-cream-50"
                 >
                   +91 00000 00000
@@ -83,6 +85,7 @@ export default function Footer() {
                 </span>
                 <a
                   href="mailto:hello@sarvadaorganic.com"
+                  onClick={() => track("footer_contact_clicked", { kind: "email" })}
                   className="text-cream-200/90 hover:text-cream-50"
                 >
                   hello@sarvadaorganic.com
@@ -99,11 +102,18 @@ export default function Footer() {
             </ul>
 
             <div className="mt-6 flex items-center gap-2">
-              {[Instagram, Facebook, Youtube].map((Icon, i) => (
+              {([
+                { Icon: Instagram, name: "instagram" },
+                { Icon: Facebook, name: "facebook" },
+                { Icon: Youtube, name: "youtube" },
+              ] as const).map(({ Icon, name }) => (
                 <a
-                  key={i}
+                  key={name}
                   href="#"
-                  aria-label="Social"
+                  aria-label={name}
+                  onClick={() =>
+                    track("footer_social_clicked", { network: name })
+                  }
                   className="grid h-10 w-10 place-items-center rounded-full bg-cream-50/10 transition-colors hover:bg-peach-400"
                 >
                   <Icon className="h-4 w-4 text-cream-50" />
@@ -123,6 +133,12 @@ export default function Footer() {
                     <li key={l}>
                       <a
                         href="#"
+                        onClick={() =>
+                          track("footer_link_clicked", {
+                            column: c.title,
+                            label: l,
+                          })
+                        }
                         className="text-cream-200/85 transition-colors hover:text-cream-50"
                       >
                         {l}

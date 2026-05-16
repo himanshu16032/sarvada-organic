@@ -1,4 +1,5 @@
 import { Home, LayoutGrid, ShoppingBag, Heart, User } from "lucide-react";
+import { track } from "../lib/analytics";
 
 const ITEMS = [
   { icon: Home, label: "Home", href: "#top" },
@@ -16,6 +17,12 @@ export default function MobileBottomNav() {
           <li key={it.label}>
             <a
               href={it.href}
+              onClick={() =>
+                track("mobile_bottom_nav_clicked", {
+                  label: it.label,
+                  href: it.href,
+                })
+              }
               className="relative flex flex-col items-center gap-0.5 rounded-xl px-2 py-1.5 text-[10px] font-medium text-forest-800 hover:text-peach-500"
             >
               <span className="relative">

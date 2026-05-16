@@ -1,4 +1,5 @@
 import SectionBg from "../components/SectionBg";
+import { useTrackVisible } from "../lib/analytics";
 
 const STEPS = [
   {
@@ -27,8 +28,13 @@ const STEPS = [
 ];
 
 export default function Process() {
+  const ref = useTrackVisible<HTMLElement>("process_section_viewed");
   return (
-    <section id="process" className="relative overflow-hidden py-12 md:py-20">
+    <section
+      ref={ref}
+      id="process"
+      className="relative overflow-hidden py-12 md:py-20"
+    >
       <SectionBg variant="peach" />
       <div className="container-wide relative">
         <div className="grid items-end gap-6 md:grid-cols-12">
