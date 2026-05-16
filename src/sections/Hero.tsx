@@ -1,9 +1,11 @@
 import { ArrowRight, Star, Truck, ShieldCheck } from "lucide-react";
+import SectionBg from "../components/SectionBg";
 
 export default function Hero() {
   return (
-    <section id="top" className="bg-cream-100 pt-4 md:pt-6">
-      <div className="container-wide">
+    <section id="top" className="relative overflow-hidden bg-cream-100 pt-4 md:pt-6">
+      <SectionBg variant="warm" />
+      <div className="container-wide relative">
         <div className="grid gap-3 md:gap-4 lg:grid-cols-3">
           <div className="relative overflow-hidden rounded-3xl bg-forest-700 p-6 text-cream-50 md:rounded-[2rem] md:p-10 lg:col-span-2 lg:p-14">
             <div

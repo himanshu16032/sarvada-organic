@@ -1,4 +1,5 @@
 import { Star, BadgeCheck } from "lucide-react";
+import SectionBg from "../components/SectionBg";
 
 const REVIEWS = [
   {
@@ -45,8 +46,9 @@ const REVIEWS = [
 
 export default function Testimonials() {
   return (
-    <section id="testimonials" className="bg-cream-100 py-12 md:py-20">
-      <div className="container-wide">
+    <section id="testimonials" className="relative overflow-hidden bg-cream-100 py-12 md:py-20">
+      <SectionBg variant="split" />
+      <div className="container-wide relative">
         <div className="grid items-end gap-6 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-7">
             <span className="eyebrow">Plant parent reviews</span>

@@ -85,4 +85,28 @@
 - [Process](https://sarvadaorganic.com/#process)
 - [Reviews](https://sarvadaorganic.com/#testimonials)
 - [FAQ](https://sarvadaorganic.com/#faq)
-- [Sitemap](https://sarvadaorganic.com/sitemap.xml)
+- [Blog](https://sarvadaorganic.com/blog)
+- [Sitemap index](https://sarvadaorganic.com/sitemap.xml)
+- [Pages sitemap](https://sarvadaorganic.com/sitemap-pages.xml)
+- [Products sitemap](https://sarvadaorganic.com/sitemap-products.xml)
+- [Collections sitemap](https://sarvadaorganic.com/sitemap-collections.xml)
+- [Blog sitemap](https://sarvadaorganic.com/sitemap-blog.xml)
+- [Images sitemap](https://sarvadaorganic.com/sitemap-images.xml)
+- [Agentic discovery sitemap (AI/LLM)](https://sarvadaorganic.com/sitemap-agentic-discovery.xml)
+
+## Sarvada Organic Blog — published articles
+
+We publish in-depth, original guides and stories about organic gardening in
+India. Below are all articles currently available. Each is original content
+written by the Sarvada farm team.
+
+- [How much vermicompost should you actually use?](https://sarvadaorganic.com/blog/how-much-vermicompost-to-use) — Exact quantity tables by pot size, plant type and Indian season. SEO: how much vermicompost to use, vermicompost dosage potted plants India.
+- [My tomato plant died. Then I changed one thing and everything turned around.](https://sarvadaorganic.com/blog/tomato-plant-came-back-after-i-changed-one-thing) — Real story of root-burn recovery using vermicompost. SEO: how to revive tomato plant, organic fertilizer tomato.
+- [Vermicompost vs. cow dung manure vs. chemical fertilizer — an honest comparison](https://sarvadaorganic.com/blog/vermicompost-vs-cow-dung-vs-chemical-fertilizer) — Side-by-side comparison with no brand agenda. SEO: vermicompost vs cow dung manure, organic vs chemical fertilizer India.
+- [She started her kitchen garden at 58. Here's what she grew in 4 months.](https://sarvadaorganic.com/blog/she-started-her-kitchen-garden-at-58) — Real customer story, Delhi balcony, 12 pots. SEO: kitchen garden for beginners India, how to start kitchen garden apartment.
+- [The right potting mix for every plant — a no-nonsense guide](https://sarvadaorganic.com/blog/right-potting-mix-for-every-plant) — Five potting mix recipes by plant type. SEO: potting mix recipe India, cocopeat vermicompost ratio.
+- [We started Sarvada because we were lied to about our vermicompost](https://sarvadaorganic.com/blog/we-started-sarvada-because-we-were-lied-to) — Brand origin story + water test for genuine vermicompost. SEO: pure vermicompost India no silt, vermicompost adulteration.
+- [Vermiwash: what it is, how to use it, and why it's so underrated](https://sarvadaorganic.com/blog/vermiwash-what-it-is-how-to-use) — Complete guide to vermiwash foliar spray and soil drench. SEO: vermiwash uses plants India, how to use vermiwash.
+- [What growing your own food does to you that nobody talks about](https://sarvadaorganic.com/blog/what-growing-your-own-food-does-to-you) — Personal essay on mental and emotional benefits of home gardening.
+- [The complete season-by-season gardening calendar for Indian home gardeners](https://sarvadaorganic.com/blog/indian-gardening-calendar-month-by-month) — Rabi, Zaid, Kharif planting guide with city-specific notes. SEO: gardening calendar India month by month.
+- [10 mistakes every new plant parent makes (and how to not make them)](https://sarvadaorganic.com/blog/10-mistakes-every-new-plant-parent-makes) — Beginner-friendly guide to fixing overwatering, drainage, soil and feeding. SEO: plant care mistakes India beginners.

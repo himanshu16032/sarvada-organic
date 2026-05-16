@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://sarvadaorganic.com/</loc>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/hero-plants.jpg</image:loc>
+      <image:title>Lush plants thriving with Sarvada Organic vermicompost</image:title>
+      <image:caption>Indian balcony garden nurtured with pure vermicompost</image:caption>
+      <image:license>https://sarvadaorganic.com/</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/vermicompost-hands.jpg</image:loc>
+      <image:title>Sarvada Organic Vermicompost in hand — pure earthworm castings</image:title>
+      <image:caption>100% pure vermicompost, no silt, no preservatives</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/packaging-reference.jpeg</image:loc>
+      <image:title>Sarvada Organic Vermicompost packaging</image:title>
+      <image:caption>Slow-cured, hand-screened vermicompost packed fresh</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/plant-transformation.jpg</image:loc>
+      <image:title>Plant transformation with Sarvada Organic vermicompost</image:title>
+      <image:caption>Healthy plant growth using organic vermicompost</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/process-diagram.jpg</image:loc>
+      <image:title>How Sarvada Organic vermicompost is made</image:title>
+      <image:caption>Slow-cured, sun-dried, hand-sieved vermicompost process</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/favicon.svg</image:loc>
+      <image:title>Sarvada Organic logo</image:title>
+    </image:image>
+  </url>
+</urlset>

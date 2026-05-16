@@ -53,14 +53,11 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-4">
             <div className="flex items-center gap-2.5">
-              <span className="grid h-10 w-10 place-items-center rounded-2xl bg-cream-50 text-forest-700">
+              <span className="grid h-11 w-11 place-items-center rounded-2xl bg-cream-50 text-forest-700">
                 <Leaf className="h-5 w-5" />
               </span>
-              <span className="font-display text-xl font-semibold text-cream-50">
-                Sarvada
-                <span className="block text-[11px] font-sans font-semibold uppercase tracking-[0.3em] text-peach-300">
-                  Organic
-                </span>
+              <span className="font-display text-2xl font-semibold leading-none tracking-tight text-cream-50">
+                Sarvada<span className="ml-1 text-peach-300">Organic</span>
               </span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-cream-200/80 md:text-base">

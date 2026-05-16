@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Menu,
   X,
@@ -7,34 +8,32 @@ import {
   ShoppingBag,
   Heart,
   User,
-  MapPin,
   ChevronDown,
 } from "lucide-react";
 
-const NAV: { label: string; href: string; sub?: string[] }[] = [
+const NAV: { label: string; href: string; sub?: { label: string; href: string }[] }[] = [
   {
     label: "Shop",
     href: "#products",
-    sub: ["Vermicompost", "Potting Mix", "Seed Starter", "Bundles"],
-  },
-  {
-    label: "Fertilizers",
-    href: "#products",
-    sub: ["Vermicompost 1kg", "Vermicompost 5kg", "Vermicompost 25kg"],
-  },
-  {
-    label: "Plant Care",
-    href: "#products",
-    sub: ["Plant Growth Serum", "Vermiwash", "Neem-Karanja Cake"],
+    sub: [
+      { label: "Vermicompost", href: "#products" },
+      { label: "Potting Mix", href: "#products" },
+      { label: "Plant Growth Serum", href: "#products" },
+      { label: "Vermiwash", href: "#products" },
+      { label: "Neem-Karanja Cake", href: "#products" },
+      { label: "Bundles", href: "#products" },
+    ],
   },
   { label: "Why Sarvada", href: "#about" },
-  { label: "Blog", href: "#" },
-  { label: "Track Order", href: "#" },
+  { label: "Process", href: "#process" },
+  { label: "Blog", href: "/blog" },
+  { label: "FAQ", href: "#faq" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [search, setSearch] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -63,35 +62,59 @@ export default function Header() {
         </button>
 
         <a href="#top" className="flex items-center gap-2 md:gap-2.5">
-          <span className="grid h-8 w-8 place-items-center rounded-xl bg-forest-700 text-cream-50 md:h-10 md:w-10">
-            <Leaf className="h-4 w-4 md:h-5 md:w-5" />
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-forest-700 text-cream-50 md:h-10 md:w-10">
+            <Leaf className="h-[18px] w-[18px] md:h-5 md:w-5" />
           </span>
-          <span className="font-display text-lg font-semibold leading-none text-forest-800 md:text-xl">
-            Sarvada
-            <span className="block text-[9px] font-sans font-semibold uppercase tracking-[0.3em] text-peach-500 md:text-[10px]">
-              Organic
-            </span>
+          <span className="font-display text-xl font-semibold leading-none tracking-tight text-forest-800 md:text-2xl">
+            Sarvada<span className="ml-1 text-peach-500">Organic</span>
           </span>
         </a>
 
-        <div className="ml-2 hidden flex-1 items-center md:ml-6 lg:flex">
-          <div className="flex w-full items-center gap-2 rounded-full border border-cream-300 bg-cream-100 px-4 py-2.5 focus-within:border-forest-600 focus-within:bg-cream-50">
-            <Search className="h-4 w-4 text-muted" />
-            <input
-              type="text"
-              placeholder="Search vermicompost, potting mix, plant care…"
-              className="w-full bg-transparent text-sm outline-none placeholder:text-muted"
-            />
-            <kbd className="hidden rounded-md border border-cream-300 bg-cream-50 px-1.5 py-0.5 text-[10px] font-medium text-muted xl:block">
-              ⌘K
-            </kbd>
-          </div>
-        </div>
+        <nav className="ml-8 hidden items-center gap-1 lg:flex">
+          {NAV.map((n) => (
+            <div key={n.label} className="group relative">
+              {n.href.startsWith("/") ? (
+                <Link
+                  to={n.href}
+                  className="flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium text-forest-800 hover:bg-cream-200/70 hover:text-forest-700"
+                >
+                  {n.label}
+                </Link>
+              ) : (
+                <a
+                  href={n.href}
+                  className="flex items-center gap-1 rounded-full px-3.5 py-2 text-sm font-medium text-forest-800 hover:bg-cream-200/70 hover:text-forest-700"
+                >
+                  {n.label}
+                  {n.sub && (
+                    <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
+                  )}
+                </a>
+              )}
+              {n.sub && (
+                <div className="absolute left-0 top-full hidden min-w-52 pt-2 group-hover:block">
+                  <div className="overflow-hidden rounded-2xl border border-cream-200 bg-cream-50 p-2 shadow-soft">
+                    {n.sub.map((s) => (
+                      <a
+                        key={s.label}
+                        href={s.href}
+                        className="block rounded-xl px-3 py-2 text-sm text-forest-800 hover:bg-cream-200/70"
+                      >
+                        {s.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
 
         <div className="ml-auto flex items-center gap-1 md:gap-1.5">
           <button
             aria-label="Search"
-            className="grid h-10 w-10 place-items-center rounded-full text-forest-700 hover:bg-cream-200 lg:hidden"
+            onClick={() => setSearch((v) => !v)}
+            className="grid h-10 w-10 place-items-center rounded-full text-forest-700 hover:bg-cream-200"
           >
             <Search className="h-5 w-5" />
           </button>
@@ -119,47 +142,28 @@ export default function Header() {
         </div>
       </div>
 
-      <div className="hidden border-t border-cream-200/80 lg:block">
-        <div className="container-wide flex h-11 items-center justify-between">
-          <nav className="flex items-center gap-7">
-            {NAV.map((n) => (
-              <div key={n.label} className="group relative">
-                <a
-                  href={n.href}
-                  className="flex items-center gap-1 text-sm font-medium text-forest-800 hover:text-peach-500"
-                >
-                  {n.label}
-                  {n.sub && (
-                    <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />
-                  )}
-                </a>
-                {n.sub && (
-                  <div className="absolute left-0 top-full hidden min-w-48 pt-2 group-hover:block">
-                    <div className="overflow-hidden rounded-2xl border border-cream-200 bg-cream-50 p-2 shadow-soft">
-                      {n.sub.map((s) => (
-                        <a
-                          key={s}
-                          href={n.href}
-                          className="block rounded-xl px-3 py-2 text-sm text-forest-800 hover:bg-cream-200/70"
-                        >
-                          {s}
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-          <a
-            href="#"
-            className="flex items-center gap-1.5 text-xs font-medium text-muted hover:text-forest-700"
-          >
-            <MapPin className="h-3.5 w-3.5" />
-            Deliver to 110001
-          </a>
+      {search && (
+        <div className="border-t border-cream-200/80 bg-cream-50">
+          <div className="container-wide py-3">
+            <div className="flex items-center gap-2 rounded-full border border-cream-300 bg-cream-100 px-4 py-2.5 focus-within:border-forest-600 focus-within:bg-cream-50">
+              <Search className="h-4 w-4 text-muted" />
+              <input
+                autoFocus
+                type="text"
+                placeholder="Search vermicompost, potting mix, plant care…"
+                className="w-full bg-transparent text-sm outline-none placeholder:text-muted"
+              />
+              <button
+                aria-label="Close search"
+                onClick={() => setSearch(false)}
+                className="text-xs font-semibold uppercase tracking-widest text-muted hover:text-forest-700"
+              >
+                Close
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
+      )}
 
       <div
         className={`lg:hidden ${
@@ -177,22 +181,30 @@ export default function Header() {
               />
             </div>
             <nav className="flex flex-col">
-              {NAV.map((n) => (
-                <a
-                  key={n.label}
-                  href={n.href}
-                  onClick={() => setOpen(false)}
-                  className="flex items-center justify-between rounded-2xl px-3 py-3 text-base font-medium text-forest-800 hover:bg-cream-200/70"
-                >
-                  {n.label}
-                  <span className="text-peach-500">→</span>
-                </a>
-              ))}
+              {NAV.map((n) =>
+                n.href.startsWith("/") ? (
+                  <Link
+                    key={n.label}
+                    to={n.href}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center justify-between rounded-2xl px-3 py-3 text-base font-medium text-forest-800 hover:bg-cream-200/70"
+                  >
+                    {n.label}
+                    <span className="text-peach-500">→</span>
+                  </Link>
+                ) : (
+                  <a
+                    key={n.label}
+                    href={n.href}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center justify-between rounded-2xl px-3 py-3 text-base font-medium text-forest-800 hover:bg-cream-200/70"
+                  >
+                    {n.label}
+                    <span className="text-peach-500">→</span>
+                  </a>
+                )
+              )}
             </nav>
-            <div className="mt-3 flex items-center gap-2 border-t border-cream-200 pt-3 text-xs text-muted">
-              <MapPin className="h-3.5 w-3.5" />
-              Deliver to 110001 · <a href="#" className="text-forest-700 underline">Change</a>
-            </div>
           </div>
         </div>
       </div>

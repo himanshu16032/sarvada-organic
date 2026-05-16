@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Plus, Minus } from "lucide-react";
+import SectionBg from "../components/SectionBg";
 
 const FAQS: { q: string; a: string }[] = [
   {
@@ -67,8 +68,9 @@ export default function FAQ() {
   }, []);
 
   return (
-    <section id="faq" className="bg-cream-100 py-12 md:py-20">
-      <div className="container-wide">
+    <section id="faq" className="relative overflow-hidden bg-cream-100 py-12 md:py-20">
+      <SectionBg variant="warm" />
+      <div className="container-wide relative">
         <div className="grid items-start gap-8 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-5">
             <span className="eyebrow">FAQs</span>

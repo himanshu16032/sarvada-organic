@@ -4,6 +4,7 @@ import MobileBottomNav from "./components/MobileBottomNav";
 import Hero from "./sections/Hero";
 import CategoryStrip from "./sections/CategoryStrip";
 import TrustStrip from "./sections/TrustStrip";
+import BrandMarquee from "./sections/BrandMarquee";
 import PressStats from "./sections/PressStats";
 import Products from "./sections/Products";
 import About from "./sections/About";
@@ -26,6 +27,7 @@ export default function App() {
         <Hero />
         <TrustStrip />
         <Products />
+        <BrandMarquee />
         <About />
         <Subscribe />
         <PressStats />

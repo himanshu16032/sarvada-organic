@@ -1,66 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml"
->
-  <url>
-    <loc>https://sarvadaorganic.com/</loc>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<!--
+  Sarvada Organic — root sitemap index.
+  Search engines and AI crawlers should start here. This index points to
+  topic-specific child sitemaps. The structure mirrors mature D2C stores
+  for fast incremental crawling.
+-->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://sarvadaorganic.com/sitemap-pages.xml</loc>
     <lastmod>2026-05-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.00</priority>
-    <xhtml:link rel="alternate" hreflang="en-IN" href="https://sarvadaorganic.com/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://sarvadaorganic.com/" />
-    <image:image>
-      <image:loc>https://sarvadaorganic.com/hero-plants.jpg</image:loc>
-      <image:title>Sarvada Organic Vermicompost — Plants thriving with pure organic fertilizer</image:title>
-      <image:caption>Lush plants nurtured with Sarvada Organic vermicompost</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://sarvadaorganic.com/vermicompost-hands.jpg</image:loc>
-      <image:title>Sarvada Organic Vermicompost in hand — pure earthworm castings</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://sarvadaorganic.com/packaging-reference.jpeg</image:loc>
-      <image:title>Sarvada Organic Vermicompost packaging</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://sarvadaorganic.com/plant-transformation.jpg</image:loc>
-      <image:title>Plant transformation with Sarvada Organic vermicompost</image:title>
-    </image:image>
-    <image:image>
-      <image:loc>https://sarvadaorganic.com/process-diagram.jpg</image:loc>
-      <image:title>How Sarvada Organic vermicompost is made</image:title>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#products</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://sarvadaorganic.com/sitemap-products.xml</loc>
     <lastmod>2026-05-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#about</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://sarvadaorganic.com/sitemap-collections.xml</loc>
     <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#process</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://sarvadaorganic.com/sitemap-blog.xml</loc>
     <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#faq</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://sarvadaorganic.com/sitemap-images.xml</loc>
     <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#testimonials</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://sarvadaorganic.com/sitemap-agentic-discovery.xml</loc>
     <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-</urlset>
+  </sitemap>
+</sitemapindex>

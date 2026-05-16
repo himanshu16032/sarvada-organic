@@ -106,4 +106,10 @@ Allow: /
 
 # Hosts and sitemaps
 Sitemap: https://sarvadaorganic.com/sitemap.xml
+Sitemap: https://sarvadaorganic.com/sitemap-pages.xml
+Sitemap: https://sarvadaorganic.com/sitemap-products.xml
+Sitemap: https://sarvadaorganic.com/sitemap-collections.xml
+Sitemap: https://sarvadaorganic.com/sitemap-blog.xml
+Sitemap: https://sarvadaorganic.com/sitemap-images.xml
+Sitemap: https://sarvadaorganic.com/sitemap-agentic-discovery.xml
 Host: https://sarvadaorganic.com

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<!--
+  Sarvada Organic — Agentic Discovery sitemap.
+  Structured discovery feed for AI agents (ChatGPT, Claude, Perplexity, Gemini,
+  shopping agents) to find the brand's canonical content, product feed and
+  knowledge resources without crawling the full site.
+-->
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://sarvadaorganic.com/llms.txt</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/hero-plants.jpg</image:loc>
+      <image:title>Sarvada Organic — India's pure vermicompost brand since 2018</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/#about</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/#products</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/#faq</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/#process</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog</loc>
+    <lastmod>2026-02-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://sarvadaorganic.com/blog/how-much-vermicompost-to-use</loc>
+    <lastmod>2026-02-04</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/vermicompost-vs-cow-dung-vs-chemical-fertilizer</loc>
+    <lastmod>2026-01-10</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/right-potting-mix-for-every-plant</loc>
+    <lastmod>2025-12-12</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/we-started-sarvada-because-we-were-lied-to</loc>
+    <lastmod>2025-11-29</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/indian-gardening-calendar-month-by-month</loc>
+    <lastmod>2025-10-09</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/10-mistakes-every-new-plant-parent-makes</loc>
+    <lastmod>2025-09-22</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/vermiwash-what-it-is-how-to-use</loc>
+    <lastmod>2025-11-14</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/tomato-plant-came-back-after-i-changed-one-thing</loc>
+    <lastmod>2026-01-22</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/she-started-her-kitchen-garden-at-58</loc>
+    <lastmod>2025-12-28</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/what-growing-your-own-food-does-to-you</loc>
+    <lastmod>2025-10-30</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>

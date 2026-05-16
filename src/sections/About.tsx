@@ -1,4 +1,5 @@
 import { Sprout, ShieldCheck, HandHeart, Quote } from "lucide-react";
+import SectionBg from "../components/SectionBg";
 
 const PILLARS = [
   {
@@ -23,8 +24,9 @@ const PILLARS = [
 
 export default function About() {
   return (
-    <section id="about" className="bg-cream-100 py-14 md:py-20">
-      <div className="container-wide">
+    <section id="about" className="relative overflow-hidden bg-cream-100 py-14 md:py-20">
+      <SectionBg variant="sage" />
+      <div className="container-wide relative">
         <div className="grid items-end gap-6 md:grid-cols-12 md:gap-12">
           <div className="md:col-span-7">
             <span className="eyebrow">Why Sarvada</span>

@@ -1,3 +1,5 @@
+import SectionBg from "../components/SectionBg";
+
 const STEPS = [
   {
     n: "01",
@@ -26,8 +28,9 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section id="process" className="py-12 md:py-20">
-      <div className="container-wide">
+    <section id="process" className="relative overflow-hidden py-12 md:py-20">
+      <SectionBg variant="peach" />
+      <div className="container-wide relative">
         <div className="grid items-end gap-6 md:grid-cols-12">
           <div className="md:col-span-7">
             <span className="eyebrow">How it's made</span>

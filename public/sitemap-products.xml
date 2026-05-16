@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://sarvadaorganic.com/#products</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/vermicompost-hands.jpg</image:loc>
+      <image:title>Sarvada Organic Vermicompost — pure earthworm castings</image:title>
+      <image:caption>100% pure vermicompost — no silt, no preservatives</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/packaging-reference.jpeg</image:loc>
+      <image:title>Sarvada Organic Vermicompost packaging</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sarvadaorganic.com/products/vermicompost-1kg</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/vermicompost-hands.jpg</image:loc>
+      <image:title>Sarvada Organic Vermicompost 1 kg trial pack</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/vermicompost-5kg</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/packaging-reference.jpeg</image:loc>
+      <image:title>Sarvada Organic Vermicompost 5 kg bestseller pack</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/vermicompost-10kg</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/vermicompost-hands.jpg</image:loc>
+      <image:title>Sarvada Organic Vermicompost 10 kg pack</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/vermicompost-25kg</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/packaging-reference.jpeg</image:loc>
+      <image:title>Sarvada Organic Vermicompost 25 kg best-value pack</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/garden-starter-bundle</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/plant-transformation.jpg</image:loc>
+      <image:title>Sarvada Organic Garden Starter Bundle — 5 kg vermicompost + tools</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/vermicompost-subscription</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/hero-plants.jpg</image:loc>
+      <image:title>Sarvada Organic Vermicompost Monthly Subscription</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sarvadaorganic.com/products/plant-growth-serum</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/liquid-vermiwash</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/neem-karanja-cake</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/seed-starter-mix</loc>
+    <lastmod>2026-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+</urlset>

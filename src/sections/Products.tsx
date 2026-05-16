@@ -1,4 +1,5 @@
 import { Star, ShoppingBag, Heart } from "lucide-react";
+import SectionBg from "../components/SectionBg";
 
 type Product = {
   name: string;
@@ -76,8 +77,9 @@ const PRODUCTS: Product[] = [
 
 export default function Products() {
   return (
-    <section id="products" className="py-12 md:py-20">
-      <div className="container-wide">
+    <section id="products" className="relative overflow-hidden py-12 md:py-20">
+      <SectionBg variant="warm" />
+      <div className="container-wide relative">
         <div className="flex items-end justify-between gap-4">
           <div>
             <span className="eyebrow">Shop bestsellers</span>

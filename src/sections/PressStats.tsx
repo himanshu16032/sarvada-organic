@@ -1,3 +1,5 @@
+import SectionBg from "../components/SectionBg";
+
 const PRESS = [
   "The Hindu",
   "YourStory",
@@ -16,8 +18,9 @@ const STATS = [
 
 export default function PressStats() {
   return (
-    <section className="bg-cream-100 py-10 md:py-14">
-      <div className="container-wide">
+    <section className="relative overflow-hidden bg-cream-100 py-10 md:py-14">
+      <SectionBg variant="cool" />
+      <div className="container-wide relative">
         <p className="text-center text-[11px] font-semibold uppercase tracking-[0.25em] text-muted md:text-xs">
           As featured in
         </p>
