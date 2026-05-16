@@ -1,0 +1,23 @@
+{
+  "name": "Sarvada Organic",
+  "short_name": "Sarvada",
+  "description": "Buy 100% pure vermicompost online in India — no silt, no preservatives. Sarvada Organic / Sarvaorganic since 2018.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FBF6EE",
+  "theme_color": "#2F4A26",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["shopping", "lifestyle", "business"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -11,8 +11,10 @@ import Subscribe from "./sections/Subscribe";
 import Process from "./sections/Process";
 import Testimonials from "./sections/Testimonials";
 import Blog from "./sections/Blog";
+import FAQ from "./sections/FAQ";
 import Newsletter from "./sections/Newsletter";
 import Footer from "./components/Footer";
+import SeoCopy from "./components/SeoCopy";
 
 export default function App() {
   return (
@@ -29,8 +31,10 @@ export default function App() {
         <PressStats />
         <Process />
         <Testimonials />
+        <FAQ />
         <Blog />
         <Newsletter />
+        <SeoCopy />
       </main>
       <Footer />
       <MobileBottomNav />

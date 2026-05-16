@@ -45,7 +45,7 @@ const REVIEWS = [
 
 export default function Testimonials() {
   return (
-    <section className="bg-cream-100 py-12 md:py-20">
+    <section id="testimonials" className="bg-cream-100 py-12 md:py-20">
       <div className="container-wide">
         <div className="grid items-end gap-6 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-7">

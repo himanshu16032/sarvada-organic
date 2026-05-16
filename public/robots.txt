@@ -1,0 +1,109 @@
+# robots.txt for Sarvada Organic — sarvadaorganic.com (also serves sarvadaorganic.shop)
+# We welcome all responsible crawlers, search engines and AI assistants
+# to index our pages so plant parents can discover us easily.
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /cart
+Disallow: /checkout
+Disallow: /account
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+
+# Google
+User-agent: Googlebot
+Allow: /
+User-agent: Googlebot-Image
+Allow: /
+User-agent: Googlebot-Mobile
+Allow: /
+User-agent: AdsBot-Google
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# Bing / Microsoft
+User-agent: Bingbot
+Allow: /
+User-agent: MSNBot
+Allow: /
+
+# Yandex / DuckDuckGo / Baidu / Yahoo
+User-agent: YandexBot
+Allow: /
+User-agent: DuckDuckBot
+Allow: /
+User-agent: Baiduspider
+Allow: /
+User-agent: Slurp
+Allow: /
+
+# Social previews
+User-agent: facebookexternalhit
+Allow: /
+User-agent: Facebot
+Allow: /
+User-agent: Twitterbot
+Allow: /
+User-agent: LinkedInBot
+Allow: /
+User-agent: Pinterest
+Allow: /
+User-agent: WhatsApp
+Allow: /
+User-agent: TelegramBot
+Allow: /
+User-agent: Applebot
+Allow: /
+
+# AI assistants / Generative engines (GEO)
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: GoogleOther
+Allow: /
+User-agent: CCBot
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: meta-externalagent
+Allow: /
+User-agent: FacebookBot
+Allow: /
+User-agent: Bytespider
+Allow: /
+User-agent: Amazonbot
+Allow: /
+User-agent: YouBot
+Allow: /
+User-agent: Diffbot
+Allow: /
+User-agent: ImagesiftBot
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: Kagibot
+Allow: /
+User-agent: PetalBot
+Allow: /
+
+# Hosts and sitemaps
+Sitemap: https://sarvadaorganic.com/sitemap.xml
+Host: https://sarvadaorganic.com

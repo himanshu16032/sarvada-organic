@@ -85,10 +85,10 @@ export default function Footer() {
                   <Mail className="h-3.5 w-3.5 text-peach-300" />
                 </span>
                 <a
-                  href="mailto:hello@sarvadaorganic.in"
+                  href="mailto:hello@sarvadaorganic.com"
                   className="text-cream-200/90 hover:text-cream-50"
                 >
-                  hello@sarvadaorganic.in
+                  hello@sarvadaorganic.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
