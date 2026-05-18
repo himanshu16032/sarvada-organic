@@ -36,7 +36,13 @@ const posthogOptions = {
   capture_pageleave: true,
   autocapture: true,
   persistence: "localStorage+cookie",
-  session_recording: { maskAllInputs: false },
+  disable_session_recording: false,
+  enable_recording_console_log: true,
+  session_recording: {
+    maskAllInputs: false,
+    maskTextSelector: "[data-ph-mask]",
+    recordCrossOriginIframes: false,
+  },
   loaded: () => {
     if (typeof window !== "undefined" && import.meta.env.DEV) {
       console.info("[posthog] loaded");
