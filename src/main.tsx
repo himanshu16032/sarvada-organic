@@ -8,6 +8,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import { PostHogProvider } from "@posthog/react";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 import App from "./App";
 import BlogLoader from "./blog/BlogLoader";
 import {
@@ -52,6 +54,7 @@ const posthogOptions = {
 
 function RouterAnalytics() {
   const location = useLocation();
+  const vercelRoute = `${location.pathname}${location.search}${location.hash}`;
   useEffect(() => {
     trackPageView(location.pathname + location.hash);
   }, [location.pathname, location.hash]);
@@ -63,7 +66,12 @@ function RouterAnalytics() {
     installDataAttributeTracker();
   }, []);
 
-  return null;
+  return (
+    <>
+      <Analytics route={vercelRoute} framework="vite-react" />
+      <SpeedInsights route={vercelRoute} framework="vite-react" />
+    </>
+  );
 }
 
 function AppShell() {
