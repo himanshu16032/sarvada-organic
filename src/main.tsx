@@ -68,7 +68,7 @@ function RouterAnalytics() {
 
   return (
     <>
-      <Analytics route={vercelRoute} framework="vite-react" />
+      <Analytics mode={import.meta.env.DEV ? "development" : "production"} />
       <SpeedInsights route={vercelRoute} framework="vite-react" />
     </>
   );
