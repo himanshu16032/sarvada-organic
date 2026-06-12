@@ -137,42 +137,52 @@ export function useDocumentMeta(meta: {
     const prevTitle = document.title;
     document.title = meta.title;
 
-    const tags: HTMLElement[] = [];
-    const addMeta = (
-      attr: "name" | "property",
-      key: string,
-      content: string
-    ) => {
-      const el = document.createElement("meta");
-      el.setAttribute(attr, key);
-      el.setAttribute("content", content);
-      document.head.appendChild(el);
-      tags.push(el);
-    };
-    const addLink = (rel: string, href: string) => {
-      const el = document.createElement("link");
-      el.setAttribute("rel", rel);
-      el.setAttribute("href", href);
-      document.head.appendChild(el);
-      tags.push(el);
+    type RestoreEntry = { el: HTMLElement; attrName: string; prevValue: string | null };
+    const toRestore: RestoreEntry[] = [];
+    const toRemove: HTMLElement[] = [];
+
+    const setMeta = (attr: "name" | "property", key: string, content: string) => {
+      const el = document.querySelector(`meta[${attr}="${key}"]`) as HTMLMetaElement | null;
+      if (el) {
+        toRestore.push({ el, attrName: "content", prevValue: el.getAttribute("content") });
+        el.setAttribute("content", content);
+      } else {
+        const created = document.createElement("meta");
+        created.setAttribute(attr, key);
+        created.setAttribute("content", content);
+        document.head.appendChild(created);
+        toRemove.push(created);
+      }
     };
 
-    addMeta("name", "description", meta.description);
-    if (meta.keywords?.length)
-      addMeta("name", "keywords", meta.keywords.join(", "));
-    addLink("canonical", meta.canonical);
-    addMeta("property", "og:type", meta.type || "article");
-    addMeta("property", "og:url", meta.canonical);
-    addMeta("property", "og:title", meta.title);
-    addMeta("property", "og:description", meta.description);
-    if (meta.image) addMeta("property", "og:image", meta.image);
-    addMeta("name", "twitter:card", "summary_large_image");
-    addMeta("name", "twitter:title", meta.title);
-    addMeta("name", "twitter:description", meta.description);
-    if (meta.image) addMeta("name", "twitter:image", meta.image);
-    if (meta.publishedTime)
-      addMeta("property", "article:published_time", meta.publishedTime);
-    if (meta.author) addMeta("name", "author", meta.author);
+    const setLink = (rel: string, href: string) => {
+      const el = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
+      if (el) {
+        toRestore.push({ el, attrName: "href", prevValue: el.getAttribute("href") });
+        el.setAttribute("href", href);
+      } else {
+        const created = document.createElement("link");
+        created.setAttribute("rel", rel);
+        created.setAttribute("href", href);
+        document.head.appendChild(created);
+        toRemove.push(created);
+      }
+    };
+
+    setMeta("name", "description", meta.description);
+    if (meta.keywords?.length) setMeta("name", "keywords", meta.keywords.join(", "));
+    setLink("canonical", meta.canonical);
+    setMeta("property", "og:type", meta.type || "article");
+    setMeta("property", "og:url", meta.canonical);
+    setMeta("property", "og:title", meta.title);
+    setMeta("property", "og:description", meta.description);
+    if (meta.image) setMeta("property", "og:image", meta.image);
+    setMeta("name", "twitter:card", "summary_large_image");
+    setMeta("name", "twitter:title", meta.title);
+    setMeta("name", "twitter:description", meta.description);
+    if (meta.image) setMeta("name", "twitter:image", meta.image);
+    if (meta.publishedTime) setMeta("property", "article:published_time", meta.publishedTime);
+    if (meta.author) setMeta("name", "author", meta.author);
 
     const scripts: HTMLScriptElement[] = [];
     (meta.jsonLd || []).forEach((schema) => {
@@ -187,7 +197,11 @@ export function useDocumentMeta(meta: {
 
     return () => {
       document.title = prevTitle;
-      tags.forEach((t) => t.remove());
+      toRemove.forEach((el) => el.remove());
+      toRestore.forEach(({ el, attrName, prevValue }) => {
+        if (prevValue === null) el.removeAttribute(attrName);
+        else el.setAttribute(attrName, prevValue);
+      });
       scripts.forEach((s) => s.remove());
     };
   }, [
