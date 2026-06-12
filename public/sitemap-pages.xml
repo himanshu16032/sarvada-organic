@@ -6,40 +6,10 @@
 >
   <url>
     <loc>https://sarvadaorganic.com/</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://sarvadaorganic.com/" />
     <xhtml:link rel="alternate" hreflang="x-default" href="https://sarvadaorganic.com/" />
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#about</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.80</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#process</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.70</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#faq</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#testimonials</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.65</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#contact</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.60</priority>
   </url>
 </urlset>

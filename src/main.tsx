@@ -12,6 +12,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import App from "./App";
 import BlogLoader from "./blog/BlogLoader";
+import ProductPage from "./pages/ProductPage";
+import CollectionPage from "./pages/CollectionPage";
 import {
   trackPageView,
   installScrollDepthTracker,
@@ -96,6 +98,8 @@ function AppShell() {
             </Suspense>
           }
         />
+        <Route path="/products/:slug" element={<ProductPage />} />
+        <Route path="/collections/:slug" element={<CollectionPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

@@ -11,44 +11,14 @@
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
 >
   <url>
-    <loc>https://sarvadaorganic.com/llms.txt</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.00</priority>
-  </url>
-  <url>
     <loc>https://sarvadaorganic.com/</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-06-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
     <image:image>
       <image:loc>https://sarvadaorganic.com/hero-plants.jpg</image:loc>
       <image:title>Sarvada Organic — India's pure vermicompost brand since 2018</image:title>
     </image:image>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#about</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#products</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#faq</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  <url>
-    <loc>https://sarvadaorganic.com/#process</loc>
-    <lastmod>2026-05-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sarvadaorganic.com/blog</loc>
@@ -106,5 +76,112 @@
     <loc>https://sarvadaorganic.com/blog/what-growing-your-own-food-does-to-you</loc>
     <lastmod>2025-10-30</lastmod>
     <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://sarvadaorganic.com/products/vermicompost-1kg</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/vermicompost-5kg</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/vermicompost-10kg</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/vermicompost-25kg</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/garden-starter-bundle</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/vermicompost-subscription</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/plant-growth-serum</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/liquid-vermiwash</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/neem-karanja-cake</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.55</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/products/seed-starter-mix</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.55</priority>
+  </url>
+
+  <url>
+    <loc>https://sarvadaorganic.com/collections/vermicompost</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/collections/organic-fertilizer</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/collections/bestsellers</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/collections/plant-care</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/collections/potting-mix</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/collections/subscriptions</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/collections/bundles</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/collections/gifting</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/collections/pest-control</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/collections/seed-starter</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/collections/new-arrivals</loc>
+    <lastmod>2026-06-12</lastmod>
+    <priority>0.65</priority>
   </url>
 </urlset>

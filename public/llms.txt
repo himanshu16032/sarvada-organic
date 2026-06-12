@@ -80,12 +80,37 @@
 ## Pages
 
 - [Home](https://sarvadaorganic.com/)
-- [Shop / Products](https://sarvadaorganic.com/#products)
-- [Why Sarvada](https://sarvadaorganic.com/#about)
-- [Process](https://sarvadaorganic.com/#process)
-- [Reviews](https://sarvadaorganic.com/#testimonials)
-- [FAQ](https://sarvadaorganic.com/#faq)
 - [Blog](https://sarvadaorganic.com/blog)
+
+## Product pages
+
+- [Vermicompost 1 kg — Trial Pack (₹149)](https://sarvadaorganic.com/products/vermicompost-1kg)
+- [Vermicompost 5 kg — Bestseller (₹599)](https://sarvadaorganic.com/products/vermicompost-5kg)
+- [Vermicompost 10 kg — Popular (₹1,099)](https://sarvadaorganic.com/products/vermicompost-10kg)
+- [Vermicompost 25 kg — Best Value (₹2,499)](https://sarvadaorganic.com/products/vermicompost-25kg)
+- [Garden Starter Bundle — 5 kg + tools (₹899)](https://sarvadaorganic.com/products/garden-starter-bundle)
+- [Monthly Vermicompost Subscription — 5 kg/month (₹509/mo)](https://sarvadaorganic.com/products/vermicompost-subscription)
+- [Plant Growth Serum — 100 ml (Coming soon)](https://sarvadaorganic.com/products/plant-growth-serum)
+- [Liquid Vermiwash — 500 ml (Coming soon)](https://sarvadaorganic.com/products/liquid-vermiwash)
+- [Neem Karanja Cake — 1 kg (Coming soon)](https://sarvadaorganic.com/products/neem-karanja-cake)
+- [Seed Starter Mix — 2 kg (Coming soon)](https://sarvadaorganic.com/products/seed-starter-mix)
+
+## Collection pages
+
+- [Vermicompost collection](https://sarvadaorganic.com/collections/vermicompost)
+- [Organic Fertilizer collection](https://sarvadaorganic.com/collections/organic-fertilizer)
+- [Plant Care collection](https://sarvadaorganic.com/collections/plant-care)
+- [Potting Mix collection](https://sarvadaorganic.com/collections/potting-mix)
+- [Pest Control collection](https://sarvadaorganic.com/collections/pest-control)
+- [Seed Starter collection](https://sarvadaorganic.com/collections/seed-starter)
+- [Bundles collection](https://sarvadaorganic.com/collections/bundles)
+- [Subscriptions collection](https://sarvadaorganic.com/collections/subscriptions)
+- [Gifting collection](https://sarvadaorganic.com/collections/gifting)
+- [Bestsellers collection](https://sarvadaorganic.com/collections/bestsellers)
+- [New Arrivals collection](https://sarvadaorganic.com/collections/new-arrivals)
+
+## Sitemaps
+
 - [Sitemap index](https://sarvadaorganic.com/sitemap.xml)
 - [Pages sitemap](https://sarvadaorganic.com/sitemap-pages.xml)
 - [Products sitemap](https://sarvadaorganic.com/sitemap-products.xml)
