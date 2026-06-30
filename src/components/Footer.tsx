@@ -4,45 +4,48 @@ import {
   Facebook,
   Youtube,
   Mail,
-  Phone,
   MapPin,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 import { track } from "../lib/analytics";
 
 const COLS = [
   {
     title: "Shop",
     links: [
-      "Vermicompost",
-      "Potting Mix",
-      "Plant Growth Serum",
-      "Neem Cake",
-      "Seed Starter",
-      "Bundles",
-      "Gifting",
+      { label: "Vermicompost", href: "/collections/vermicompost" },
+      { label: "Potting Mix", href: "/collections/potting-mix" },
+      { label: "Plant Growth Serum", href: "/products/plant-growth-serum" },
+      { label: "Neem Cake", href: "/products/neem-karanja-cake" },
+      { label: "Seed Starter", href: "/collections/seed-starter" },
+      { label: "Bundles", href: "/collections/bundles" },
+      { label: "Gifting", href: "/collections/gifting" },
     ],
   },
   {
     title: "About",
     links: [
-      "Our Story",
-      "Why Sarvada",
-      "Sustainability",
-      "Blog",
-      "Press",
-      "Careers",
+      {
+        label: "Our Story",
+        href: "/blog/we-started-sarvada-because-we-were-lied-to",
+      },
+      { label: "Why Sarvada", href: "/#about" },
+      { label: "Sustainability", href: "/#process" },
+      { label: "Blog", href: "/blog" },
+      { label: "Corrections Policy", href: "/corrections-policy" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Support",
     links: [
-      "Track Order",
-      "Shipping Policy",
-      "Returns & Refunds",
-      "FAQs",
-      "Terms",
-      "Privacy",
-      "Contact Us",
+      { label: "Track Order", href: "/contact" },
+      { label: "Shipping Policy", href: "/shipping-policy" },
+      { label: "Returns & Refunds", href: "/returns-refunds" },
+      { label: "FAQs", href: "/#faq" },
+      { label: "Terms", href: "/terms" },
+      { label: "Privacy", href: "/privacy" },
+      { label: "Contact Us", href: "/contact" },
     ],
   },
 ];
@@ -62,23 +65,11 @@ export default function Footer() {
               </span>
             </div>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-cream-200/80 md:text-base">
-              India's most loved organic vermicompost — slow-crafted on our
-              farm since 2018. Pure castings, no silt, no preservatives.
+              Organic vermicompost made on our farm since 2018. Pure castings,
+              no silt, no preservatives.
             </p>
 
             <ul className="mt-6 space-y-3 text-sm">
-              <li className="flex items-center gap-3">
-                <span className="grid h-8 w-8 place-items-center rounded-full bg-cream-50/10">
-                  <Phone className="h-3.5 w-3.5 text-peach-300" />
-                </span>
-                <a
-                  href="tel:+910000000000"
-                  onClick={() => track("footer_contact_clicked", { kind: "phone" })}
-                  className="text-cream-200/90 hover:text-cream-50"
-                >
-                  +91 00000 00000
-                </a>
-              </li>
               <li className="flex items-center gap-3">
                 <span className="grid h-8 w-8 place-items-center rounded-full bg-cream-50/10">
                   <Mail className="h-3.5 w-3.5 text-peach-300" />
@@ -103,14 +94,28 @@ export default function Footer() {
 
             <div className="mt-6 flex items-center gap-2">
               {([
-                { Icon: Instagram, name: "instagram" },
-                { Icon: Facebook, name: "facebook" },
-                { Icon: Youtube, name: "youtube" },
-              ] as const).map(({ Icon, name }) => (
+                {
+                  Icon: Instagram,
+                  name: "instagram",
+                  href: "https://www.instagram.com/sarvadaorganic",
+                },
+                {
+                  Icon: Facebook,
+                  name: "facebook",
+                  href: "https://www.facebook.com/sarvadaorganic",
+                },
+                {
+                  Icon: Youtube,
+                  name: "youtube",
+                  href: "https://www.youtube.com/@sarvadaorganic",
+                },
+              ] as const).map(({ Icon, name, href }) => (
                 <a
                   key={name}
-                  href="#"
+                  href={href}
                   aria-label={name}
+                  target="_blank"
+                  rel="noreferrer"
                   onClick={() =>
                     track("footer_social_clicked", { network: name })
                   }
@@ -130,19 +135,34 @@ export default function Footer() {
                 </p>
                 <ul className="mt-4 space-y-2.5 text-sm">
                   {c.links.map((l) => (
-                    <li key={l}>
-                      <a
-                        href="#"
-                        onClick={() =>
-                          track("footer_link_clicked", {
-                            column: c.title,
-                            label: l,
-                          })
-                        }
-                        className="text-cream-200/85 transition-colors hover:text-cream-50"
-                      >
-                        {l}
-                      </a>
+                    <li key={l.label}>
+                      {l.href.startsWith("/#") ? (
+                        <a
+                          href={l.href}
+                          onClick={() =>
+                            track("footer_link_clicked", {
+                              column: c.title,
+                              label: l.label,
+                            })
+                          }
+                          className="text-cream-200/85 transition-colors hover:text-cream-50"
+                        >
+                          {l.label}
+                        </a>
+                      ) : (
+                        <Link
+                          to={l.href}
+                          onClick={() =>
+                            track("footer_link_clicked", {
+                              column: c.title,
+                              label: l.label,
+                            })
+                          }
+                          className="text-cream-200/85 transition-colors hover:text-cream-50"
+                        >
+                          {l.label}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>

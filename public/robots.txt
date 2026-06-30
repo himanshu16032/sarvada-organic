@@ -57,6 +57,8 @@ User-agent: TelegramBot
 Allow: /
 User-agent: Applebot
 Allow: /
+User-agent: Applebot-Extended
+Allow: /
 
 # AI assistants / Generative engines (GEO)
 User-agent: GPTBot
@@ -78,6 +80,10 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 User-agent: GoogleOther
+Allow: /
+User-agent: GoogleOther-Image
+Allow: /
+User-agent: GoogleOther-Video
 Allow: /
 User-agent: CCBot
 Allow: /

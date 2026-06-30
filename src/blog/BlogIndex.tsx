@@ -4,6 +4,13 @@ import { POSTS_META, type Category } from "./posts";
 import { BlogHeader, BlogFooter, useDocumentMeta } from "./BlogChrome";
 import { useState } from "react";
 import { track } from "../lib/analytics";
+import {
+  ORG_ID,
+  SITE_URL,
+  breadcrumbSchema,
+  organizationSchema,
+  websiteSchema,
+} from "../lib/aeo";
 
 const CATEGORIES: ("All" | Category)[] = [
   "All",
@@ -26,11 +33,15 @@ export default function BlogIndex() {
 
   const featured = POSTS_META.find((p) => p.featured) || POSTS_META[0];
   const rest = filtered.filter((p) => p.slug !== featured.slug);
+  const latestUpdate = POSTS_META.reduce(
+    (latest, post) => (post.updatedDate > latest ? post.updatedDate : latest),
+    POSTS_META[0]?.updatedDate || "2026-06-30"
+  );
 
   useDocumentMeta({
-    title: "Sarvada Organic Blog — Honest plant care, organic gardening, real stories",
+    title: "Sarvada Organic Blog | Organic Gardening India",
     description:
-      "Practical guides, customer stories and honest essays on vermicompost, organic fertilizer, kitchen gardens and home plant care for Indian growers. From the Sarvada Organic team.",
+      "Read practical Indian gardening guides on vermicompost, potting mix, kitchen gardens, plant care mistakes and real Sarvada Organic grower stories.",
     canonical: "https://sarvadaorganic.com/blog",
     image: "https://sarvadaorganic.com/hero-plants.jpg",
     type: "website",
@@ -43,48 +54,48 @@ export default function BlogIndex() {
       "plant care India",
     ],
     jsonLd: [
+      organizationSchema(),
+      websiteSchema(),
       {
         "@context": "https://schema.org",
         "@type": "Blog",
         "@id": "https://sarvadaorganic.com/blog#blog",
         name: "Sarvada Organic Blog",
         description:
-          "Honest guides, stories and plant-care essays from India's most loved vermicompost brand.",
+          "Gardening guides, stories and plant-care essays from Sarvada Organic.",
         url: "https://sarvadaorganic.com/blog",
         inLanguage: "en-IN",
+        dateModified: latestUpdate,
+        about: [
+          { "@type": "Thing", name: "organic gardening India" },
+          { "@type": "Thing", name: "vermicompost for plants" },
+          { "@type": "Thing", name: "kitchen garden tips India" },
+        ],
         publisher: {
-          "@type": "Organization",
-          name: "Sarvada Organic",
-          url: "https://sarvadaorganic.com",
+          "@id": ORG_ID,
         },
         blogPost: POSTS_META.map((p) => ({
           "@type": "BlogPosting",
           headline: p.title,
+          alternativeHeadline: p.seoTitle,
+          description: p.metaDescription,
           url: `https://sarvadaorganic.com/blog/${p.slug}`,
           datePublished: p.date,
-          author: { "@type": "Organization", name: p.author },
+          dateModified: p.updatedDate,
+          author: {
+            "@type": p.author === "Sarvada Founder" ? "Person" : "Organization",
+            name: p.author,
+          },
           image: `https://sarvadaorganic.com${p.cover}`,
-          keywords: p.keywords.join(", "),
+          keywords: p.keywords,
+          articleSection: p.category,
+          inLanguage: "en-IN",
         })),
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://sarvadaorganic.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Blog",
-            item: "https://sarvadaorganic.com/blog",
-          },
-        ],
-      },
+      breadcrumbSchema([
+        { name: "Home", item: SITE_URL },
+        { name: "Blog", item: `${SITE_URL}/blog` },
+      ]),
     ],
   });
 
@@ -99,14 +110,14 @@ export default function BlogIndex() {
               The Sarvada Blog
             </span>
             <h1 className="mt-5 font-display text-4xl font-semibold leading-[1.05] tracking-tight text-forest-800 md:text-6xl lg:text-[4.5rem]">
-              Honest plant care,
+              Plant care that
               <br className="hidden md:block" />{" "}
-              <span className="italic text-peach-500">written slowly.</span>
+              <span className="italic text-peach-500">sounds like home.</span>
             </h1>
             <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted md:text-xl">
-              Guides, customer stories and the occasional essay from the farm.
-              No fluff. No corporate phrases. Just what we'd tell a friend
-              starting their first balcony garden.
+              Guides, customer stories and the occasional note from the farm.
+              The same advice we would give a friend starting their first
+              balcony garden.
             </p>
           </div>
         </div>

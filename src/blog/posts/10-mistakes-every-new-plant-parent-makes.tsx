@@ -5,17 +5,23 @@ export default function Post() {
     <Prose>
       <Lead>
         We've made most of these ourselves. Some of them more than once. If
-        you're losing plants and don't know why — odds are you're doing one
-        of the ten things below. The good news is, all of them are easy to
-        fix.
+        you're losing plants and cannot tell why, start here. Most beginner
+        problems are not bad luck. They are water, soil, light, drainage or
+        feeding done at the wrong time.
       </Lead>
+
+      <Callout title="Start here" tone="peach">
+        Most beginner plant deaths come from five fixable problems:
+        too much water, compact soil, poor drainage, wrong light, and feeding a
+        stressed plant too soon. Fix the growing conditions first. Then feed
+        lightly.
+      </Callout>
 
       <H2>1. Overwatering</H2>
       <P>
-        The #1 killer of Indian home plants. We feel responsible for our
-        plants, so we water them — daily, sometimes twice. But roots need
-        oxygen as much as water. Wet soil with no air pockets suffocates
-        roots, leading to rot.
+        The fastest way to love a plant to death. We feel responsible for our
+        plants, so we water them daily, sometimes twice. But roots need air as
+        much as water. Wet soil with no air pockets slowly suffocates them.
       </P>
       <P>
         <strong>The fix:</strong> Stick your finger 2 inches into the soil.
@@ -25,10 +31,20 @@ export default function Post() {
 
       <H2>2. Garden soil straight into pots</H2>
       <P>
-        Garden soil works in the garden because the ecosystem supports it —
-        rain, microbes, worms, varied texture. In a pot, garden soil
-        compacts after a few waterings and forms a hard surface that water
-        runs off without soaking.
+        Garden soil works in the garden because water can move, worms keep
+        making tunnels, and roots have somewhere to go. In a pot, the same soil
+        compacts after a few waterings and forms a hard surface that water runs
+        off without soaking.{" "}
+        <a
+          href="https://extension.illinois.edu/container-gardens/soil"
+          target="_blank"
+          rel="noreferrer"
+          className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+        >
+          Illinois Extension
+        </a>{" "}
+        also notes that container media needs drainage and aeration, which
+        plain garden soil usually cannot provide inside a pot.
       </P>
       <P>
         <strong>The fix:</strong> Always cut garden soil with at least 40%
@@ -51,7 +67,7 @@ export default function Post() {
       <P>
         Putting a sun-loving rose in a north-facing balcony, or a
         shade-loving fern on a hot western terrace. Plants don't move
-        themselves. You have to know what they need before you buy.
+        themselves. No fertilizer can fix the wrong spot.
       </P>
 
       <H3>Quick light reference</H3>
@@ -64,10 +80,10 @@ export default function Post() {
 
       <H2>5. Fertilizing a sick plant</H2>
       <P>
-        It feels logical — "the plant looks weak, let me feed it more". But
-        feeding a stressed plant is like feeding a person with a stomach
-        upset. The roots can't absorb properly. The unused fertilizer builds
-        up and makes things worse.
+        It feels logical: "the plant looks weak, let me feed it more." But a
+        stressed plant is like a person with a stomach upset. It cannot take in
+        what you are giving it. The unused fertilizer sits in the pot and makes
+        the roots work harder.
       </P>
       <P>
         <strong>The fix:</strong> Diagnose first. Is it water? Light?
@@ -77,9 +93,9 @@ export default function Post() {
 
       <H2>6. Ignoring drainage</H2>
       <P>
-        Pots without drainage holes are a death sentence for most plants.
-        Even decorative pots with one small hole at the bottom often clog
-        with compacted soil.
+        Pots without drainage holes are trouble for most plants. Even a pretty
+        decorative pot with one tiny hole at the bottom can clog after a few
+        waterings.
       </P>
       <P>
         <strong>The fix:</strong> Every pot needs at least one drainage hole
@@ -115,14 +131,14 @@ export default function Post() {
       <P>
         Plants like monstera, calathea, ferns and peace lily originate in
         humid forests. In dry Delhi winters they look perpetually crispy. A
-        small humidifier or a weekly mist makes a dramatic difference.
+        small humidifier or a weekly mist can help a lot.
       </P>
 
       <H2>10. Buying plants without researching them</H2>
       <P>
-        Nursery owners will sell you anything they have. That doesn't mean
-        every plant fits your home. Spend five minutes searching the plant's
-        light, water and humidity needs before you take it home.
+        A nursery may sell what is available, not what fits your home. Spend
+        five minutes checking the plant's light, water and humidity needs before
+        you take it home.
       </P>
       <P>
         <strong>A small list of forgiving plants for beginners:</strong>
@@ -137,10 +153,9 @@ export default function Post() {
       </UL>
 
       <Callout title="The Sarvada beginner's promise" tone="peach">
-        If you do the basics right — good soil mix, pure vermicompost
-        monthly, water only when soil is dry — you'll lose less than one
-        plant in ten. That's a respectable record even for experienced
-        gardeners.
+        If you get the boring basics right — airy soil, clean vermicompost,
+        drainage holes, and water only when the soil asks — your plants stop
+        dying from the same five mistakes. That is already a strong beginning.
       </Callout>
 
       <BlogFAQ

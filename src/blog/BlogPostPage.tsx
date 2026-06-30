@@ -1,10 +1,16 @@
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Suspense, useEffect } from "react";
 import { ArrowUpRight, Clock, ArrowLeft, ShoppingBag } from "lucide-react";
-import { getPostBySlug, getRelatedPosts } from "./posts";
+import { getPostBySlug, getRelatedPosts, type BlogEntry } from "./posts";
 import { BlogHeader, BlogFooter, useDocumentMeta } from "./BlogChrome";
 import BlogLoader from "./BlogLoader";
 import { track } from "../lib/analytics";
+import {
+  ORG_ID,
+  SITE_URL,
+  breadcrumbSchema,
+  organizationSchema,
+} from "../lib/aeo";
 
 export default function BlogPostPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -29,6 +35,20 @@ export default function BlogPostPage() {
   const related = getRelatedPosts(post.slug, 3);
   const canonical = `https://sarvadaorganic.com/blog/${post.slug}`;
   const imageUrl = `https://sarvadaorganic.com${post.cover}`;
+  const publishedDate = new Date(post.date).toLocaleDateString("en-IN", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  const updatedDate = new Date(post.updatedDate).toLocaleDateString("en-IN", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+  const authorNote =
+    post.author === "Sarvada Founder"
+      ? "From Sarvada Organic's founder, based on small-batch vermicompost production and Indian balcony-garden support since 2018."
+      : "From Sarvada Organic's farm team, based on small-batch vermicompost production and Indian balcony-garden support since 2018.";
 
   return (
     <>
@@ -64,12 +84,13 @@ export default function BlogPostPage() {
                     dateTime={post.date}
                     className="text-muted"
                   >
-                    {new Date(post.date).toLocaleDateString("en-IN", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
+                    {publishedDate}
                   </time>
+                  {post.updatedDate !== post.date && (
+                    <time dateTime={post.updatedDate} className="text-muted">
+                      Updated {updatedDate}
+                    </time>
+                  )}
                 </div>
                 <h1 className="mt-5 font-display text-3xl font-semibold leading-[1.05] tracking-tight text-forest-800 md:text-5xl lg:text-[3.75rem]">
                   {post.title}
@@ -79,6 +100,9 @@ export default function BlogPostPage() {
                 </p>
                 <p className="mt-6 text-sm text-muted">
                   By <span className="font-semibold text-forest-800">{post.author}</span>
+                </p>
+                <p className="mt-2 max-w-2xl text-xs leading-relaxed text-muted md:text-sm">
+                  {authorNote}
                 </p>
               </div>
             </div>
@@ -106,12 +130,12 @@ export default function BlogPostPage() {
                   Try Sarvada Organic
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-semibold leading-tight text-forest-800 md:text-3xl">
-                  100% pure vermicompost — no silt, no preservatives.
+                  100% pure vermicompost. No silt, no preservatives.
                 </h3>
                 <p className="mt-3 text-sm text-muted md:text-base">
-                  If this article helped you, our hand-screened, slow-cured
-                  vermicompost will help your plants even more. Free delivery
-                  above ₹499, Cash on Delivery available.
+                  If this helped, start with clean, hand-screened
+                  vermicompost. Free delivery above ₹499 and Cash on Delivery
+                  available.
                 </p>
                 <Link
                   to="/#products"
@@ -192,71 +216,88 @@ function PostMeta({
   canonical,
   imageUrl,
 }: {
-  post: ReturnType<typeof getPostBySlug> & object;
+  post: BlogEntry;
   canonical: string;
   imageUrl: string;
 }) {
+  const author =
+    post.author === "Sarvada Founder"
+      ? {
+          "@type": "Person",
+          "@id": "https://sarvadaorganic.com/#founder",
+          name: post.author,
+          worksFor: { "@id": ORG_ID },
+          knowsAbout: [
+            "vermicomposting",
+            "organic gardening in India",
+            "silt-free vermicompost",
+          ],
+        }
+      : {
+          "@type": "Organization",
+          "@id": "https://sarvadaorganic.com/#farm-team",
+          name: post.author,
+          url: "https://sarvadaorganic.com/#about",
+          parentOrganization: {
+            "@id": ORG_ID,
+          },
+          knowsAbout: [
+            "vermicompost use",
+            "Indian balcony gardening",
+            "organic fertilizer for home plants",
+          ],
+        };
+
   useDocumentMeta({
-    title: `${post.title} — Sarvada Organic Blog`,
-    description: post.excerpt,
+    title: post.seoTitle,
+    description: post.metaDescription,
     canonical,
     image: imageUrl,
     type: "article",
     publishedTime: post.date,
+    modifiedTime: post.updatedDate,
     author: post.author,
+    section: post.category,
     keywords: post.keywords,
+    tags: post.keywords,
     jsonLd: [
+      organizationSchema(),
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "@id": `${canonical}#article`,
         mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
         headline: post.title,
-        description: post.excerpt,
+        alternativeHeadline: post.seoTitle,
+        description: post.metaDescription,
+        abstract: post.summary,
         image: [imageUrl],
         datePublished: post.date,
-        dateModified: post.date,
-        author: { "@type": "Organization", name: post.author },
-        publisher: {
-          "@type": "Organization",
-          name: "Sarvada Organic",
-          logo: {
-            "@type": "ImageObject",
-            url: "https://sarvadaorganic.com/favicon.svg",
-          },
-        },
-        keywords: post.keywords.join(", "),
+        dateModified: post.updatedDate,
+        author,
+        publisher: { "@id": ORG_ID },
+        keywords: post.keywords,
+        about: [
+          { "@type": "Thing", name: post.primaryKeyword },
+          ...post.keywords.slice(0, 4).map((keyword) => ({
+            "@type": "Thing",
+            name: keyword,
+          })),
+        ],
         inLanguage: "en-IN",
         articleSection: post.category,
-        wordCount: 1500,
+        isAccessibleForFree: true,
+        isPartOf: { "@id": `${SITE_URL}/blog#blog` },
+        sourceOrganization: { "@id": ORG_ID },
+        thumbnailUrl: imageUrl,
         url: canonical,
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://sarvadaorganic.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Blog",
-            item: "https://sarvadaorganic.com/blog",
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: post.title,
-            item: canonical,
-          },
-        ],
-      },
+      breadcrumbSchema([
+        { name: "Home", item: SITE_URL },
+        { name: "Blog", item: `${SITE_URL}/blog` },
+        { name: post.title, item: canonical },
+      ]),
     ],
   });
   return null;
 }
-

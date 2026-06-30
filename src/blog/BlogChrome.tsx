@@ -68,15 +68,33 @@ export function BlogFooter() {
               </span>
             </Link>
             <p className="mt-4 max-w-sm text-sm text-muted">
-              India's most loved vermicompost — since 2018. No silt, no
-              preservatives, no shortcuts.
+              Vermicompost made on our farm since 2018. No silt, no
+              preservatives.
             </p>
             <div className="mt-5 flex items-center gap-2">
-              {[Instagram, Facebook, Youtube].map((Icon, i) => (
+              {[
+                {
+                  Icon: Instagram,
+                  name: "instagram",
+                  href: "https://www.instagram.com/sarvadaorganic",
+                },
+                {
+                  Icon: Facebook,
+                  name: "facebook",
+                  href: "https://www.facebook.com/sarvadaorganic",
+                },
+                {
+                  Icon: Youtube,
+                  name: "youtube",
+                  href: "https://www.youtube.com/@sarvadaorganic",
+                },
+              ].map(({ Icon, name, href }) => (
                 <a
-                  key={i}
-                  href="#"
-                  aria-label="Social"
+                  key={name}
+                  href={href}
+                  aria-label={name}
+                  target="_blank"
+                  rel="noreferrer"
                   className="grid h-9 w-9 place-items-center rounded-full bg-cream-50 text-forest-700 hover:bg-peach-400 hover:text-cream-50"
                 >
                   <Icon className="h-4 w-4" />
@@ -86,10 +104,10 @@ export function BlogFooter() {
           </div>
           <div className="md:col-span-7 md:text-right">
             <p className="font-display text-2xl font-semibold leading-tight text-forest-800 md:text-3xl">
-              Liked this read?
+              Want the next plant note?
             </p>
             <p className="mt-2 text-sm text-muted md:text-base">
-              Get our next plant-care essay straight to your inbox.
+              Get the next plant-care essay straight to your inbox.
             </p>
             <form
               onSubmit={(e) => e.preventDefault()}
@@ -111,10 +129,12 @@ export function BlogFooter() {
         </div>
         <div className="mt-10 flex flex-col items-start justify-between gap-3 border-t border-cream-300/70 pt-5 text-xs text-muted md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Sarvada Organic Pvt. Ltd.</p>
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-5">
             <Link to="/" className="hover:text-forest-700">Home</Link>
             <Link to="/blog" className="hover:text-forest-700">Blog</Link>
             <a href="/#products" className="hover:text-forest-700">Shop</a>
+            <Link to="/corrections-policy" className="hover:text-forest-700">Corrections</Link>
+            <Link to="/contact" className="hover:text-forest-700">Contact</Link>
           </div>
         </div>
       </div>
@@ -128,9 +148,12 @@ export function useDocumentMeta(meta: {
   canonical: string;
   image?: string;
   keywords?: string[];
-  type?: "article" | "website";
+  type?: "article" | "website" | "product";
   publishedTime?: string;
+  modifiedTime?: string;
   author?: string;
+  section?: string;
+  tags?: string[];
   jsonLd?: object[];
 }) {
   useEffect(() => {
@@ -155,6 +178,14 @@ export function useDocumentMeta(meta: {
       }
     };
 
+    const appendMeta = (attr: "name" | "property", key: string, content: string) => {
+      const created = document.createElement("meta");
+      created.setAttribute(attr, key);
+      created.setAttribute("content", content);
+      document.head.appendChild(created);
+      toRemove.push(created);
+    };
+
     const setLink = (rel: string, href: string) => {
       const el = document.querySelector(`link[rel="${rel}"]`) as HTMLLinkElement | null;
       if (el) {
@@ -170,18 +201,24 @@ export function useDocumentMeta(meta: {
     };
 
     setMeta("name", "description", meta.description);
+    setMeta("name", "robots", "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1");
     if (meta.keywords?.length) setMeta("name", "keywords", meta.keywords.join(", "));
     setLink("canonical", meta.canonical);
     setMeta("property", "og:type", meta.type || "article");
     setMeta("property", "og:url", meta.canonical);
     setMeta("property", "og:title", meta.title);
     setMeta("property", "og:description", meta.description);
+    setMeta("property", "og:locale", "en_IN");
     if (meta.image) setMeta("property", "og:image", meta.image);
     setMeta("name", "twitter:card", "summary_large_image");
     setMeta("name", "twitter:title", meta.title);
     setMeta("name", "twitter:description", meta.description);
+    setMeta("name", "twitter:url", meta.canonical);
     if (meta.image) setMeta("name", "twitter:image", meta.image);
     if (meta.publishedTime) setMeta("property", "article:published_time", meta.publishedTime);
+    if (meta.modifiedTime) setMeta("property", "article:modified_time", meta.modifiedTime);
+    if (meta.section) setMeta("property", "article:section", meta.section);
+    meta.tags?.forEach((tag) => appendMeta("property", "article:tag", tag));
     if (meta.author) setMeta("name", "author", meta.author);
 
     const scripts: HTMLScriptElement[] = [];
@@ -211,6 +248,9 @@ export function useDocumentMeta(meta: {
     meta.image,
     meta.author,
     meta.publishedTime,
+    meta.modifiedTime,
+    meta.section,
+    meta.tags?.join(","),
     meta.keywords?.join(","),
     JSON.stringify(meta.jsonLd || []),
   ]);

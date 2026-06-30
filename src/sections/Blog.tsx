@@ -15,8 +15,8 @@ export default function Blog() {
           <div>
             <span className="eyebrow">From our blog</span>
             <h2 className="mt-3 font-display text-3xl font-semibold leading-tight text-forest-800 md:text-5xl">
-              Grow smarter,{" "}
-              <span className="italic text-peach-500">one read</span> at a time.
+              Useful reads{" "}
+              <span className="italic text-peach-500">from the farm.</span>
             </h2>
           </div>
           <Link

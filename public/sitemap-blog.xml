@@ -3,20 +3,67 @@
 <urlset
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-  xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
   <url>
     <loc>https://sarvadaorganic.com/blog</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <xhtml:link rel="alternate" hreflang="en-IN" href="https://sarvadaorganic.com/blog" />
   </url>
 
   <url>
+    <loc>https://sarvadaorganic.com/blog/buy-cow-dung-manure-online-khaad-guide</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/packaging-reference.jpeg</image:loc>
+      <image:title>Sarvada Organic vermicompost pack for online khaad buying guide</image:title>
+      <image:caption>Buy cow dung manure online or choose vermicompost guide</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sarvadaorganic.com/blog/best-fertilizer-for-indoor-plants</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/hero-plants.jpg</image:loc>
+      <image:title>Healthy indoor plants growing with natural fertilizer</image:title>
+      <image:caption>Best fertilizer for indoor plants and potting mix guide</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sarvadaorganic.com/blog/process-of-vermicomposting-earthworm-guide</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/process-diagram.jpg</image:loc>
+      <image:title>Simple visual guide showing the vermicomposting process</image:title>
+      <image:caption>Process of vermicomposting, earthworms and vermi khad</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://sarvadaorganic.com/blog/fertilizer-for-tomato-plant</loc>
+    <lastmod>2026-06-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.86</priority>
+    <image:image>
+      <image:loc>https://sarvadaorganic.com/plant-transformation.jpg</image:loc>
+      <image:title>Tomato plant growing in a pot with organic fertilizer</image:title>
+      <image:caption>Fertilizer for tomato plant organic feeding schedule</image:caption>
+    </image:image>
+  </url>
+
+  <url>
     <loc>https://sarvadaorganic.com/blog/how-much-vermicompost-to-use</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <image:image>
@@ -24,60 +71,33 @@
       <image:title>Close-up of pure Sarvada Organic vermicompost held in hands</image:title>
       <image:caption>How much vermicompost to use — quantity by pot size</image:caption>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>Sarvada Organic Blog</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-02-04</news:publication_date>
-      <news:title>How much vermicompost should you actually use?</news:title>
-      <news:keywords>vermicompost dosage, how much vermicompost to use, vermicompost India</news:keywords>
-    </news:news>
   </url>
 
   <url>
     <loc>https://sarvadaorganic.com/blog/tomato-plant-came-back-after-i-changed-one-thing</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
       <image:loc>https://sarvadaorganic.com/plant-transformation.jpg</image:loc>
       <image:title>A tomato plant brought back to life with organic vermicompost</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>Sarvada Organic Blog</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-22</news:publication_date>
-      <news:title>My tomato plant died. Then I changed one thing and everything turned around.</news:title>
-      <news:keywords>tomato plant revive, organic fertilizer tomato, burned roots</news:keywords>
-    </news:news>
   </url>
 
   <url>
     <loc>https://sarvadaorganic.com/blog/vermicompost-vs-cow-dung-vs-chemical-fertilizer</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <image:image>
       <image:loc>https://sarvadaorganic.com/process-diagram.jpg</image:loc>
       <image:title>Side-by-side comparison of vermicompost, cow dung manure and chemical fertilizer</image:title>
     </image:image>
-    <news:news>
-      <news:publication>
-        <news:name>Sarvada Organic Blog</news:name>
-        <news:language>en</news:language>
-      </news:publication>
-      <news:publication_date>2026-01-10</news:publication_date>
-      <news:title>Vermicompost vs cow dung vs chemical fertilizer — an honest comparison</news:title>
-      <news:keywords>vermicompost vs cow dung, organic vs chemical fertilizer India</news:keywords>
-    </news:news>
   </url>
 
   <url>
     <loc>https://sarvadaorganic.com/blog/she-started-her-kitchen-garden-at-58</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -88,7 +108,7 @@
 
   <url>
     <loc>https://sarvadaorganic.com/blog/right-potting-mix-for-every-plant</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -99,7 +119,7 @@
 
   <url>
     <loc>https://sarvadaorganic.com/blog/we-started-sarvada-because-we-were-lied-to</loc>
-    <lastmod>2025-11-29</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
@@ -110,7 +130,7 @@
 
   <url>
     <loc>https://sarvadaorganic.com/blog/vermiwash-what-it-is-how-to-use</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
     <image:image>
@@ -121,7 +141,7 @@
 
   <url>
     <loc>https://sarvadaorganic.com/blog/what-growing-your-own-food-does-to-you</loc>
-    <lastmod>2025-10-30</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
     <image:image>
@@ -132,7 +152,7 @@
 
   <url>
     <loc>https://sarvadaorganic.com/blog/indian-gardening-calendar-month-by-month</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <image:image>
@@ -143,7 +163,7 @@
 
   <url>
     <loc>https://sarvadaorganic.com/blog/10-mistakes-every-new-plant-parent-makes</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>

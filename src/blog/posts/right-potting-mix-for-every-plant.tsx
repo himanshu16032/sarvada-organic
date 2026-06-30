@@ -4,104 +4,245 @@ export default function Post() {
   return (
     <Prose>
       <Lead>
-        The fertilizer gets the credit, but the potting mix does most of the
-        work. Get the mix wrong and the best vermicompost in the world won't
-        save a plant. Get it right and your plants will be patient with you
-        when everything else goes wrong.
+        If you do not want to think in percentages, use a 10-scoop potting mix:
+        4 scoops garden soil, 4 scoops cocopeat and 2 scoops vermicompost. It
+        works for money plant, tulsi, pothos, palms, herbs and most balcony
+        pots. Special plants only need small changes.
       </Lead>
 
       <P>
-        For Indian homes, there are essentially three building blocks. You
-        change the ratio depending on what you're growing. Here are the five
-        recipes that cover roughly 95% of home gardening.
+        Potting mix is not plant food. It is the room the roots live in. If
+        that room has no air, no drainage, or too much wetness, even the best
+        fertilizer cannot rescue the plant.
       </P>
 
-      <H2>The three building blocks</H2>
-      <UL>
-        <LI>
-          <strong>Garden soil / red soil</strong> — provides structure and
-          minerals. Sieve to remove rocks. Avoid construction-site soil.
-        </LI>
-        <LI>
-          <strong>Cocopeat</strong> — coconut husk fibre. Holds water, keeps
-          the mix light and airy. Available cheap in any plant store.
-        </LI>
-        <LI>
-          <strong>Vermicompost</strong> — your nutrient and microbe source.
-          Use only pure, silt-free vermicompost (Sarvada's, for example).
-        </LI>
-      </UL>
+      <Callout title="Start here" tone="peach">
+        Use the 4:4:2 rule as your default: 4 parts soil, 4 parts cocopeat, 2
+        parts vermicompost. For succulents, add much more sand or perlite. For
+        seedlings, skip heavy soil and keep the mix light.
+      </Callout>
 
-      <Pull>
-        Get these three right, in the right ratio, and almost any Indian home
-        plant will thrive. Add perlite or sand only for cacti and succulents.
-      </Pull>
-
-      <H2>The five recipes worth bookmarking</H2>
+      <H2>The 10-scoop rule</H2>
+      <P>
+        Do not start with percentages. Start with a bowl, a mug or your hand.
+        If one scoop means one katori, the recipe is still the same. The goal is
+        simple: structure, moisture, gentle food, and enough air space for
+        roots.
+      </P>
 
       <Table
         caption="Potting mix recipes by plant type"
         headers={["Plant type", "Garden soil", "Cocopeat", "Vermicompost", "Extra"]}
         rows={[
-          ["Indoor foliage (money plant, snake, monstera)", "40%", "40%", "20%", "—"],
-          ["Flowering plants (rose, hibiscus, jasmine)", "30%", "30%", "30%", "10% perlite"],
-          ["Vegetables (tomato, chilli, methi)", "33%", "33%", "33%", "—"],
-          ["Succulents & cacti", "20%", "30%", "20%", "30% sand/perlite"],
-          ["Seedlings (under 30 days)", "0%", "60%", "40%", "—"],
+          [
+            "Indoor foliage: money plant, pothos, palm, monstera",
+            "4 scoops",
+            "4 scoops",
+            "2 scoops",
+            "Optional 1 scoop perlite if the room is humid",
+          ],
+          [
+            "Flowering plants: rose, hibiscus, jasmine",
+            "3 scoops",
+            "3 scoops",
+            "3 scoops",
+            "1 scoop perlite, rice husk or coarse sand",
+          ],
+          [
+            "Vegetables: tomato, chilli, brinjal, methi",
+            "3 scoops",
+            "3 scoops",
+            "2 scoops",
+            "2 scoops leaf mould, composted manure or rice husk",
+          ],
+          [
+            "Succulents and cacti",
+            "2 scoops",
+            "1 scoop",
+            "1 scoop",
+            "6 scoops coarse sand, perlite, pumice or brick chips",
+          ],
+          [
+            "Seedlings under 30 days",
+            "0 scoops",
+            "7 scoops",
+            "1 scoop, finely sieved",
+            "2 scoops perlite or vermiculite",
+          ],
         ]}
       />
 
-      <H2>What NOT to mix</H2>
+      <H2>Why garden soil alone fails in pots</H2>
+      <P>
+        Good garden soil can make terrible pot soil. In the ground, extra water
+        can move sideways and roots can travel deeper. In a pot, the same soil
+        becomes a small locked box.{" "}
+        <a
+          href="https://extension.illinois.edu/container-gardens/soil"
+          target="_blank"
+          rel="noreferrer"
+          className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+        >
+          Illinois Extension
+        </a>{" "}
+        says container media must drain and breathe, and that garden soil by
+        itself blocks both.
+      </P>
+      <P>
+        <a
+          href="https://fieldreport.caes.uga.edu/publications/C787/gardening-in-containers/"
+          target="_blank"
+          rel="noreferrer"
+          className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+        >
+          University of Georgia Extension
+        </a>{" "}
+        explains the same thing in root language: excess moisture and poor air
+        stress roots and invite root-rotting fungi. That is why the best mix
+        feels like moist poha, not wet dough. It should hold shape lightly, then
+        crumble when you press it.
+      </P>
+
+      <Pull>
+        If water sits on top for more than 30 seconds, your potting mix is too
+        tight. Roots do not drown in one watering. They drown when the mix never
+        lets air come back.
+      </Pull>
+
+      <H2>What each ingredient does</H2>
+      <Table
+        caption="Ingredient job chart"
+        headers={["Ingredient", "Job in the pot", "Common mistake"]}
+        rows={[
+          [
+            "Garden soil or red soil",
+            "Gives weight, minerals and structure",
+            "Using it alone, especially if it is clay-heavy",
+          ],
+          [
+            "Cocopeat",
+            "Holds water and keeps the mix light",
+            "Using dry bricks without soaking and squeezing first",
+          ],
+          [
+            "Vermicompost",
+            "Adds slow food, microbes and organic matter",
+            "Making it the whole potting mix",
+          ],
+          [
+            "Perlite, rice husk, pumice or brick chips",
+            "Creates air pockets and faster drainage",
+            "Skipping it for succulents or very wet balconies",
+          ],
+          [
+            "Coarse sand",
+            "Adds drainage and weight",
+            "Using fine construction sand or beach sand",
+          ],
+          [
+            "Leaf mould",
+            "Softens vegetable and flowering mixes",
+            "Using fresh leaves that are still breaking down",
+          ],
+        ]}
+      />
+
+      <H2>How to adjust for Indian homes</H2>
+      <H3>If your soil becomes a hard cake</H3>
+      <P>
+        Use less garden soil and more cocopeat or rice husk. This usually
+        happens with heavy clay, black cotton soil, or silt-heavy compost. For a
+        10-scoop mix, move from 4 scoops soil to 2 or 3 scoops soil.
+      </P>
+
+      <H3>If your balcony stays wet after rain</H3>
+      <P>
+        Use less cocopeat and add more air material. In monsoon, a pot that
+        stays wet for two days is not being "well watered"; it is stuck. Add
+        perlite, pumice, rice husk, brick chips, or coarse sand.
+      </P>
+
+      <H3>If your terrace dries in one afternoon</H3>
+      <P>
+        Keep the 4 scoops cocopeat, add mulch on top, and water deeply instead
+        of sprinkling. Dry heat punishes shallow watering. A thin layer of dry
+        leaves or coco chips on top saves more water than adding extra compost.
+      </P>
+
+      <H3>If you are starting seeds</H3>
+      <P>
+        Keep the mix light.{" "}
+        <a
+          href="https://extension.umd.edu/resource/starting-seeds-indoors/"
+          target="_blank"
+          rel="noreferrer"
+          className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+        >
+          University of Maryland Extension
+        </a>{" "}
+        describes seed-starting media as soilless and moist like a wrung-out
+        sponge, not soppy wet. For Indian homes, cocopeat plus perlite or
+        vermiculite does that job well. Add only a little sieved vermicompost
+        after the first true leaves appear.
+      </P>
+
+      <H2>What not to mix</H2>
       <UL>
         <LI>
-          <strong>Heavy clay or black cotton soil alone</strong> — it
-          compacts after one watering and drowns roots. Always cut with
-          cocopeat.
+          <strong>Fresh cow dung.</strong> It can heat, smell, bring weed seeds,
+          and burn young roots. Use only well-rotted manure in outdoor beds.
         </LI>
         <LI>
-          <strong>Soil from outside without treatment</strong> — full of
-          fungus, weed seeds and possibly pests. Spread it on a sheet in
-          direct sun for 2 days first.
+          <strong>Fine construction sand.</strong> It packs into the gaps and
+          makes the pot heavier without improving drainage.
         </LI>
         <LI>
-          <strong>Construction sand</strong> — too fine, too saline. Use
-          horticultural sand or perlite.
+          <strong>Too much wood ash.</strong> A pinch is enough. A cup can push
+          the mix too alkaline for many home plants.
         </LI>
         <LI>
-          <strong>Wood ash in large quantities</strong> — pH spike kills root
-          microbes. A sprinkle is fine, a cupful is not.
+          <strong>Only cocopeat.</strong> It holds water but has no real
+          structure for long-term plants unless you mix in compost and minerals.
+        </LI>
+        <LI>
+          <strong>Only vermicompost.</strong> It is food, not a full house for
+          roots. Too much can keep small pots wet and heavy.
         </LI>
       </UL>
 
-      <H2>The two India-specific gotchas</H2>
-
-      <H3>North India: avoid pure loamy soil</H3>
-      <P>
-        Delhi, Punjab and Haryana soils are heavy and silty. Used straight,
-        they form a hard crust on top. Always cut at least 40% cocopeat into
-        any North Indian garden soil for pot use.
-      </P>
-
-      <H3>South India: laterite soil needs extra organic matter</H3>
-      <P>
-        Bangalore, Chennai and parts of Kerala have laterite-leaning soils —
-        red, low in organic content. Push your vermicompost percentage up to
-        30% in the recipes above. Plants will thank you.
-      </P>
+      <H2>How to mix it without wasting material</H2>
+      <ol className="mt-5 list-decimal space-y-2.5 pl-6 text-[17px] leading-[1.75] md:text-[18px]">
+        <li>Soak cocopeat fully, then squeeze it until it feels damp, not dripping.</li>
+        <li>Sieve garden soil and vermicompost so stones and hard lumps stay out.</li>
+        <li>Measure with one scoop size and mix dry ingredients first.</li>
+        <li>Add water slowly until the mix clumps lightly in your fist.</li>
+        <li>Fill the pot, tap the sides once, and leave one inch at the top for watering.</li>
+      </ol>
 
       <H2>When to refresh the mix</H2>
       <UL>
-        <LI><strong>Every 12 months</strong> — replace the top 2 inches of soil with a fresh mix.</LI>
-        <LI><strong>Every 18–24 months</strong> — fully repot, washing roots gently and using a completely new mix.</LI>
-        <LI><strong>Whenever water sits</strong> — if water pools on the surface for &gt;30 seconds, the mix is compacted. Refresh now, don't wait.</LI>
+        <LI>
+          <strong>Every 12 months</strong> - remove the top 2 inches and replace
+          with fresh mix.
+        </LI>
+        <LI>
+          <strong>Every 18-24 months</strong> - repot fully if the plant is
+          root-bound or water stops draining well.
+        </LI>
+        <LI>
+          <strong>When water pools</strong> - if water sits on the surface for
+          more than 30 seconds, refresh sooner.
+        </LI>
+        <LI>
+          <strong>After root rot</strong> - do not reuse the same wet, sour mix
+          for another plant.
+        </LI>
       </UL>
 
-      <Callout title="Why Sarvada vermicompost matters in your mix" tone="peach">
-        Cheap vermicompost often contains 30–50% silt. When you mix that into
-        your potting soil, the silt fills the air gaps cocopeat created. The
-        whole mix becomes denser than what you started with. That's why pure,
-        silt-free vermicompost matters — it adds nutrition without stealing
-        aeration.
+      <Callout title="Sarvada note" tone="sage">
+        Pure vermicompost should feel crumbly and earthy. If a bag turns your
+        mix into clay after one watering, it probably has too much silt. In
+        pots, silt steals the air gaps that cocopeat and perlite create.
       </Callout>
 
       <BlogFAQ
@@ -109,23 +250,31 @@ export default function Post() {
         items={[
           {
             q: "What is the best potting mix ratio for indoor plants in India?",
-            a: "40% garden soil + 40% cocopeat + 20% pure vermicompost. This works for money plant, snake plant, pothos, peace lily, monstera, areca palm and most foliage indoor plants.",
+            a: "Use 4 scoops garden soil, 4 scoops cocopeat, and 2 scoops vermicompost. Add 1 scoop perlite if your room or balcony stays humid.",
           },
           {
-            q: "What is the right cocopeat to vermicompost ratio for seedlings?",
-            a: "60% cocopeat to 40% vermicompost works perfectly for seedlings under 30 days old. No garden soil at this stage — it's too heavy for young roots.",
+            q: "What is the best potting mix for vegetables in pots?",
+            a: "Use 3 scoops soil, 3 scoops cocopeat, 2 scoops vermicompost, and 2 scoops leaf mould, composted manure, rice husk, or perlite. Vegetables need food, drainage, and root space.",
           },
           {
-            q: "Can I use only cocopeat and vermicompost without soil?",
-            a: "Yes — for seedlings, microgreens and very short-cycle plants. For long-term potted plants you need garden soil for mineral content and structural stability.",
+            q: "Can I use only cocopeat and vermicompost?",
+            a: "Yes for seedlings and short-cycle microgreens, but not for long-term pots. Most plants need some mineral structure from soil or another stable base ingredient.",
           },
           {
-            q: "How often should I change potting soil for indoor plants?",
-            a: "Refresh the top 2 inches every 12 months. Fully repot every 18–24 months. If water pools on the surface, refresh sooner.",
+            q: "Why does my potting mix become hard after watering?",
+            a: "It usually has too much clay, fine sand, or silt-heavy compost. Add cocopeat and an air material like perlite, rice husk, pumice, or coarse sand.",
           },
           {
-            q: "Why does my potting mix become hard like concrete after a few months?",
-            a: "Almost always silt in the vermicompost or untreated heavy soil. Silt fills the air pockets and forms a crust on watering. Switch to pure, silt-free vermicompost and add 30% cocopeat to break compaction.",
+            q: "Is garden soil good for potted plants?",
+            a: "Garden soil is useful only after amendment. By itself it becomes too compact in containers, so mix it with cocopeat, vermicompost, and a drainage material.",
+          },
+          {
+            q: "What is the best potting mix for succulents and cacti?",
+            a: "Use a gritty mix: 2 scoops soil, 1 scoop cocopeat, 1 scoop vermicompost, and 6 scoops coarse sand, perlite, pumice, or brick chips.",
+          },
+          {
+            q: "How often should I change potting soil?",
+            a: "Refresh the top 2 inches every 12 months. Fully repot every 18-24 months, or sooner if water pools, roots circle the pot, or the mix smells sour.",
           },
         ]}
       />

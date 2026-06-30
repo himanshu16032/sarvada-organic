@@ -25,8 +25,8 @@ export default function Subscribe() {
                 Never run out of plant food again.
               </h2>
               <p className="mt-3 max-w-lg text-sm leading-relaxed text-forest-800/80 md:text-base">
-                Get a fresh 5kg pack of Sarvada Vermicompost delivered every month —
-                automatically. Pause, skip or cancel anytime.
+                Get a fresh 5kg pack of Sarvada Vermicompost delivered every
+                month. Pause, skip or cancel anytime.
               </p>
 
               <ul className="mt-6 grid gap-2.5 md:grid-cols-3 md:gap-3">

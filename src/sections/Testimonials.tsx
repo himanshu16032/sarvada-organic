@@ -19,7 +19,7 @@ const REVIEWS = [
     rating: 5,
     title: "Finally an honest compost",
     body:
-      "I've tried 4 brands. All had silt and dust. Sarvada is the real deal — light, dark, alive. My terrace tomatoes love it.",
+      "I've tried 4 brands. All had silt and dust. Sarvada feels light, dark and alive. My terrace tomatoes love it.",
     verified: true,
     product: "Vermicompost 25kg",
   },
@@ -39,7 +39,7 @@ const REVIEWS = [
     rating: 4,
     title: "Worth every rupee",
     body:
-      "Slightly premium pricing but completely justified. The packaging is great, delivery was fast, and plants are thriving.",
+      "Costs a little more, but I can see why. The pack arrived clean, delivery was fast, and my plants picked up.",
     verified: true,
     product: "Vermicompost 5kg",
   },

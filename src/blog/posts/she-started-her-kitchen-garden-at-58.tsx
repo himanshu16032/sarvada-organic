@@ -1,139 +1,242 @@
-import { Prose, H2, H3, P, Lead, UL, LI, Pull, Callout, BlogFAQ } from "../Prose";
+import {
+  Prose,
+  H2,
+  H3,
+  P,
+  Lead,
+  UL,
+  LI,
+  Pull,
+  Callout,
+  Table,
+  BlogFAQ,
+} from "../Prose";
 
 export default function Post() {
   return (
     <Prose>
       <Lead>
-        Asha is 58. She lives in a third-floor apartment in West Delhi with a
-        six-foot balcony that gets four hours of morning sun. Until last
-        September, she had never grown anything. Not a single plant. Her
-        daughter sent her a Sarvada Organic 1&nbsp;kg pack as a "try it" gift.
-        Four months later, she has twelve pots.
+        Asha started her kitchen garden at 58 with three pots, one 6-foot Delhi
+        balcony, and four hours of morning sun. She planted methi, tulsi and one
+        chilli plant first. Four months later she had 12 pots: herbs, chillies,
+        cherry tomato, mint, coriander, money plant and roses.
       </Lead>
 
-      <H2>Month 1 — the nervous beginning</H2>
       <P>
-        Asha bought three plastic pots. Methi seeds. Tomato seedlings. A
-        chilli plant from the nursery near her bus stop. The nursery owner
-        asked if she needed soil. She said yes, then panicked at the till
-        when he asked which type. She bought a bag of cocopeat too, because
-        someone on YouTube had said so.
+        The part worth copying is not that everything grew perfectly. It did
+        not. She drowned the first methi tray by day 10. The part worth copying
+        is the routine she ended up with: three beginner plants, a bowl-mix soil
+        recipe, light watering, and one monthly vermicompost feeding.
       </P>
+
+      <Callout title="Asha's starter setup" tone="peach">
+        <strong>
+          Start with 3 pots: methi, tulsi and chilli. Fill each pot with 2 bowls
+          garden soil, 2 bowls cocopeat and 1 bowl vermicompost.
+        </strong>{" "}
+        Water only when the top finger-depth feels dry. Feed once a month, not
+        every week.
+      </Callout>
+
+      <H2>What she started with</H2>
       <P>
-        Her first week she watered the pots twice a day, every day. By day
-        ten she had drowned the methi.
+        Asha lives in a third-floor apartment in West Delhi. Her balcony gets
+        morning sun from roughly 8 AM to noon. Before this, she had never grown
+        anything. Her daughter sent her a Sarvada Organic 1 kg pack as a "try
+        it" gift, and she bought three plastic pots from the nursery near her
+        bus stop.
+      </P>
+
+      <Table
+        caption="Asha's first three pots"
+        headers={["Plant", "Pot size", "Why it worked for a beginner"]}
+        rows={[
+          [
+            "Methi",
+            "Wide shallow tray",
+            "Sprouts quickly and forgives imperfect soil",
+          ],
+          [
+            "Tulsi",
+            "8-inch pot",
+            "Clear watering signal: leaves droop when thirsty",
+          ],
+          [
+            "Chilli",
+            "10-inch pot",
+            "Slow but steady; good for learning patience",
+          ],
+        ]}
+      />
+
+      <H2>Month 1: the nervous beginning</H2>
+      <P>
+        She watered twice a day because the top looked dry. By day 10, the methi
+        had collapsed. The soil was wet underneath, but the surface kept fooling
+        her. That is the first beginner trap in Indian balconies: the top dries
+        fast, the root zone does not.
       </P>
 
       <Pull>
         "I cried over the methi," she told us later. "I thought it must be me.
-        Maybe I'm not the kind of person who can grow things."
+        Maybe I am not the kind of person who can grow things."
       </Pull>
 
-      <H2>Month 2 — the first sprout</H2>
       <P>
-        She started watering once a day, in the evening. She added a fistful
-        of Sarvada vermicompost to each pot. Three days later, the chilli
-        plant had two new leaves. Dark, healthy green.
-      </P>
-      <P>
-        She called her daughter. Her daughter sent her a photo from her own
-        Delhi balcony — a flowering hibiscus she had been struggling with for
-        months that had also turned around after switching to vermicompost.
-        They sent each other photos every Sunday after that.
+        The fix was small enough to feel silly. She stopped watering by habit
+        and started using the finger test. If the top finger-depth felt dry, she
+        watered. If it felt cool and damp, she waited.
       </P>
 
-      <H2>Month 3 — the first harvest</H2>
+      <H2>Month 2: the first real sign</H2>
       <P>
-        Twenty grams of fresh methi. Asha's mother used to grow methi in
-        their village courtyard. Asha hadn't tasted "real" methi — the kind
-        that smells faintly bitter when you bruise the leaf — in maybe forty
-        years.
+        She remade the methi tray with the bowl rule: 2 bowls soil, 2 bowls
+        cocopeat, 1 bowl vermicompost. For the tulsi and chilli pots, she added
+        vermicompost only on top: half a teacup for the 8-inch tulsi and
+        three-quarter teacup for the 10-inch chilli.
       </P>
       <P>
-        She made dal with it. Texted her daughter the photo. Her daughter
-        called and they spoke for an hour.
+        Three days later, the chilli plant pushed two new leaves. Not a harvest.
+        Not a miracle. Just two clean green leaves. That was enough to make her
+        call her daughter.
       </P>
 
-      <H3>What Asha was growing by week 12</H3>
+      <H2>Month 3: the first harvest</H2>
+      <P>
+        The first successful harvest was not a basket of vegetables. It was one
+        small handful of methi. Asha's mother used to grow methi in their village
+        courtyard, and Asha said the smell came back before the memory did:
+        faintly bitter when she rubbed the leaf between her fingers.
+      </P>
+      <P>
+        She put it in dal, took a photo, and sent it to her daughter. They spoke
+        for an hour.
+      </P>
+
+      <H3>What she was growing by week 12</H3>
       <UL>
-        <LI>Three pots of methi (staggered, so harvests rolled)</LI>
-        <LI>One cherry tomato plant — first fruit at week 11</LI>
-        <LI>Two chillies — Bhut Jolokia and a mild Bhavnagri</LI>
-        <LI>Tulsi, mint, coriander — the kitchen trio</LI>
-        <LI>One money plant from a cutting her neighbour gave her</LI>
-        <LI>Roses — newly added at month 3</LI>
+        <LI>Three methi trays, staggered so one tray was always young</LI>
+        <LI>One cherry tomato plant, with the first fruit around week 11</LI>
+        <LI>Two chilli plants: one mild Bhavnagri and one very ambitious hot chilli</LI>
+        <LI>Tulsi, mint and coriander near the kitchen door</LI>
+        <LI>One money plant cutting from her neighbour</LI>
+        <LI>Two rose pots added after she stopped calling herself a beginner</LI>
       </UL>
 
-      <H2>Month 4 — twelve pots, one routine</H2>
+      <H2>Month 4: twelve pots, one routine</H2>
       <P>
-        Asha now spends 30 minutes on her balcony every morning. She doesn't
-        listen to music. She doesn't scroll. She waters, looks, occasionally
-        prunes. She has a notebook where she tracks who got fed when.
-      </P>
-      <P>
-        Her exact monthly feeding schedule, in her words:
+        By month four, Asha was spending 20-30 minutes on the balcony every
+        morning. She does not scroll there. She checks leaves, turns one pot
+        slightly, pinches dry tips, and writes feeding dates in a notebook. The
+        routine became the real harvest.
       </P>
 
-      <Callout title="Asha's monthly schedule" tone="sage">
-        <p>
-          <strong>First Sunday of the month</strong> — one fist of Sarvada
-          vermicompost in each medium pot. Two fists in the tomato.
-        </p>
-        <p className="mt-2">
-          <strong>Every Sunday</strong> — quick visual check. Any yellow
-          leaves? Anything wilting? Anything new?
-        </p>
-        <p className="mt-2">
-          <strong>Every evening</strong> — water just enough that a little
-          drains out the bottom.
-        </p>
-      </Callout>
-
-      <H2>Why this matters more than gardening</H2>
-      <P>
-        Asha didn't take up gardening for the herbs. She took it up because
-        her husband's evening walk routine had her sitting alone at home and
-        she didn't know what to do with the hours. She tells us, "Now I have
-        a reason to wake up before everyone else." Her daughter notices.
-      </P>
-      <P>
-        Most of our customers aren't really buying vermicompost. They're
-        buying a quiet half hour with something alive. We try to remember
-        that when we pack each bag.
-      </P>
+      <Table
+        caption="Asha's monthly kitchen garden routine"
+        headers={["When", "What she does", "How much"]}
+        rows={[
+          [
+            "Every morning",
+            "Checks leaves and soil",
+            "Finger test before watering",
+          ],
+          [
+            "When soil feels dry",
+            "Waters slowly",
+            "Until a little drains out below",
+          ],
+          [
+            "First Sunday",
+            "Feeds small pots",
+            "4-5 tablespoons vermicompost",
+          ],
+          [
+            "First Sunday",
+            "Feeds 8-10 inch pots",
+            "Half to three-quarter teacup",
+          ],
+          [
+            "First Sunday",
+            "Feeds tomato grow bag",
+            "4-5 teacups during fruiting",
+          ],
+        ]}
+      />
 
       <H2>If you want to start like Asha</H2>
+      <P>
+        Do not begin with 12 pots. Begin with three. One fast plant, one daily
+        use plant, one slow fruiting plant. That way you get a small win, a
+        daily reason to look, and one plant that teaches patience.
+      </P>
       <UL>
-        <LI>Three pots. No more. Pick easy plants: methi, chilli, tulsi.</LI>
-        <LI>Don't buy potting mix in fancy bags. Garden soil + cocopeat + vermicompost (40-40-20) is plenty.</LI>
-        <LI>Water once a day, not twice. Most beginners drown plants.</LI>
-        <LI>One fist of Sarvada vermicompost in each pot every 30 days.</LI>
-        <LI>Don't move pots around. Plants like steady light.</LI>
-        <LI>Be okay with one death. Everyone loses a plant.</LI>
+        <LI>
+          <strong>Fast plant</strong> - methi, coriander or spinach in a shallow
+          tray.
+        </LI>
+        <LI>
+          <strong>Daily use plant</strong> - tulsi, mint or curry leaf in an
+          8-inch pot.
+        </LI>
+        <LI>
+          <strong>Patience plant</strong> - chilli or cherry tomato in a 10-12
+          inch pot.
+        </LI>
+        <LI>
+          <strong>Soil mix</strong> - 2 bowls garden soil, 2 bowls cocopeat, 1
+          bowl vermicompost.
+        </LI>
+        <LI>
+          <strong>Monthly feeding</strong> - use spoons for small pots and
+          teacups for bigger pots.
+        </LI>
       </UL>
+
+      <H2>Why this matters more than vegetables</H2>
+      <P>
+        Asha did not start gardening because she needed cheaper methi. Her
+        husband's evening walk routine had left a quiet hour in the day, and she
+        did not know what to do with it. Now she says, "I have a reason to wake
+        up before everyone else."
+      </P>
+      <P>
+        Most people think they are buying compost. Very often they are buying a
+        reason to look closely at something alive for 20 minutes. We try to
+        remember that when we pack each bag.
+      </P>
+
+      <Callout title="Beginner rule" tone="sage">
+        If your first plant dies, do not restart the whole hobby. Restart with
+        one tray of methi. It sprouts fast, forgives mistakes, and gives your
+        confidence back before the week is over.
+      </Callout>
 
       <BlogFAQ
         postSlug="she-started-her-kitchen-garden-at-58"
         items={[
           {
             q: "How do I start a kitchen garden in an Indian apartment balcony?",
-            a: "Start with 3 pots — methi, chilli, tulsi are the easiest. Use a 40% garden soil + 40% cocopeat + 20% vermicompost mix. Water once a day in the evening. Feed with vermicompost once a month.",
+            a: "Start with three pots: methi, tulsi and chilli. Use 2 bowls garden soil, 2 bowls cocopeat and 1 bowl vermicompost. Keep them in morning sun and water only when the top finger-depth feels dry.",
           },
           {
-            q: "What's the easiest vegetable to grow for first-time gardeners in India?",
-            a: "Methi (fenugreek). It sprouts in 3 days, grows in any size pot, doesn't need much sun, and gives you a harvest in 25 days. It's the most forgiving Indian kitchen-garden plant.",
+            q: "What is the easiest vegetable to grow first?",
+            a: "Methi is the easiest first crop. It sprouts quickly, grows in a shallow tray, needs only a few hours of sun, and gives a small harvest in about 3-4 weeks.",
           },
           {
-            q: "Do I need expensive potting mix for a beginner kitchen garden?",
-            a: "No. A simple 40% garden soil + 40% cocopeat + 20% Sarvada vermicompost mix is better than most premium potting mixes — and a third of the cost.",
+            q: "How much vermicompost should a beginner use?",
+            a: "For a 6-inch pot, use 4-5 tablespoons once a month. For an 8-10 inch pot, use half to three-quarter teacup. Sprinkle it on top and lightly mix the surface.",
           },
           {
             q: "How much sun does a balcony kitchen garden need?",
-            a: "Four hours of direct morning sun is enough for tulsi, methi, mint, chillies and leafy greens. For tomatoes and roses you'll want closer to 6 hours.",
+            a: "Four hours of morning sun is enough for methi, tulsi, mint, coriander and many chillies. Tomatoes and roses do better with closer to 6 hours.",
           },
           {
-            q: "Can senior citizens with no gardening experience grow vegetables at home?",
-            a: "Absolutely. Many of our most active customers are over 50 and started during the pandemic. Begin with 3–4 forgiving plants, feed them gently with vermicompost, and you'll see results in 4–6 weeks.",
+            q: "Do I need expensive potting mix?",
+            a: "No. For beginner balcony plants, use 2 bowls garden soil, 2 bowls cocopeat and 1 bowl vermicompost. This is easier than reading a bag full of technical ratios.",
+          },
+          {
+            q: "Can someone over 50 start gardening for the first time?",
+            a: "Yes. Start small, keep the pots at a comfortable height, avoid heavy grow bags at first, and choose forgiving plants like methi, tulsi, mint and chilli.",
           },
         ]}
       />

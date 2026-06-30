@@ -1,8 +1,10 @@
 import { Star, ShoppingBag, Heart } from "lucide-react";
+import { Link } from "react-router-dom";
 import SectionBg from "../components/SectionBg";
 import { track, useTrackVisible } from "../lib/analytics";
 
 type Product = {
+  slug: string;
   name: string;
   weight: string;
   price: number;
@@ -15,6 +17,7 @@ type Product = {
 
 const PRODUCTS: Product[] = [
   {
+    slug: "vermicompost-1kg",
     name: "Sarvada Vermicompost",
     weight: "1 kg pack",
     price: 149,
@@ -25,6 +28,7 @@ const PRODUCTS: Product[] = [
     image: "/vermicompost-hands.jpg",
   },
   {
+    slug: "vermicompost-5kg",
     name: "Sarvada Vermicompost",
     weight: "5 kg pack",
     price: 599,
@@ -35,6 +39,7 @@ const PRODUCTS: Product[] = [
     image: "/packaging-reference.jpeg",
   },
   {
+    slug: "vermicompost-10kg",
     name: "Sarvada Vermicompost",
     weight: "10 kg pack",
     price: 1099,
@@ -45,6 +50,7 @@ const PRODUCTS: Product[] = [
     image: "/vermicompost-hands.jpg",
   },
   {
+    slug: "vermicompost-25kg",
     name: "Sarvada Vermicompost",
     weight: "25 kg pack",
     price: 2499,
@@ -55,6 +61,7 @@ const PRODUCTS: Product[] = [
     image: "/packaging-reference.jpeg",
   },
   {
+    slug: "garden-starter-bundle",
     name: "Garden Starter Bundle",
     weight: "5 kg + tools",
     price: 899,
@@ -65,6 +72,7 @@ const PRODUCTS: Product[] = [
     image: "/plant-transformation.jpg",
   },
   {
+    slug: "vermicompost-subscription",
     name: "Monthly Subscription",
     weight: "5 kg / month",
     price: 509,
@@ -89,15 +97,15 @@ export default function Products() {
               <span className="italic text-peach-500">fresh.</span>
             </h2>
           </div>
-          <a
-            href="#"
+          <Link
+            to="/collections/bestsellers"
             onClick={() =>
               track("products_view_all_clicked", { device: "desktop" })
             }
             className="hidden text-sm font-semibold text-forest-700 hover:text-peach-500 md:inline"
           >
             View all →
-          </a>
+          </Link>
         </div>
 
         <div className="mt-8 grid grid-cols-2 gap-3 md:mt-12 md:grid-cols-3 md:gap-5 lg:grid-cols-3">
@@ -106,15 +114,15 @@ export default function Products() {
           ))}
         </div>
 
-        <a
-          href="#"
+        <Link
+          to="/collections/bestsellers"
           onClick={() =>
             track("products_view_all_clicked", { device: "mobile" })
           }
           className="mx-auto mt-8 flex w-fit items-center gap-2 rounded-full border border-forest-700/20 bg-cream-50 px-6 py-3 text-sm font-semibold text-forest-700 hover:border-forest-700/40 md:hidden"
         >
           View all products →
-        </a>
+        </Link>
       </div>
     </section>
   );
@@ -135,6 +143,7 @@ function ProductCard({
   }[product.badge?.tone || "peach"];
 
   const baseProps = {
+    slug: product.slug,
     name: product.name,
     weight: product.weight,
     price: product.price,
@@ -192,7 +201,18 @@ function ProductCard({
           </span>
         </div>
         <h3 className="mt-1.5 text-sm font-semibold text-forest-800 md:text-base">
-          {product.name}
+          <Link
+            to={`/products/${product.slug}`}
+            onClick={() =>
+              track("product_details_clicked", {
+                slug: product.slug,
+                position,
+              })
+            }
+            className="hover:text-peach-500"
+          >
+            {product.name}
+          </Link>
         </h3>
         <p className="text-[11px] text-muted md:text-xs">{product.weight}</p>
 

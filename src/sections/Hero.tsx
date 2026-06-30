@@ -17,7 +17,7 @@ export default function Hero() {
               <div>
                 <span className="inline-flex items-center gap-2 rounded-full bg-cream-50/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-peach-300 backdrop-blur md:text-xs">
                   <Star className="h-3 w-3 fill-peach-300" />
-                  India's most loved vermicompost · 4.8★
+                  Vermicompost trusted since 2018 · 4.8★
                 </span>
                 <h1 className="mt-4 font-display text-[2.25rem] font-semibold leading-[1.05] md:text-5xl lg:text-[3.75rem]">
                   Pure vermicompost.{" "}
@@ -25,8 +25,8 @@ export default function Hero() {
                   <br className="hidden md:block" /> No preservatives.
                 </h1>
                 <p className="mt-4 max-w-md text-sm leading-relaxed text-cream-200 md:text-base">
-                  Trusted by 12,000+ plant parents since 2018. Earthworm-made,
-                  hand-screened, sun-cured. Real food for real plants.
+                  Used by 12,000+ plant parents since 2018. Made by earthworms,
+                  screened by hand, cured in the sun.
                 </p>
 
                 <div className="mt-6 flex flex-wrap items-center gap-3">
@@ -72,7 +72,7 @@ export default function Hero() {
                     12,000+
                   </p>
                   <p className="text-[10px] uppercase tracking-widest text-peach-500 md:text-[11px]">
-                    Happy plant parents
+                    Plant parents
                   </p>
                 </div>
                 <div className="absolute -right-2 top-4 rotate-3 rounded-2xl bg-peach-400 px-3.5 py-2.5 text-cream-50 shadow-soft md:-right-4">

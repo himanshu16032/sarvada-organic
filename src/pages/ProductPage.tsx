@@ -5,6 +5,15 @@ import Footer from "../components/Footer";
 import { useDocumentMeta } from "../blog/BlogChrome";
 import { PRODUCT_DATA, ProductData } from "../data/products";
 import { track } from "../lib/analytics";
+import {
+  ORG_ID,
+  SITE_URL,
+  breadcrumbSchema,
+  merchantReturnPolicy,
+  organizationSchema,
+  shippingDetails,
+  storeSchema,
+} from "../lib/aeo";
 
 export default function ProductPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -166,23 +175,61 @@ function ProductMeta({
         price: product.price,
         availability: "https://schema.org/InStock",
         url: canonical,
-        seller: { "@type": "Organization", name: "Sarvada Organic" },
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@id": ORG_ID },
+        shippingDetails: shippingDetails(),
+        hasMerchantReturnPolicy: merchantReturnPolicy(),
       }
     : {
         "@type": "Offer",
         priceCurrency: "INR",
         availability: "https://schema.org/PreOrder",
         url: canonical,
-        seller: { "@type": "Organization", name: "Sarvada Organic" },
+        itemCondition: "https://schema.org/NewCondition",
+        seller: { "@id": ORG_ID },
+        hasMerchantReturnPolicy: merchantReturnPolicy(),
       };
 
   const productSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${canonical}#product`,
     name: `${product.name} ${product.weight}`,
     description: product.description,
     image: [imageUrl],
     brand: { "@type": "Brand", name: "Sarvada Organic" },
+    manufacturer: { "@id": ORG_ID },
+    url: canonical,
+    sku: `SARV-${product.slug.toUpperCase()}`,
+    category: product.category,
+    countryOfOrigin: "IN",
+    material: product.category === "Vermicompost" ? "Earthworm castings" : undefined,
+    additionalProperty:
+      product.category === "Vermicompost"
+        ? [
+            {
+              "@type": "PropertyValue",
+              name: "No silt",
+              value: "Yes",
+            },
+            {
+              "@type": "PropertyValue",
+              name: "No preservatives",
+              value: "Yes",
+            },
+            {
+              "@type": "PropertyValue",
+              name: "Pack size",
+              value: product.weight,
+            },
+          ]
+        : [
+            {
+              "@type": "PropertyValue",
+              name: "Pack size",
+              value: product.weight,
+            },
+          ],
     offers: offerSchema,
   };
 
@@ -201,34 +248,17 @@ function ProductMeta({
     description: product.description,
     canonical,
     image: imageUrl,
-    type: "website",
+    type: "product",
     keywords: product.keywords,
     jsonLd: [
+      organizationSchema(),
+      storeSchema(),
       productSchema,
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://sarvadaorganic.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: "Products",
-            item: "https://sarvadaorganic.com/#products",
-          },
-          {
-            "@type": "ListItem",
-            position: 3,
-            name: `${product.name} ${product.weight}`,
-            item: canonical,
-          },
-        ],
-      },
+      breadcrumbSchema([
+        { name: "Home", item: SITE_URL },
+        { name: "Products", item: `${SITE_URL}/#products` },
+        { name: `${product.name} ${product.weight}`, item: canonical },
+      ]),
     ],
   });
   return null;

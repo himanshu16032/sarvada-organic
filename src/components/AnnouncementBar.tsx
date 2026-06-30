@@ -2,7 +2,7 @@ import { Truck, ShieldCheck, Sparkles } from "lucide-react";
 
 const ITEMS = [
   { icon: Truck, text: "Free delivery on orders above ₹499" },
-  { icon: Sparkles, text: "Flat 10% off on your first order — code WELCOME10" },
+  { icon: Sparkles, text: "Flat 10% off your first order, code WELCOME10" },
   { icon: ShieldCheck, text: "Cash on Delivery available · 7-day return" },
   { icon: Truck, text: "Next-day dispatch from our farm" },
 ];

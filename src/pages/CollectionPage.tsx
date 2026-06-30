@@ -6,6 +6,12 @@ import { useDocumentMeta } from "../blog/BlogChrome";
 import { COLLECTION_DATA, CollectionData } from "../data/collections";
 import { PRODUCT_DATA, ProductData } from "../data/products";
 import { track } from "../lib/analytics";
+import {
+  SITE_URL,
+  breadcrumbSchema,
+  organizationSchema,
+  storeSchema,
+} from "../lib/aeo";
 
 export default function CollectionPage() {
   const { slug } = useParams<{ slug: string }>();
@@ -176,15 +182,22 @@ function CollectionMeta({
       "sarvada organic",
     ],
     jsonLd: [
+      organizationSchema(),
+      storeSchema(),
       {
         "@context": "https://schema.org",
         "@type": "CollectionPage",
+        "@id": `${canonical}#collection`,
         name: `${collection.name} — Sarvada Organic`,
         description: collection.description,
         url: canonical,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
         ...(availableProducts.length > 0 && {
           mainEntity: {
             "@type": "ItemList",
+            name: `${collection.name} products`,
+            numberOfItems: availableProducts.length,
             itemListElement: availableProducts.map((p, i) => ({
               "@type": "ListItem",
               position: i + 1,
@@ -194,24 +207,10 @@ function CollectionMeta({
           },
         }),
       },
-      {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          {
-            "@type": "ListItem",
-            position: 1,
-            name: "Home",
-            item: "https://sarvadaorganic.com/",
-          },
-          {
-            "@type": "ListItem",
-            position: 2,
-            name: collection.name,
-            item: canonical,
-          },
-        ],
-      },
+      breadcrumbSchema([
+        { name: "Home", item: SITE_URL },
+        { name: collection.name, item: canonical },
+      ]),
     ],
   });
   return null;

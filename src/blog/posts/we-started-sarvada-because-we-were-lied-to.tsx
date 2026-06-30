@@ -4,7 +4,7 @@ export default function Post() {
   return (
     <Prose>
       <Lead>
-        In 2018 we were beginners. We bought our first bag of "premium organic
+        In 2018, we were beginners. We bought our first bag of "premium organic
         vermicompost" from a local nursery for ₹120. It looked fine — dark,
         slightly moist, smelled like soil. We mixed it into our pots, watered
         them, and went to sleep happy. The next morning the soil had turned
@@ -35,7 +35,8 @@ export default function Post() {
         Eight of the ten bags failed the water test. Two were closer to 50%
         soil and silt than vermicompost. One bag — at ₹240 a kilo — was the
         worst. The seller had simply packed garden silt with a top layer of
-        real castings so the bag looked dark when opened.
+        real castings so the bag looked dark when opened. The clean label was
+        doing most of the work.
       </P>
 
       <Pull>
@@ -50,15 +51,15 @@ export default function Post() {
         don't notice because the bag looks the same on top.
       </P>
       <P>
-        There's no regulation in India that prevents this. There's no
-        certification body that actually tests. The "organic" sticker on a
-        bag means nothing unless the brand is willing to be tested.
+        The market does not make this easy for a home gardener. A clean
+        "organic" sticker can look reassuring even when nobody has checked what
+        is actually inside the bag.
       </P>
 
       <H2>So we started making our own</H2>
       <P>
-        We knew nothing. We learnt — slowly. From soil scientists. From
-        farmers in our village. From mistakes we made in our own little
+        We were bad at it at first. We learnt slowly: from soil scientists,
+        from farmers in our village, and from mistakes we made in our own little
         composting setup behind the house.
       </P>
       <P>
@@ -132,10 +133,10 @@ export default function Post() {
 
       <H2>Why we keep doing this</H2>
       <P>
-        12,000+ plant parents trust us today. We've been on the same farm
-        since 2018. We have never advertised on television. We've never
-        chased big retail. Almost everyone who buys from us was sent to us by
-        someone whose plants did well with our bag.
+        12,000+ plant parents trust us today. We've been on the same farm since
+        2018. We have never advertised on television. We've never chased big
+        retail. Most people who buy from us were sent by someone whose plants
+        did well with our bag.
       </P>
       <P>
         That's the only growth strategy we want.

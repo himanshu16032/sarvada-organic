@@ -14,6 +14,7 @@ import App from "./App";
 import BlogLoader from "./blog/BlogLoader";
 import ProductPage from "./pages/ProductPage";
 import CollectionPage from "./pages/CollectionPage";
+import PolicyPage from "./pages/PolicyPage";
 import {
   trackPageView,
   installScrollDepthTracker,
@@ -100,6 +101,7 @@ function AppShell() {
         />
         <Route path="/products/:slug" element={<ProductPage />} />
         <Route path="/collections/:slug" element={<CollectionPage />} />
+        <Route path="/:slug" element={<PolicyPage />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>

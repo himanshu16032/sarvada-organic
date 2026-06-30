@@ -6,13 +6,13 @@ const STEPS = [
     n: "01",
     title: "Feed the worms",
     body:
-      "Organic cow dung & farm waste — no plastic, no chemicals — feeds our worms.",
+      "Organic cow dung and farm waste feed our worms. No plastic, no chemicals.",
   },
   {
     n: "02",
     title: "Slow composting",
     body:
-      "For 60–90 days, worms turn waste into rich, dark, living castings.",
+      "For 60-90 days, worms turn waste into dark, crumbly castings.",
   },
   {
     n: "03",
@@ -46,8 +46,8 @@ export default function Process() {
             </h2>
           </div>
           <p className="text-base text-muted md:col-span-5 md:text-lg">
-            Real vermicompost can't be rushed. Here's the slow craft behind
-            every Sarvada bag — for the last 6+ years.
+            Real vermicompost can't be rushed. Every Sarvada bag comes from the
+            same slow process we have used for 6+ years.
           </p>
         </div>
 

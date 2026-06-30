@@ -7,19 +7,19 @@ const PILLARS = [
     icon: Sprout,
     title: "For first-time planters",
     body:
-      "Just starting your green journey? Sarvada gives saplings the best foundation — gentle, balanced, alive.",
+      "Starting with your first few pots? Sarvada gives saplings a gentle, balanced start.",
   },
   {
     icon: HandHeart,
     title: "For fading plants",
     body:
-      "Bring tired plants back to life. Slow-release nutrients restore strength, leaf by leaf.",
+      "For plants that look tired, slow food helps the soil recover before the leaves do.",
   },
   {
     icon: ShieldCheck,
     title: "Zero shortcuts",
     body:
-      "We never add silt or preservatives. 100% pure earthworm castings — clean, screened, tested.",
+      "We never add silt or preservatives. Just clean, screened earthworm castings.",
   },
 ];
 
@@ -43,8 +43,8 @@ export default function About() {
           </div>
           <p className="text-base leading-relaxed text-muted md:col-span-5 md:text-lg">
             We started Sarvada because most "organic" compost in the market is
-            cut with silt and dust to fill the bag. We do the opposite —
-            patient, clean vermicomposting that puts your plant first.
+            cut with silt and dust to fill the bag. We do the opposite. Slow,
+            clean vermicomposting, packed only when it is ready.
           </p>
         </div>
 

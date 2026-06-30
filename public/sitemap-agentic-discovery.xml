@@ -12,7 +12,7 @@
 >
   <url>
     <loc>https://sarvadaorganic.com/</loc>
-    <lastmod>2026-06-12</lastmod>
+    <lastmod>2026-07-01</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
     <image:image>
@@ -22,59 +22,99 @@
   </url>
   <url>
     <loc>https://sarvadaorganic.com/blog</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/corrections-policy</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/contact</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/shipping-policy</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/returns-refunds</loc>
+    <lastmod>2026-07-01</lastmod>
+    <priority>0.72</priority>
   </url>
 
   <url>
     <loc>https://sarvadaorganic.com/blog/how-much-vermicompost-to-use</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <priority>0.95</priority>
   </url>
   <url>
+    <loc>https://sarvadaorganic.com/blog/buy-cow-dung-manure-online-khaad-guide</loc>
+    <lastmod>2026-06-30</lastmod>
+    <priority>0.92</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/best-fertilizer-for-indoor-plants</loc>
+    <lastmod>2026-06-30</lastmod>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/process-of-vermicomposting-earthworm-guide</loc>
+    <lastmod>2026-06-30</lastmod>
+    <priority>0.88</priority>
+  </url>
+  <url>
+    <loc>https://sarvadaorganic.com/blog/fertilizer-for-tomato-plant</loc>
+    <lastmod>2026-06-30</lastmod>
+    <priority>0.88</priority>
+  </url>
+  <url>
     <loc>https://sarvadaorganic.com/blog/vermicompost-vs-cow-dung-vs-chemical-fertilizer</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://sarvadaorganic.com/blog/right-potting-mix-for-every-plant</loc>
-    <lastmod>2025-12-12</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://sarvadaorganic.com/blog/we-started-sarvada-because-we-were-lied-to</loc>
-    <lastmod>2025-11-29</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://sarvadaorganic.com/blog/indian-gardening-calendar-month-by-month</loc>
-    <lastmod>2025-10-09</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://sarvadaorganic.com/blog/10-mistakes-every-new-plant-parent-makes</loc>
-    <lastmod>2025-09-22</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <priority>0.90</priority>
   </url>
   <url>
     <loc>https://sarvadaorganic.com/blog/vermiwash-what-it-is-how-to-use</loc>
-    <lastmod>2025-11-14</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://sarvadaorganic.com/blog/tomato-plant-came-back-after-i-changed-one-thing</loc>
-    <lastmod>2026-01-22</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <priority>0.85</priority>
   </url>
   <url>
     <loc>https://sarvadaorganic.com/blog/she-started-her-kitchen-garden-at-58</loc>
-    <lastmod>2025-12-28</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://sarvadaorganic.com/blog/what-growing-your-own-food-does-to-you</loc>
-    <lastmod>2025-10-30</lastmod>
+    <lastmod>2026-06-30</lastmod>
     <priority>0.80</priority>
   </url>
 

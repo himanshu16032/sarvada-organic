@@ -4,12 +4,19 @@ export default function Post() {
   return (
     <Prose>
       <Lead>
-        Most gardening calendars on the internet are written for European
-        seasons. They tell you to plant tomatoes "after the last frost". We
-        don't have frost in most of India. We have three growing seasons,
-        each with its own rhythm — Rabi, Zaid and Kharif. Once you understand
-        them, planning your kitchen garden becomes almost effortless.
+        Most gardening calendars online are written for European seasons. They
+        tell you to plant tomatoes "after the last frost". We do not have frost
+        in most of India. We have Rabi, Zaid and Kharif. Once you know what each
+        season is asking for, the calendar starts making sense.
       </Lead>
+
+      <Callout title="Start here" tone="peach">
+        For most Indian home gardens, plant cool-season vegetables in Rabi
+        (October-February), heat-loving gourds and okra in Zaid (March-May),
+        and monsoon greens or climbers in Kharif (June-September). Feed with
+        vermicompost every 30-45 days in Rabi, every 21 days in Zaid, and as a
+        top dressing in Kharif.
+      </Callout>
 
       <H2>The three Indian growing seasons</H2>
       <Table
@@ -24,10 +31,9 @@ export default function Post() {
 
       <H2>Rabi season — October to February</H2>
       <P>
-        This is India's peak home-gardening season. Cool nights, mild days,
-        and just enough sun. Almost every popular vegetable does well now.
-        If you're going to set up new pots, do it in late September or early
-        October.
+        This is when Indian gardeners get spoiled: cool nights, mild days, and
+        enough sun for tomatoes, greens and flowers. If you want to set up new
+        pots, do it in late September or early October.
       </P>
 
       <H3>What to plant</H3>
@@ -49,10 +55,10 @@ export default function Post() {
 
       <H2>Zaid season — March to May</H2>
       <P>
-        Pre-monsoon summer. Days are hot, evenings are forgiving. This is
-        when most plants fail in Indian terrace gardens — not from heat
-        directly, but from the dehydration and salt build-up that comes with
-        it.
+        Pre-monsoon summer is where terrace gardens get tested. Days are hot,
+        evenings are kinder, and pots dry from the sides while staying damp
+        near the roots. Most failures now come from stress, salt build-up and
+        confused watering.
       </P>
 
       <H3>What to plant</H3>
@@ -69,7 +75,7 @@ export default function Post() {
         Hot weather means more watering, which means more nutrient leaching.
         Increase vermicompost top-dressing to every 21 days instead of 30. A
         thin layer of mulch (dry grass, cocopeat, coconut coir) on top of the
-        soil dramatically reduces evaporation and root stress.
+        soil saves water and keeps roots calmer.
       </P>
 
       <Pull>
@@ -79,9 +85,9 @@ export default function Post() {
 
       <H2>Kharif season — June to September</H2>
       <P>
-        Monsoon. Low maintenance for most things — the rain handles your
-        watering. The big risks are overwatering and fungal disease. Drainage
-        becomes everything.
+        Monsoon looks easy because the rain does your watering. That is also
+        the trap. The big risks are overwatering, fungal disease and pots that
+        never dry out. Drainage becomes everything.
       </P>
 
       <H3>What to plant</H3>
