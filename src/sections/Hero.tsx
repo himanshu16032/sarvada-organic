@@ -102,7 +102,7 @@ export default function Hero() {
               <img
                 src="/sarvada-pack-balcony.webp"
                 alt=""
-                className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105"
+                className="absolute inset-0 h-full w-full object-cover opacity-10 transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-cream-50/95 via-cream-50/40 to-transparent" />
               <div className="relative">
