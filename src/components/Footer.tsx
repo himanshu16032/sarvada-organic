@@ -75,11 +75,11 @@ export default function Footer() {
                   <Mail className="h-3.5 w-3.5 text-peach-300" />
                 </span>
                 <a
-                  href="mailto:hello@sarvadaorganic.com"
+                  href="mailto:sarvadaorganic@gmail.com"
                   onClick={() => track("footer_contact_clicked", { kind: "email" })}
                   className="text-cream-200/90 hover:text-cream-50"
                 >
-                  hello@sarvadaorganic.com
+                  sarvadaorganic@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">

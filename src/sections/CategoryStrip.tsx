@@ -1,24 +1,8 @@
-import {
-  Sprout,
-  Leaf,
-  FlaskConical,
-  Package,
-  Gift,
-  Flower2,
-  Bug,
-  Layers,
-} from "lucide-react";
+import { Sprout } from "lucide-react";
 import { track } from "../lib/analytics";
 
 const CATS = [
   { icon: Sprout, label: "Vermicompost" },
-  { icon: Layers, label: "Potting Mix" },
-  { icon: FlaskConical, label: "Plant Serum" },
-  { icon: Leaf, label: "Neem Cake" },
-  { icon: Flower2, label: "Seed Starter" },
-  { icon: Bug, label: "Pest Control" },
-  { icon: Package, label: "Bundles" },
-  { icon: Gift, label: "Gifting" },
 ];
 
 export default function CategoryStrip() {

@@ -84,7 +84,7 @@
           <xsl:apply-templates select="s:urlset" />
 
           <footer>
-            Need help? Email <a href="mailto:hello@sarvadaorganic.com">hello@sarvadaorganic.com</a><br />
+            Need help? Email <a href="mailto:sarvadaorganic@gmail.com">sarvadaorganic@gmail.com</a><br />
             <a href="/">← Back to Sarvada Organic</a> ·
             <a href="/sitemap.xml">Sitemap Index</a> ·
             <a href="/llms.txt">llms.txt</a>

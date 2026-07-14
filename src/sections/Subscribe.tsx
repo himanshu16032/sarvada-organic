@@ -71,7 +71,7 @@ export default function Subscribe() {
             <div className="md:col-span-5">
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-cream-50 ring-1 ring-cream-300/60">
                 <img
-                  src="/packaging-reference.jpeg"
+                  src="/sarvada-pack-balcony.webp"
                   alt="Sarvada Organic Vermicompost monthly subscription pack"
                   className="h-full w-full object-cover"
                   loading="lazy"

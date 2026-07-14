@@ -47,7 +47,7 @@ export const POSTS: BlogEntry[] = [
     date: "2026-02-04",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/vermicompost-hands.jpg",
+    cover: "/sarvada-pack-table.webp",
     coverAlt: "Close-up of pure Sarvada Organic vermicompost held in hands",
     primaryKeyword: "how much vermicompost to use",
     keywords: [
@@ -79,7 +79,7 @@ export const POSTS: BlogEntry[] = [
     date: "2026-06-30",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/packaging-reference.jpeg",
+    cover: "/sarvada-pack-balcony.webp",
     coverAlt: "Sarvada Organic vermicompost pack for online khaad buying guide",
     primaryKeyword: "buy cow dung manure online",
     keywords: [
@@ -111,7 +111,7 @@ export const POSTS: BlogEntry[] = [
     date: "2026-06-30",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/hero-plants.jpg",
+    cover: "/sarvada-logo-horizontal.webp",
     coverAlt: "Healthy indoor plants growing with natural fertilizer",
     primaryKeyword: "best fertilizer for indoor plants",
     keywords: [
@@ -170,7 +170,7 @@ export const POSTS: BlogEntry[] = [
     date: "2026-06-30",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/plant-transformation.jpg",
+    cover: "/sarvada-pack-table.webp",
     coverAlt: "Tomato plant growing in a pot with organic fertilizer",
     primaryKeyword: "fertilizer for tomato plant",
     keywords: [
@@ -198,7 +198,7 @@ export const POSTS: BlogEntry[] = [
     date: "2026-01-22",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/plant-transformation.jpg",
+    cover: "/sarvada-pack-table.webp",
     coverAlt: "A tomato plant brought back to life with organic vermicompost",
     primaryKeyword: "tomato plant dying",
     keywords: [
@@ -261,7 +261,7 @@ export const POSTS: BlogEntry[] = [
     date: "2025-12-28",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/hero-plants.jpg",
+    cover: "/sarvada-logo-horizontal.webp",
     coverAlt: "An Indian balcony kitchen garden with herbs, tomatoes and chillies",
     primaryKeyword: "kitchen garden for beginners India",
     keywords: [
@@ -293,7 +293,7 @@ export const POSTS: BlogEntry[] = [
     date: "2025-12-12",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/packaging-reference.jpeg",
+    cover: "/sarvada-pack-balcony.webp",
     coverAlt: "Hands mixing potting soil, cocopeat and vermicompost in a bowl",
     primaryKeyword: "potting mix recipe India",
     keywords: [
@@ -318,7 +318,7 @@ export const POSTS: BlogEntry[] = [
     date: "2025-11-29",
     updatedDate: "2026-06-30",
     author: "Sarvada Founder",
-    cover: "/packaging-reference.jpeg",
+    cover: "/sarvada-pack-balcony.webp",
     coverAlt: "Sarvada Organic founder holding genuine, silt-free vermicompost",
     primaryKeyword: "pure vermicompost India no silt",
     keywords: [
@@ -347,7 +347,7 @@ export const POSTS: BlogEntry[] = [
     date: "2025-11-14",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/plant-transformation.jpg",
+    cover: "/sarvada-pack-table.webp",
     coverAlt: "Spraying diluted vermiwash on leafy green plants",
     primaryKeyword: "vermiwash uses plants India",
     keywords: [
@@ -376,7 +376,7 @@ export const POSTS: BlogEntry[] = [
     date: "2025-10-30",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/hero-plants.jpg",
+    cover: "/sarvada-logo-horizontal.webp",
     coverAlt: "Morning light falling on a peaceful home balcony garden",
     primaryKeyword: "benefits of growing your own food India",
     keywords: [
@@ -404,7 +404,7 @@ export const POSTS: BlogEntry[] = [
     date: "2025-10-09",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/hero-plants.jpg",
+    cover: "/sarvada-logo-horizontal.webp",
     coverAlt: "Seasonal Indian home garden — monsoon green leafy vegetables",
     primaryKeyword: "gardening calendar India month by month",
     keywords: [
@@ -432,7 +432,7 @@ export const POSTS: BlogEntry[] = [
     date: "2025-09-22",
     updatedDate: "2026-06-30",
     author: "Sarvada Farm Team",
-    cover: "/plant-transformation.jpg",
+    cover: "/sarvada-pack-table.webp",
     coverAlt: "Wilting plant being revived with proper care and organic fertilizer",
     primaryKeyword: "plant care mistakes India beginners",
     keywords: [

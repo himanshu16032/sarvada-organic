@@ -70,7 +70,7 @@ export default function About() {
         <div className="mt-10 grid items-stretch gap-3 overflow-hidden rounded-[2rem] bg-forest-700 md:mt-16 md:grid-cols-2 md:rounded-[2.5rem]">
           <div className="aspect-[5/4] overflow-hidden md:aspect-auto">
             <img
-              src="/plant-transformation.jpg"
+              src="/sarvada-pack-table.webp"
               alt="Plants thriving after weeks of Sarvada vermicompost"
               className="h-full w-full object-cover"
               loading="lazy"

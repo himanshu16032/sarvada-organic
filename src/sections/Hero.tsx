@@ -1,5 +1,6 @@
 import { ArrowRight, Star, Truck, ShieldCheck } from "lucide-react";
 import SectionBg from "../components/SectionBg";
+import { AMAZON_PRODUCT_URL } from "../lib/amazon";
 import { track } from "../lib/analytics";
 
 export default function Hero() {
@@ -43,7 +44,7 @@ export default function Hero() {
                     Shop now <ArrowRight className="h-4 w-4" />
                   </a>
                   <span className="rounded-full border border-cream-50/20 px-4 py-2 text-xs font-semibold text-cream-100 md:text-sm">
-                    Starts at ₹149
+                    5 kg at ₹249
                   </span>
                 </div>
 
@@ -60,9 +61,9 @@ export default function Hero() {
               <div className="relative">
                 <div className="aspect-square overflow-hidden rounded-[2rem] bg-sage-200/30 ring-1 ring-cream-50/10">
                   <img
-                    src="/hero-plants.jpg"
+                    src="/sarvada-logo-horizontal.webp"
                     alt="Lush plants thriving with Sarvada Organic vermicompost"
-                    className="h-full w-full object-cover"
+                    className="h-full w-full object-contain"
                     loading="eager"
                     fetchPriority="high"
                   />
@@ -89,17 +90,17 @@ export default function Hero() {
 
           <div className="grid gap-3 md:gap-4">
             <a
-              href="#products"
+              href={AMAZON_PRODUCT_URL}
               onClick={() =>
                 track("hero_side_tile_clicked", {
                   tile: "vermicompost_5kg_bestseller",
-                  offer: "flat_20_off_599",
+                  offer: "5kg_249",
                 })
               }
               className="group relative flex h-44 items-end overflow-hidden rounded-3xl bg-peach-200 p-5 md:h-auto md:flex-1 md:rounded-[2rem] md:p-6"
             >
               <img
-                src="/plant-transformation.jpg"
+                src="/sarvada-pack-balcony.webp"
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover opacity-60 transition-transform duration-500 group-hover:scale-105"
               />
@@ -112,35 +113,35 @@ export default function Hero() {
                   Vermicompost 5kg
                 </h3>
                 <p className="mt-0.5 text-xs text-forest-800/80 md:text-sm">
-                  Flat 20% off · ₹599
+                  5 kg · ₹249
                 </p>
               </div>
             </a>
             <a
-              href="#products"
+              href={AMAZON_PRODUCT_URL}
               onClick={() =>
                 track("hero_side_tile_clicked", {
-                  tile: "subscribe_and_save",
-                  offer: "monthly_15_off",
+                  tile: "amazon_available",
+                  offer: "5kg_249",
                 })
               }
               className="group relative flex h-44 items-end overflow-hidden rounded-3xl bg-forest-100 p-5 md:h-auto md:flex-1 md:rounded-[2rem] md:p-6"
             >
               <img
-                src="/vermicompost-hands.jpg"
+                src="/sarvada-pack-table.webp"
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover opacity-70 transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-forest-800/85 via-forest-800/40 to-transparent" />
               <div className="relative text-cream-50">
                 <span className="text-[10px] font-bold uppercase tracking-widest text-peach-300 md:text-xs">
-                  New
+                  Available now
                 </span>
                 <h3 className="mt-1 font-display text-xl font-semibold md:text-2xl">
-                  Subscribe & save
+                  Buy on Amazon
                 </h3>
                 <p className="mt-0.5 text-xs text-cream-200 md:text-sm">
-                  Monthly delivery · 15% off
+                  5 kg pack · ₹249
                 </p>
               </div>
             </a>

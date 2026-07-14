@@ -141,7 +141,7 @@ export default function Post() {
         headers={["Pack", "Price", "Approx. price per kg", "Best for"]}
         rows={[
           ["1 kg", "Rs. 149", "Rs. 149/kg", "Trying vermicompost or feeding a few pots"],
-          ["5 kg", "Rs. 599", "About Rs. 120/kg", "Most balcony gardens"],
+          ["5 kg", "Rs. 249", "About Rs. 50/kg", "Most balcony gardens"],
           ["10 kg", "Rs. 1,099", "About Rs. 110/kg", "Larger plant collections"],
           ["25 kg", "Rs. 2,499", "About Rs. 100/kg", "Terrace gardens and bulk use"],
         ]}
@@ -262,7 +262,7 @@ export default function Post() {
           },
           {
             q: "What is a fair vermicompost price?",
-            a: "Compare per kg, not only bag price. Sarvada packs range from Rs. 149 for 1 kg to about Rs. 100/kg in the 25 kg pack. Online prices vary with delivery and quality.",
+            a: "Compare per kg, not only bag price. Sarvada's current 5 kg pack is Rs. 249 on Amazon. Online prices vary with delivery and quality.",
           },
           {
             q: "Is vermi khad the same as vermicompost?",

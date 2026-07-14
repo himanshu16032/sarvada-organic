@@ -43,7 +43,7 @@ export default function BlogIndex() {
     description:
       "Read practical Indian gardening guides on vermicompost, potting mix, kitchen gardens, plant care mistakes and real Sarvada Organic grower stories.",
     canonical: "https://sarvadaorganic.com/blog",
-    image: "https://sarvadaorganic.com/hero-plants.jpg",
+    image: "https://sarvadaorganic.com/sarvada-logo-horizontal.webp",
     type: "website",
     keywords: [
       "sarvada organic blog",

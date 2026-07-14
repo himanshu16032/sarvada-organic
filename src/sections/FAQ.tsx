@@ -34,7 +34,7 @@ const FAQS: { q: string; a: string }[] = [
   },
   {
     q: "What are the available pack sizes and prices?",
-    a: "Sarvada Organic vermicompost is available in 1 kg (₹149), 5 kg (₹599), 10 kg (₹1,099) and 25 kg (₹2,499). We also offer a monthly subscription at ₹509/month for the 5kg pack, with free priority delivery and skip-anytime flexibility.",
+    a: "Sarvada Organic vermicompost is currently available as a 5 kg pack for ₹249 on Amazon.",
   },
   {
     q: "Does Sarvada Organic offer Cash on Delivery and returns?",
@@ -83,7 +83,7 @@ export default function FAQ() {
               fertilizer and Sarvada Organic.
             </p>
             <a
-              href="mailto:hello@sarvadaorganic.com"
+              href="mailto:sarvadaorganic@gmail.com"
               onClick={() => track("faq_ask_us_clicked")}
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-forest-700 px-5 py-2.5 text-sm font-semibold text-cream-50 hover:bg-forest-800"
             >

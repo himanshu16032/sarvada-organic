@@ -8,7 +8,6 @@ import BrandMarquee from "./sections/BrandMarquee";
 import PressStats from "./sections/PressStats";
 import Products from "./sections/Products";
 import About from "./sections/About";
-import Subscribe from "./sections/Subscribe";
 import Process from "./sections/Process";
 import Testimonials from "./sections/Testimonials";
 import Blog from "./sections/Blog";
@@ -29,7 +28,6 @@ export default function App() {
         <Products />
         <BrandMarquee />
         <About />
-        <Subscribe />
         <PressStats />
         <Process />
         <Testimonials />

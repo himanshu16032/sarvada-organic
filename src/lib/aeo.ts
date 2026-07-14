@@ -2,7 +2,7 @@ export const SITE_URL = "https://sarvadaorganic.com";
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 export const STORE_ID = `${SITE_URL}/#store`;
-export const EMAIL = "hello@sarvadaorganic.com";
+export const EMAIL = "sarvadaorganic@gmail.com";
 export const SOCIAL_LINKS = [
   "https://sarvadaorganic.shop",
   "https://www.instagram.com/sarvadaorganic",
@@ -30,7 +30,7 @@ export function organizationSchema() {
       "@type": "ImageObject",
       url: `${SITE_URL}/favicon.svg`,
     },
-    image: `${SITE_URL}/hero-plants.jpg`,
+    image: `${SITE_URL}/sarvada-logo-horizontal.webp`,
     description:
       "Sarvada Organic makes 100% pure vermicompost for Indian homes. No silt, no preservatives, no fillers.",
     foundingDate: "2018",
@@ -78,7 +78,7 @@ export function storeSchema() {
     "@id": STORE_ID,
     name: "Sarvada Organic Store",
     url: SITE_URL,
-    image: `${SITE_URL}/hero-plants.jpg`,
+    image: `${SITE_URL}/sarvada-logo-horizontal.webp`,
     priceRange: "₹149 - ₹2499",
     currenciesAccepted: "INR",
     paymentAccepted: "Cash on Delivery, UPI, Visa, Mastercard, RuPay, Razorpay",
