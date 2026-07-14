@@ -9,7 +9,7 @@ export default function Hero() {
       <SectionBg variant="warm" />
       <div className="container-wide relative">
         <div className="relative overflow-hidden rounded-3xl bg-forest-700 p-5 text-cream-50 md:rounded-[2rem] md:p-8 lg:p-10 xl:p-12">
-          <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(320px,0.72fr)] lg:gap-10">
+          <div className="grid items-center gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(460px,0.9fr)] lg:gap-10">
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-cream-50/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-peach-300 md:text-xs">
                 <Star className="h-3 w-3 fill-peach-300" />
@@ -53,39 +53,77 @@ export default function Hero() {
               </div>
             </div>
 
-            <a
-              href={AMAZON_PRODUCT_URL}
-              onClick={() =>
-                track("hero_product_image_clicked", {
-                  product: "vermicompost_5kg",
-                  offer: "5kg_249",
-                })
-              }
-              className="group block max-w-[22rem] overflow-hidden rounded-[1.5rem] bg-cream-50 shadow-soft ring-1 ring-cream-50/15 md:rounded-[1.75rem] lg:justify-self-end"
-            >
-              <div className="aspect-[4/5] max-h-[22rem] md:aspect-[5/4] lg:aspect-[4/5]">
-                <img
-                  src="/sarvada-pack-balcony.webp"
-                  alt="Sarvada Organic vermicompost 5 kg pack"
-                  className="h-full w-full object-cover"
-                  loading="eager"
-                  fetchPriority="high"
-                />
-              </div>
-              <div className="flex items-center justify-between gap-3 px-4 py-3 text-forest-800">
-                <div>
-                  <p className="text-xs font-bold uppercase tracking-widest text-peach-500">
-                    Bestseller
-                  </p>
-                  <p className="font-display text-lg font-semibold md:text-xl">
-                    Vermicompost 5kg
+            <div className="grid gap-3 lg:grid-cols-2 lg:justify-self-end">
+              <a
+                href={AMAZON_PRODUCT_URL}
+                onClick={() =>
+                  track("hero_product_image_clicked", {
+                    product: "vermicompost_5kg",
+                    image: "balcony",
+                    offer: "5kg_249",
+                  })
+                }
+                className="group block max-w-[22rem] overflow-hidden rounded-[1.5rem] bg-cream-50 shadow-soft ring-1 ring-cream-50/15 md:rounded-[1.75rem] lg:max-w-none"
+              >
+                <div className="aspect-[4/5] max-h-[22rem] md:aspect-[5/4] lg:aspect-[4/5] lg:max-h-[18rem]">
+                  <img
+                    src="/sarvada-pack-balcony.webp"
+                    alt="Sarvada Organic vermicompost 5 kg pack"
+                    className="h-full w-full object-cover"
+                    loading="eager"
+                    fetchPriority="high"
+                  />
+                </div>
+                <div className="flex items-center justify-between gap-3 px-4 py-3 text-forest-800">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-peach-500">
+                      Bestseller
+                    </p>
+                    <p className="font-display text-lg font-semibold md:text-xl lg:text-lg">
+                      Vermicompost 5kg
+                    </p>
+                  </div>
+                  <p className="shrink-0 rounded-full bg-forest-700 px-3 py-1.5 text-sm font-semibold text-cream-50">
+                    ₹249
                   </p>
                 </div>
-                <p className="shrink-0 rounded-full bg-forest-700 px-3 py-1.5 text-sm font-semibold text-cream-50">
-                  ₹249
-                </p>
-              </div>
-            </a>
+              </a>
+
+              <a
+                href={AMAZON_PRODUCT_URL}
+                onClick={() =>
+                  track("hero_product_image_clicked", {
+                    product: "vermicompost_5kg",
+                    image: "table",
+                    offer: "5kg_249",
+                  })
+                }
+                className="hidden overflow-hidden rounded-[1.5rem] bg-cream-50 shadow-soft ring-1 ring-cream-50/15 lg:block"
+              >
+                <div className="aspect-[4/5] max-h-[18rem]">
+                  <img
+                    src="/sarvada-pack-table.webp"
+                    alt="Sarvada Organic vermicompost pack on a table"
+                    className="h-full w-full object-cover"
+                    loading="eager"
+                    fetchPriority="high"
+                  />
+                </div>
+                <div className="flex items-center justify-between gap-3 px-4 py-3 text-forest-800">
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-peach-500">
+                      Pure
+                    </p>
+                    <p className="font-display text-lg font-semibold">
+                      No silt
+                    </p>
+                  </div>
+                  <p className="shrink-0 rounded-full bg-forest-700 px-3 py-1.5 text-sm font-semibold text-cream-50">
+                    5 kg
+                  </p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
       </div>
