@@ -1,6 +1,7 @@
-import { Star, ShoppingBag, Heart } from "lucide-react";
+import { Star, ShoppingBag } from "lucide-react";
 import { Link } from "react-router-dom";
 import SectionBg from "../components/SectionBg";
+import { AMAZON_PRODUCT_URL } from "../lib/amazon";
 import { track, useTrackVisible } from "../lib/analytics";
 
 type Product = {
@@ -176,13 +177,6 @@ function ProductCard({
             {product.badge.label}
           </span>
         )}
-        <button
-          aria-label="Add to wishlist"
-          onClick={() => track("product_wishlist_added", baseProps)}
-          className="absolute right-2.5 top-2.5 grid h-8 w-8 place-items-center rounded-full bg-cream-50/95 text-forest-700 transition-colors hover:bg-peach-100 hover:text-peach-500 md:right-3 md:top-3 md:h-9 md:w-9"
-        >
-          <Heart className="h-3.5 w-3.5 md:h-4 md:w-4" />
-        </button>
         {discount > 0 && (
           <span className="absolute bottom-2.5 left-2.5 rounded-full bg-cream-50 px-2 py-0.5 text-[10px] font-bold text-forest-700 shadow-sm md:bottom-3 md:left-3 md:text-xs">
             {discount}% OFF
@@ -225,13 +219,14 @@ function ProductCard({
           </p>
         </div>
 
-        <button
+        <a
+          href={AMAZON_PRODUCT_URL}
           onClick={() => track("product_add_to_cart_clicked", baseProps)}
           className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-full bg-forest-700 px-3 py-2 text-[11px] font-semibold text-cream-50 transition-colors hover:bg-forest-800 md:py-2.5 md:text-sm"
         >
           <ShoppingBag className="h-3.5 w-3.5 md:h-4 md:w-4" />
           Add to cart
-        </button>
+        </a>
       </div>
     </article>
   );

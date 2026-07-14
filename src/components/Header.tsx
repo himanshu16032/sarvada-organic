@@ -5,9 +5,6 @@ import {
   X,
   Leaf,
   Search,
-  ShoppingBag,
-  Heart,
-  User,
   ChevronDown,
 } from "lucide-react";
 import { track } from "../lib/analytics";
@@ -154,30 +151,6 @@ export default function Header() {
             className="grid h-10 w-10 place-items-center rounded-full text-forest-700 hover:bg-cream-200"
           >
             <Search className="h-5 w-5" />
-          </button>
-          <button
-            aria-label="Account"
-            onClick={() => track("header_account_clicked")}
-            className="hidden h-10 w-10 place-items-center rounded-full text-forest-700 hover:bg-cream-200 md:grid"
-          >
-            <User className="h-5 w-5" />
-          </button>
-          <button
-            aria-label="Wishlist"
-            onClick={() => track("header_wishlist_clicked")}
-            className="hidden h-10 w-10 place-items-center rounded-full text-forest-700 hover:bg-cream-200 md:grid"
-          >
-            <Heart className="h-5 w-5" />
-          </button>
-          <button
-            aria-label="Cart"
-            onClick={() => track("header_cart_clicked", { items_in_cart: 2 })}
-            className="relative grid h-10 w-10 place-items-center rounded-full text-forest-700 hover:bg-cream-200"
-          >
-            <ShoppingBag className="h-5 w-5" />
-            <span className="absolute -right-0.5 -top-0.5 grid h-4 min-w-4 place-items-center rounded-full bg-peach-500 px-1 text-[10px] font-bold text-cream-50">
-              2
-            </span>
           </button>
         </div>
       </div>

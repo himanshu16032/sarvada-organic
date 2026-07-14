@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useDocumentMeta } from "../blog/BlogChrome";
 import { PRODUCT_DATA, ProductData } from "../data/products";
+import { AMAZON_PRODUCT_URL } from "../lib/amazon";
 import { track } from "../lib/analytics";
 import {
   ORG_ID,
@@ -109,7 +110,8 @@ export default function ProductPage() {
                       </>
                     )}
                   </div>
-                  <button
+                  <a
+                    href={AMAZON_PRODUCT_URL}
                     onClick={() =>
                       track("product_page_add_to_cart", {
                         slug: product.slug,
@@ -119,7 +121,7 @@ export default function ProductPage() {
                     className="mt-5 flex w-full items-center justify-center gap-2 rounded-full bg-forest-700 px-6 py-4 text-base font-semibold text-cream-50 transition-colors hover:bg-forest-800 md:w-auto md:px-10"
                   >
                     <ShoppingBag className="h-5 w-5" /> Add to cart
-                  </button>
+                  </a>
                 </div>
               ) : (
                 <div className="mt-8 rounded-3xl border border-cream-300/70 bg-cream-50 p-6">

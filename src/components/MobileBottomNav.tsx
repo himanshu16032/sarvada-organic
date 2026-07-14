@@ -1,18 +1,15 @@
-import { Home, LayoutGrid, ShoppingBag, Heart, User } from "lucide-react";
+import { Home, LayoutGrid } from "lucide-react";
 import { track } from "../lib/analytics";
 
 const ITEMS = [
   { icon: Home, label: "Home", href: "#top" },
   { icon: LayoutGrid, label: "Shop", href: "#products" },
-  { icon: Heart, label: "Wishlist", href: "#" },
-  { icon: ShoppingBag, label: "Cart", href: "#", badge: 2 },
-  { icon: User, label: "Account", href: "#" },
 ];
 
 export default function MobileBottomNav() {
   return (
     <nav className="fixed inset-x-0 bottom-0 z-40 border-t border-cream-300/70 bg-cream-50/95 backdrop-blur lg:hidden">
-      <ul className="container-wide grid grid-cols-5 py-1.5">
+      <ul className="container-wide grid grid-cols-2 py-1.5">
         {ITEMS.map((it) => (
           <li key={it.label}>
             <a
