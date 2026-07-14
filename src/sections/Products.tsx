@@ -50,28 +50,6 @@ const PRODUCTS: Product[] = [
     badge: { label: "Popular", tone: "forest" },
     image: "/sarvada-pack-table.webp",
   },
-  {
-    slug: "vermicompost-25kg",
-    name: "Sarvada Vermicompost",
-    weight: "25 kg pack",
-    price: 2499,
-    mrp: 3499,
-    rating: 4.9,
-    reviews: 318,
-    badge: { label: "Best value", tone: "peach" },
-    image: "/sarvada-pack-balcony.webp",
-  },
-  {
-    slug: "garden-starter-bundle",
-    name: "Garden Starter Bundle",
-    weight: "5 kg + tools",
-    price: 899,
-    mrp: 1299,
-    rating: 4.7,
-    reviews: 204,
-    badge: { label: "Bundle", tone: "sage" },
-    image: "/sarvada-pack-table.webp",
-  },
 ];
 
 export default function Products() {

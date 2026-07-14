@@ -14,8 +14,8 @@ export default function Hero() {
               aria-hidden
               className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-peach-400/30 blur-3xl md:h-96 md:w-96"
             />
-            <div className="relative grid items-center gap-8 md:grid-cols-2">
-              <div>
+            <div className="relative">
+              <div className="max-w-2xl">
                 <span className="inline-flex items-center gap-2 rounded-full bg-cream-50/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-peach-300 backdrop-blur md:text-xs">
                   <Star className="h-3 w-3 fill-peach-300" />
                   Vermicompost trusted since 2018 · 4.8★
@@ -58,17 +58,17 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="relative">
-                <div className="aspect-square overflow-hidden rounded-[2rem] bg-sage-200/30 ring-1 ring-cream-50/10">
+              <div className="relative mt-8 overflow-hidden rounded-[1.75rem] bg-cream-50 shadow-soft ring-1 ring-cream-50/20 md:mt-10 md:rounded-[2rem]">
+                <div className="aspect-[16/9]">
                   <img
                     src="/sarvada-logo-horizontal.webp"
-                    alt="Lush plants thriving with Sarvada Organic vermicompost"
-                    className="h-full w-full object-contain"
+                    alt="Sarvada Organic vermicompost and plants"
+                    className="h-full w-full object-cover"
                     loading="eager"
                     fetchPriority="high"
                   />
                 </div>
-                <div className="absolute -bottom-3 -left-3 rotate-[-4deg] rounded-2xl bg-cream-50 px-3.5 py-2.5 text-forest-800 shadow-soft md:-bottom-4 md:-left-4">
+                <div className="absolute bottom-3 left-3 rounded-2xl bg-cream-50/95 px-3.5 py-2.5 text-forest-800 shadow-soft md:bottom-4 md:left-4">
                   <p className="font-display text-base font-semibold leading-none md:text-lg">
                     12,000+
                   </p>
@@ -76,7 +76,7 @@ export default function Hero() {
                     Plant parents
                   </p>
                 </div>
-                <div className="absolute -right-2 top-4 rotate-3 rounded-2xl bg-peach-400 px-3.5 py-2.5 text-cream-50 shadow-soft md:-right-4">
+                <div className="absolute right-3 top-3 rounded-2xl bg-forest-700/90 px-3.5 py-2.5 text-cream-50 shadow-soft md:right-4 md:top-4">
                   <p className="font-display text-base font-semibold leading-none md:text-lg">
                     100%
                   </p>
