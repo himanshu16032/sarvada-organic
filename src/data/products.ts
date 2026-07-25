@@ -21,7 +21,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     name: "Sarvada Vermicompost",
     tagline: "Trial pack — pure earthworm castings",
     description:
-      "Start your organic gardening journey with our 1 kg trial pack. 100% pure vermicompost — no silt, no preservatives, no shortcuts. Hand-screened and slow-cured on our farm since 2018.",
+      "Start your organic gardening journey with our 1 kg trial pack. 100% pure vermicompost — no silt, no preservatives. Lab certified by SV Testing Laboratories (SVTL-10-260604-01): Nitrogen 3.16%.",
     price: 149,
     mrp: 199,
     weight: "1 kg",
@@ -43,7 +43,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     name: "Sarvada Vermicompost",
     tagline: "Bestseller — the most popular size",
     description:
-      "Our most loved pack — 5 kg of pure, hand-screened vermicompost for home gardens, balcony plants, and kitchen gardens. No silt. No fillers. Free delivery above ₹499.",
+      "Our most loved pack — 5 kg of pure, hand-screened vermicompost. Lab certified Nitrogen 3.16% (SV Testing Laboratories report SVTL-10-260604-01). No silt. No fillers. Free delivery above ₹499.",
     price: 249,
     mrp: 599,
     weight: "5 kg",
@@ -65,7 +65,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     name: "Sarvada Vermicompost",
     tagline: "Popular — ideal for larger gardens",
     description:
-      "10 kg of farm-fresh vermicompost for serious gardeners. Perfect for raised beds, multiple containers, or a full balcony garden. Pure castings — slow-cured for maximum nutrition.",
+      "10 kg of farm-fresh vermicompost for serious gardeners. Lab tested by SV Testing Laboratories — Nitrogen 3.16%, Potassium 0.94%, Organic carbon 15%. Pure castings, slow-cured.",
     price: 1099,
     mrp: 1499,
     weight: "10 kg",
@@ -87,7 +87,7 @@ export const PRODUCT_DATA: Record<string, ProductData> = {
     name: "Sarvada Vermicompost",
     tagline: "Best value — for farms and large gardens",
     description:
-      "Our best-value 25 kg pack. Ideal for kitchen gardens, small farms, community gardening, and bulk buyers. Same pure vermicompost — lower per-kg cost.",
+      "Best-value 25 kg pack for kitchen gardens, small farms and bulk buyers. Same lab-certified Sarvada vermicompost (SVTL-10-260604-01, N 3.16%) — lower per-kg cost.",
     price: 2499,
     mrp: 3499,
     weight: "25 kg",

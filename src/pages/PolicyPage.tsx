@@ -26,7 +26,7 @@ const POLICIES: Record<string, PolicyPageData> = {
     title: "Shipping Policy",
     description:
       "Sarvada Organic ships vermicompost and plant-care products across India, with free delivery above ₹499 and Cash on Delivery where available.",
-    updatedDate: "2026-07-01",
+    updatedDate: "2026-07-25",
     schemaType: "WebPage",
     sections: [
       {
@@ -52,7 +52,7 @@ const POLICIES: Record<string, PolicyPageData> = {
     title: "Returns and Refunds",
     description:
       "Sarvada Organic accepts return requests for unopened packs within 7 days and replaces damaged or wrong items after order verification.",
-    updatedDate: "2026-07-01",
+    updatedDate: "2026-07-25",
     schemaType: "WebPage",
     sections: [
       {
@@ -78,7 +78,7 @@ const POLICIES: Record<string, PolicyPageData> = {
     title: "Privacy Policy",
     description:
       "Sarvada Organic uses customer information to process orders, support deliveries, answer questions and improve the store experience.",
-    updatedDate: "2026-07-01",
+    updatedDate: "2026-07-25",
     schemaType: "WebPage",
     sections: [
       {
@@ -104,7 +104,7 @@ const POLICIES: Record<string, PolicyPageData> = {
     title: "Terms of Service",
     description:
       "Sarvada Organic's terms explain product use, pricing, order acceptance, delivery support and customer responsibilities.",
-    updatedDate: "2026-07-01",
+    updatedDate: "2026-07-25",
     schemaType: "WebPage",
     sections: [
       {
@@ -130,7 +130,7 @@ const POLICIES: Record<string, PolicyPageData> = {
     title: "Corrections Policy",
     description:
       "Sarvada Organic reviews plant-care and vermicompost content when readers report factual issues, outdated guidance or unclear instructions.",
-    updatedDate: "2026-07-01",
+    updatedDate: "2026-07-25",
     schemaType: "WebPage",
     sections: [
       {
@@ -156,7 +156,7 @@ const POLICIES: Record<string, PolicyPageData> = {
     title: "Contact Sarvada Organic",
     description:
       "Contact Sarvada Organic for product questions, order support, bulk vermicompost enquiries, corrections and plant-care guidance.",
-    updatedDate: "2026-07-01",
+    updatedDate: "2026-07-25",
     schemaType: "ContactPage",
     sections: [
       {

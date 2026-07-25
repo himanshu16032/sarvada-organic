@@ -71,6 +71,72 @@ export default function CollectionPage() {
               </Link>
             </div>
           )}
+
+          {collection.slug === "vermicompost" && (
+            <div className="mt-12 max-w-3xl rounded-3xl border border-cream-200 bg-cream-50 p-6 md:p-8">
+              <h2 className="font-display text-xl font-semibold text-forest-800 md:text-2xl">
+                Why vermicompost works
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted md:text-base">
+                Buy Sarvada vermicompost online for pots, balcony gardens and
+                kitchen herbs — pure earthworm castings with no silt and no
+                preservatives. For official background on vermicomposting and
+                organic manures in India, see these sources:
+              </p>
+              <ul className="mt-4 space-y-2 text-sm text-muted md:text-base">
+                <li>
+                  <a
+                    href="/lab-reports/svtl-10-260604-01.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+                  >
+                    SVTL-10-260604-01 lab report PDF (N 3.16%, K 0.94%)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://svtestinglaboratories.co.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+                  >
+                    SV Testing Laboratories (NABL accredited)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://agritech.tnau.ac.in/org_farm/orgfarm_vermicompost.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+                  >
+                    TNAU Agritech — vermicompost production guide
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://icar.org.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+                  >
+                    Indian Council of Agricultural Research (ICAR)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.agriwelfare.gov.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+                  >
+                    Ministry of Agriculture &amp; Farmers Welfare
+                  </a>
+                </li>
+              </ul>
+            </div>
+          )}
         </div>
         <Footer />
       </div>

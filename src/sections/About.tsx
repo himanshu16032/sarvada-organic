@@ -19,7 +19,7 @@ const PILLARS = [
     icon: ShieldCheck,
     title: "Zero shortcuts",
     body:
-      "We never add silt or preservatives. Just clean, screened earthworm castings.",
+      "Lab certified by SV Testing Laboratories (NABL). Nitrogen 3.16% — no silt, no preservatives.",
   },
 ];
 

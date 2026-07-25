@@ -4,7 +4,7 @@ const ITEMS = [
   { icon: Truck, title: "Free Delivery", sub: "On orders above ₹499" },
   { icon: RefreshCcw, title: "7-Day Returns", sub: "Easy hassle-free returns" },
   { icon: ShieldCheck, title: "Cash on Delivery", sub: "Pay when it arrives" },
-  { icon: Leaf, title: "100% Organic", sub: "Lab-tested every batch" },
+  { icon: Leaf, title: "Lab Certified", sub: "SVTL report · N 3.16%" },
 ];
 
 export default function TrustStrip() {

@@ -23,6 +23,12 @@ export default function Post() {
       </Lead>
 
       <P>
+        This guide was refreshed in July 2026 for Indian balcony pots, grow bags
+        and monsoon watering. The spoon measures below still match how we pack
+        and recommend Sarvada vermicompost for home gardens.
+      </P>
+
+      <P>
         Start there. Then adjust: bigger pots get more, indoor plants get less,
         fruiting vegetables get fed more often, and wet monsoon soil gets a
         lighter hand. Think of it like adding masala to food. A little improves

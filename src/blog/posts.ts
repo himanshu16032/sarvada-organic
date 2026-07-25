@@ -37,15 +37,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "how-much-vermicompost-to-use",
     title: "How Much Vermicompost to Use Per Pot: Spoon Guide",
-    seoTitle: "How Much Vermicompost Per Pot | Spoon Guide",
+    seoTitle: "How Much Vermicompost Per Pot (2026) | Spoon Guide",
     metaDescription:
-      "Learn exactly how much vermicompost to use for 4-inch to 18-inch pots, seedlings, tomatoes, indoor plants and Indian summer or monsoon conditions.",
+      "2026 spoon guide: how much vermicompost to use for 4-inch to 18-inch pots, seedlings, tomatoes, indoor plants and Indian summer or monsoon conditions.",
     excerpt:
       "A spoon, teacup and handful guide for Indian balcony pots, grow bags and seedlings: what to add, where to add it and when to repeat.",
     category: "Guides",
     readTime: "9 min read",
     date: "2026-02-04",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-pack-table.webp",
     coverAlt: "Close-up of pure Sarvada Organic vermicompost held in hands",
@@ -69,15 +69,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "buy-cow-dung-manure-online-khaad-guide",
     title: "Buy Cow Dung Manure Online? Read This Khaad Guide First",
-    seoTitle: "Buy Cow Dung Manure Online | Khaad Guide",
+    seoTitle: "Buy Cow Dung Manure Online India 2026 | Khaad Guide",
     metaDescription:
-      "Buy cow dung manure online or choose vermicompost? Learn khaad types, vermicompost price, near-me checks and safe organic fertilizer buying tips for pots.",
+      "Buy cow dung manure online or choose vermicompost in 2026? Compare khaad types, vermicompost price per kg, near-me checks and safe organic fertilizer tips for pots.",
     excerpt:
       "Before you buy khaad online, learn when cow dung manure helps, when vermicompost is safer and how to compare the real price per kg.",
     category: "Guides",
     readTime: "8 min read",
     date: "2026-06-30",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-pack-balcony.webp",
     coverAlt: "Sarvada Organic vermicompost pack for online khaad buying guide",
@@ -101,15 +101,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "best-fertilizer-for-indoor-plants",
     title: "Best Fertilizer for Indoor Plants: Simple Soil and Feeding Guide",
-    seoTitle: "Best Fertilizer for Indoor Plants India",
+    seoTitle: "Best Fertilizer for Indoor Plants India 2026",
     metaDescription:
-      "Find the best fertilizer for indoor plants with potting mix, garden soil mix ratios and a natural plant fertilizer schedule for Indian homes and balconies.",
+      "Best fertilizer for indoor plants in India (2026): potting mix ratios, vermicompost doses and a natural feeding schedule for homes and balconies.",
     excerpt:
       "Indoor plants do not want heavy feeding. They need airy mix, small vermicompost doses and enough patience to let new leaves arrive.",
     category: "Plant Care",
     readTime: "8 min read",
     date: "2026-06-30",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-logo-horizontal.webp",
     coverAlt: "Healthy indoor plants growing with natural fertilizer",
@@ -130,15 +130,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "process-of-vermicomposting-earthworm-guide",
     title: "Process of Vermicomposting: Earthworm and Vermi Khad Guide",
-    seoTitle: "Process of Vermicomposting | Earthworm Guide",
+    seoTitle: "Process of Vermicomposting 2026 | Earthworm Guide",
     metaDescription:
-      "Learn the process of vermicomposting, earthworm for vermicompost, vermi khad steps and a simple PDF-style checklist for Indian home gardeners at home.",
+      "Process of vermicomposting in 2026: earthworms, vermi khad steps, moisture tips and a simple checklist for Indian home gardeners.",
     excerpt:
       "A plain vermicomposting guide: bedding, feed, worms, moisture, harvest signs and the small mistakes that make compost smell.",
     category: "Guides",
     readTime: "8 min read",
     date: "2026-06-30",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/process-diagram.jpg",
     coverAlt: "Simple visual guide showing the vermicomposting process",
@@ -160,15 +160,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "fertilizer-for-tomato-plant",
     title: "Fertilizer for Tomato Plant: Organic Feeding Schedule for Pots",
-    seoTitle: "Fertilizer for Tomato Plant | Organic Pot Guide",
+    seoTitle: "Fertilizer for Tomato Plant India 2026 | Pot Guide",
     metaDescription:
-      "Use this fertilizer for tomato plant schedule for Indian pots, with vermicompost doses, potting mix, flowering support and organic feeding mistake fixes.",
+      "2026 fertilizer for tomato plant schedule for Indian pots: vermicompost doses, potting mix, flowering support and organic feeding mistake fixes.",
     excerpt:
       "Tomatoes need steady feeding, not one rescue dose. Use this stage-by-stage vermicompost routine for pots and grow bags.",
     category: "Plant Care",
     readTime: "7 min read",
     date: "2026-06-30",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-pack-table.webp",
     coverAlt: "Tomato plant growing in a pot with organic fertilizer",
@@ -188,15 +188,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "tomato-plant-came-back-after-i-changed-one-thing",
     title: "Tomato Plant Dying? The One Change That Brought Mine Back",
-    seoTitle: "Tomato Plant Dying? Organic Revival Guide",
+    seoTitle: "Tomato Plant Dying? Organic Revival Guide 2026",
     metaDescription:
-      "Revive a stressed tomato plant with yellow leaves, brown tips or fertilizer burn using plain-water flushing, drainage checks and measured vermicompost.",
+      "2026 guide: revive a stressed tomato plant with yellow leaves or fertilizer burn using plain-water flushing, drainage checks and measured vermicompost.",
     excerpt:
       "Yellow leaves, brown tips, wet soil, no new growth: the plain-water flush and vermicompost top dressing that helped my tomato plant recover.",
     category: "Stories",
     readTime: "8 min read",
     date: "2026-01-22",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-pack-table.webp",
     coverAlt: "A tomato plant brought back to life with organic vermicompost",
@@ -221,15 +221,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "vermicompost-vs-cow-dung-vs-chemical-fertilizer",
     title: "Vermicompost vs. cow dung manure vs. chemical fertilizer — an honest comparison",
-    seoTitle: "Vermicompost vs Cow Dung vs Chemical Fertilizer",
+    seoTitle: "Vermicompost vs Cow Dung vs Chemical (2026)",
     metaDescription:
-      "Compare vermicompost, cow dung manure and chemical fertilizer for Indian pots, terrace gardens and outdoor beds, including burn risk, speed and best use.",
+      "2026 comparison: vermicompost vs cow dung manure vs chemical fertilizer for Indian pots, terrace gardens and outdoor beds — burn risk, speed and best use.",
     excerpt:
       "Forget the packet claims. Here is what each fertilizer actually does to your soil, your plant and your wallet.",
     category: "Comparisons",
     readTime: "8 min read",
     date: "2026-01-10",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/process-diagram.jpg",
     coverAlt:
@@ -251,15 +251,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "she-started-her-kitchen-garden-at-58",
     title: "She Started Her Kitchen Garden at 58: A 3-Pot Beginner Plan",
-    seoTitle: "Kitchen Garden for Beginners India | 3-Pot Plan",
+    seoTitle: "Kitchen Garden for Beginners India 2026 | 3-Pot Plan",
     metaDescription:
-      "See how a 58-year-old beginner started a Delhi balcony kitchen garden with methi, tulsi and chilli, then grew a 12-pot routine in four months.",
+      "2026 beginner plan: how a 58-year-old started a Delhi balcony kitchen garden with methi, tulsi and chilli, then grew a 12-pot routine in four months.",
     excerpt:
       "Asha began with methi, tulsi and chilli in a 6-foot Delhi balcony. Four months later, she had 12 pots and a routine she actually enjoyed.",
     category: "Stories",
     readTime: "8 min read",
     date: "2025-12-28",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-logo-horizontal.webp",
     coverAlt: "An Indian balcony kitchen garden with herbs, tomatoes and chillies",
@@ -283,15 +283,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "right-potting-mix-for-every-plant",
     title: "The right potting mix for every plant — a no-nonsense guide for Indian homes",
-    seoTitle: "Potting Mix Recipe India for Every Plant",
+    seoTitle: "Potting Mix Recipe India 2026 for Every Plant",
     metaDescription:
-      "Use simple potting mix recipes for indoor plants, vegetables, flowers, succulents and seedlings with Indian soil, cocopeat and vermicompost ratios.",
+      "2026 potting mix recipes for indoor plants, vegetables, flowers, succulents and seedlings with Indian soil, cocopeat and vermicompost ratios.",
     excerpt:
       "Indoor foliage, flowers, vegetables, succulents and seedlings each need a different mix. These five recipes are enough for most homes.",
     category: "Guides",
     readTime: "7 min read",
     date: "2025-12-12",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-pack-balcony.webp",
     coverAlt: "Hands mixing potting soil, cocopeat and vermicompost in a bowl",
@@ -308,15 +308,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "we-started-sarvada-because-we-were-lied-to",
     title: "We started Sarvada because we were lied to about our vermicompost",
-    seoTitle: "Pure Vermicompost India: No-Silt Water Test",
+    seoTitle: "Pure Vermicompost India 2026 | No-Silt Water Test",
     metaDescription:
-      "Learn the water test for pure vermicompost, why silt-heavy compost hardens pots, and how Sarvada Organic keeps castings filler-free.",
+      "2026 water test for pure vermicompost: why silt-heavy compost hardens pots, how to spot fillers, and how Sarvada Organic keeps castings clean.",
     excerpt:
       "The first bag we bought turned into concrete after one watering. We tested every brand we could find. That is how Sarvada began.",
     category: "Behind the Brand",
     readTime: "7 min read",
     date: "2025-11-29",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Founder",
     cover: "/sarvada-pack-balcony.webp",
     coverAlt: "Sarvada Organic founder holding genuine, silt-free vermicompost",
@@ -337,15 +337,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "vermiwash-what-it-is-how-to-use",
     title: "Vermiwash: What It Is and How to Dilute It",
-    seoTitle: "Vermiwash Uses, Dilution and Spray Guide",
+    seoTitle: "Vermiwash Uses, Dilution and Spray Guide 2026",
     metaDescription:
-      "Learn what vermiwash is, how to dilute it safely for foliar spray or soil drench, and when Indian home plants should or should not use it.",
+      "2026 vermiwash guide: what it is, how to dilute for foliar spray or soil drench, and when Indian home plants should or should not use it.",
     excerpt:
       "Use 1 cap vermiwash with 10 caps water for most plants. Here is the spray-bottle, spoon and soil-drench guide.",
     category: "Plant Care",
     readTime: "8 min read",
     date: "2025-11-14",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-pack-table.webp",
     coverAlt: "Spraying diluted vermiwash on leafy green plants",
@@ -366,15 +366,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "what-growing-your-own-food-does-to-you",
     title: "What growing your own food does to you that nobody talks about",
-    seoTitle: "Benefits of Growing Your Own Food at Home",
+    seoTitle: "Benefits of Growing Your Own Food at Home 2026",
     metaDescription:
-      "Explore the mental, practical and family benefits of growing food at home, with research-backed reasons to start a small Indian balcony garden.",
+      "2026 essay: mental, practical and family benefits of growing food at home, with reasons to start a small Indian balcony garden.",
     excerpt:
       "Not a how-to. Just an honest essay about what a few balcony pots quietly change in your day, your food and your attention.",
     category: "Stories",
     readTime: "6 min read",
     date: "2025-10-30",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-logo-horizontal.webp",
     coverAlt: "Morning light falling on a peaceful home balcony garden",
@@ -394,15 +394,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "indian-gardening-calendar-month-by-month",
     title: "The complete season-by-season gardening calendar for Indian home gardeners",
-    seoTitle: "Gardening Calendar India: Month-by-Month Guide",
+    seoTitle: "Gardening Calendar India 2026 | Month-by-Month",
     metaDescription:
-      "Plan an Indian kitchen garden by Rabi, Zaid and Kharif seasons with month-by-month planting, feeding, watering and city-specific tips.",
+      "2026 Indian gardening calendar by Rabi, Zaid and Kharif: month-by-month planting, vermicompost feeding, watering and city-specific tips.",
     excerpt:
       "Rabi, Zaid, Kharif: three growing seasons, twelve months and a practical planner for what to plant and when to feed.",
     category: "Seasonal",
     readTime: "9 min read",
     date: "2025-10-09",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-logo-horizontal.webp",
     coverAlt: "Seasonal Indian home garden — monsoon green leafy vegetables",
@@ -422,15 +422,15 @@ export const POSTS: BlogEntry[] = [
   {
     slug: "10-mistakes-every-new-plant-parent-makes",
     title: "10 mistakes every new plant parent makes (and how to not make them)",
-    seoTitle: "Plant Care Mistakes: 10 Beginner Fixes",
+    seoTitle: "Plant Care Mistakes 2026: 10 Beginner Fixes",
     metaDescription:
-      "Avoid the 10 common plant care mistakes that kill beginner plants in India, from overwatering and poor drainage to silt-heavy compost.",
+      "2026 checklist: avoid the 10 plant care mistakes that kill beginner plants in India — overwatering, poor drainage and silt-heavy compost.",
     excerpt:
       "Overwatering, garden soil straight in pots, cheap fertilizer with silt: the ten quiet plant-killers and the fix for each.",
     category: "Beginner",
     readTime: "8 min read",
     date: "2025-09-22",
-    updatedDate: "2026-06-30",
+    updatedDate: "2026-07-25",
     author: "Sarvada Farm Team",
     cover: "/sarvada-pack-table.webp",
     coverAlt: "Wilting plant being revived with proper care and organic fertilizer",

@@ -12,6 +12,12 @@ export default function Post() {
       </Lead>
 
       <P>
+        We still use the same water test in 2026 when customers ask how to spot
+        pure vermicompost before they buy online. The silt problem has not gone
+        away — it is why Sarvada still screens every batch by hand.
+      </P>
+
+      <P>
         We thought it was us. New gardeners, new mistakes — we'd over-watered
         or used the wrong soil. So we bought another bag from a different
         brand. Same thing happened.

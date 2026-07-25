@@ -9,6 +9,7 @@ import PressStats from "./sections/PressStats";
 import Products from "./sections/Products";
 import About from "./sections/About";
 import Process from "./sections/Process";
+import LabReport from "./sections/LabReport";
 import Testimonials from "./sections/Testimonials";
 import Blog from "./sections/Blog";
 import FAQ from "./sections/FAQ";
@@ -30,6 +31,7 @@ export default function App() {
         <About />
         <PressStats />
         <Process />
+        <LabReport />
         <Testimonials />
         <FAQ />
         <Blog />

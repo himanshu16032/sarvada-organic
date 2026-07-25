@@ -1,9 +1,10 @@
 import { Link, Navigate, useParams } from "react-router-dom";
-import { ArrowLeft, ShoppingBag, Star, Truck, Shield, RotateCcw } from "lucide-react";
+import { ArrowLeft, ShoppingBag, Star, Truck, Shield, RotateCcw, FlaskConical, FileText } from "lucide-react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useDocumentMeta } from "../blog/BlogChrome";
 import { PRODUCT_DATA, ProductData } from "../data/products";
+import { LAB_REPORT } from "../data/labReport";
 import { AMAZON_PRODUCT_URL } from "../lib/amazon";
 import { track } from "../lib/analytics";
 import {
@@ -112,6 +113,7 @@ export default function ProductPage() {
                   </div>
                   <a
                     href={AMAZON_PRODUCT_URL}
+                    rel="nofollow sponsored"
                     onClick={() =>
                       track("product_page_add_to_cart", {
                         slug: product.slug,
@@ -152,6 +154,48 @@ export default function ProductPage() {
                   </div>
                 ))}
               </div>
+
+              {product.category === "Vermicompost" && (
+                <div className="mt-8 rounded-3xl border border-cream-200 bg-cream-50 p-5 md:p-6">
+                  <div className="flex items-start gap-3">
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-sage-100 text-forest-700">
+                      <FlaskConical className="h-5 w-5" />
+                    </span>
+                    <div>
+                      <p className="text-sm font-semibold text-forest-800">
+                        Lab certified by {LAB_REPORT.lab.shortName}
+                      </p>
+                      <p className="mt-1 text-xs leading-relaxed text-muted md:text-sm">
+                        Report {LAB_REPORT.reportNo}: Nitrogen {LAB_REPORT.highlights[0].value},
+                        Potassium {LAB_REPORT.highlights[1].value}, Organic carbon{" "}
+                        {LAB_REPORT.highlights[2].value}. {LAB_REPORT.lab.credentials}.
+                      </p>
+                      <div className="mt-3 flex flex-wrap gap-3 text-xs font-semibold md:text-sm">
+                        <a
+                          href={LAB_REPORT.pdfPath}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          download={`sarvada-vermicompost-lab-report-${LAB_REPORT.reportNo}.pdf`}
+                          onClick={() =>
+                            track("product_lab_pdf_clicked", { slug: product.slug })
+                          }
+                          className="inline-flex items-center gap-1.5 text-forest-700 underline decoration-peach-300 underline-offset-4"
+                        >
+                          <FileText className="h-3.5 w-3.5" /> View lab report PDF
+                        </a>
+                        <a
+                          href={LAB_REPORT.lab.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-forest-700 underline decoration-peach-300 underline-offset-4"
+                        >
+                          {LAB_REPORT.lab.shortName}
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -209,20 +253,41 @@ function ProductMeta({
     additionalProperty:
       product.category === "Vermicompost"
         ? [
+            { "@type": "PropertyValue", name: "No silt", value: "Yes" },
+            { "@type": "PropertyValue", name: "No preservatives", value: "Yes" },
+            { "@type": "PropertyValue", name: "Pack size", value: product.weight },
             {
               "@type": "PropertyValue",
-              name: "No silt",
-              value: "Yes",
+              name: "Nitrogen (N)",
+              value: "3.16%",
+              unitText: "%",
             },
             {
               "@type": "PropertyValue",
-              name: "No preservatives",
-              value: "Yes",
+              name: "Potassium (K)",
+              value: "0.94%",
+              unitText: "%",
             },
             {
               "@type": "PropertyValue",
-              name: "Pack size",
-              value: product.weight,
+              name: "Organic carbon",
+              value: "15.0%",
+              unitText: "%",
+            },
+            {
+              "@type": "PropertyValue",
+              name: "pH",
+              value: "6.85",
+            },
+            {
+              "@type": "PropertyValue",
+              name: "Lab report",
+              value: LAB_REPORT.reportNo,
+            },
+            {
+              "@type": "PropertyValue",
+              name: "Testing laboratory",
+              value: LAB_REPORT.lab.name,
             },
           ]
         : [
@@ -235,6 +300,21 @@ function ProductMeta({
     offers: offerSchema,
   };
 
+  if (product.category === "Vermicompost") {
+    productSchema.subjectOf = {
+      "@type": "DigitalDocument",
+      name: `Vermicompost lab report ${LAB_REPORT.reportNo}`,
+      url: `https://sarvadaorganic.com${LAB_REPORT.pdfPath}`,
+      encodingFormat: "application/pdf",
+      dateCreated: LAB_REPORT.reportingDate,
+      author: {
+        "@type": "Organization",
+        name: LAB_REPORT.lab.name,
+        url: LAB_REPORT.lab.url,
+      },
+    };
+  }
+
   if (product.reviews > 0) {
     productSchema.aggregateRating = {
       "@type": "AggregateRating",
@@ -246,7 +326,7 @@ function ProductMeta({
   }
 
   useDocumentMeta({
-    title: `${product.name} ${product.weight} — Sarvada Organic`,
+    title: `${product.name} ${product.weight} Buy Online — Sarvada Organic`,
     description: product.description,
     canonical,
     image: imageUrl,

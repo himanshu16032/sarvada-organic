@@ -13,7 +13,7 @@ export default function Hero() {
             <div>
               <span className="inline-flex items-center gap-2 rounded-full bg-cream-50/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-peach-300 md:text-xs">
                 <Star className="h-3 w-3 fill-peach-300" />
-                Vermicompost trusted since 2018 · 4.8★
+                Vermicompost trusted since 2018 · Lab certified N 3.16%
               </span>
               <h1 className="mt-3 max-w-2xl font-display text-[2.15rem] font-semibold leading-[1.05] md:text-5xl lg:text-[3.25rem] xl:text-[3.5rem]">
                 Pure vermicompost.{" "}
@@ -28,6 +28,7 @@ export default function Hero() {
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <a
                   href={AMAZON_PRODUCT_URL}
+                  rel="nofollow sponsored"
                   onClick={() =>
                     track("hero_cta_clicked", {
                       cta: "shop_now",
@@ -56,6 +57,7 @@ export default function Hero() {
             <div className="grid gap-3 lg:grid-cols-2 lg:justify-self-end">
               <a
                 href={AMAZON_PRODUCT_URL}
+                rel="nofollow sponsored"
                 onClick={() =>
                   track("hero_product_image_clicked", {
                     product: "vermicompost_5kg",
@@ -91,6 +93,7 @@ export default function Hero() {
 
               <a
                 href={AMAZON_PRODUCT_URL}
+                rel="nofollow sponsored"
                 onClick={() =>
                   track("hero_product_image_clicked", {
                     product: "vermicompost_5kg",

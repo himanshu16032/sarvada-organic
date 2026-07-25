@@ -10,7 +10,7 @@ export const COLLECTION_DATA: Record<string, CollectionData> = {
     slug: "vermicompost",
     name: "Vermicompost",
     description:
-      "100% pure earthworm castings — hand-screened, slow-cured, no silt, no preservatives. India's most trusted vermicompost since 2018.",
+      "Buy lab-certified vermicompost online in India — Nitrogen 3.16% (SV Testing Laboratories, report SVTL-10-260604-01). 1–25 kg packs, no silt, no preservatives. Free delivery above ₹499.",
     productSlugs: [
       "vermicompost-1kg",
       "vermicompost-5kg",
@@ -22,7 +22,7 @@ export const COLLECTION_DATA: Record<string, CollectionData> = {
     slug: "organic-fertilizer",
     name: "Organic Fertilizer",
     description:
-      "Certified organic plant nutrition for home gardens, balcony plants, and small farms. Safe for children, pets, and the planet.",
+      "Buy organic fertilizer online in India — vermicompost and plant nutrition for home gardens, balcony plants and small farms. Safe, silt-free. Updated July 2026.",
     productSlugs: [
       "vermicompost-1kg",
       "vermicompost-5kg",

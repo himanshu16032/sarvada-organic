@@ -46,8 +46,18 @@ export default function Process() {
             </h2>
           </div>
           <p className="text-base text-muted md:col-span-5 md:text-lg">
-            Real vermicompost can't be rushed. Every Sarvada bag comes from the
-            same slow process we have used for 6+ years.
+            Real vermicompost can't be rushed. Every Sarvada bag follows the
+            same slow process we have used for 6+ years — aligned with standard
+            vermicomposting methods documented by{" "}
+            <a
+              href="https://agritech.tnau.ac.in/org_farm/orgfarm_vermicompost.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+            >
+              Tamil Nadu Agricultural University (TNAU)
+            </a>
+            .
           </p>
         </div>
 

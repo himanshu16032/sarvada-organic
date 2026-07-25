@@ -23,6 +23,12 @@ export default function Post() {
       </Lead>
 
       <P>
+        Updated July 2026 with current vermicompost pack prices and a clearer
+        per-kg comparison so you can buy vermicompost online in India without
+        guessing from bag size alone.
+      </P>
+
+      <P>
         The word khaad gets used for many things: cow dung manure, vermicompost,
         compost, potting mix, neem cake and even chemical fertilizer. That is
         why online shopping becomes confusing. It is like buying atta, besan and

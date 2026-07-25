@@ -138,7 +138,7 @@ export default function BlogPostPage() {
                   available.
                 </p>
                 <Link
-                  to="/#products"
+                  to="/collections/vermicompost"
                   onClick={() =>
                     track("blog_post_shop_cta_clicked", {
                       from_slug: post.slug,

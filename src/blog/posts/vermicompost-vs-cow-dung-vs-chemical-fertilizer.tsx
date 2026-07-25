@@ -11,6 +11,12 @@ export default function Post() {
       </Lead>
 
       <P>
+        Updated July 2026 for Indian home gardeners comparing options before
+        they buy vermicompost or manure online. The table below still matches
+        how we advise customers on pots vs outdoor beds.
+      </P>
+
+      <P>
         Think of it like feeding a person. Chemical fertilizer is a quick energy
         drink: fast, strong, useful in the right moment, but not a full meal.
         Cow dung manure is raw groceries: cheap and useful, but it needs time to

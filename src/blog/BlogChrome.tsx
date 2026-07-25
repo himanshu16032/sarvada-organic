@@ -43,7 +43,7 @@ export function BlogHeader() {
         </nav>
 
         <Link
-          to="/#products"
+          to="/collections/vermicompost"
           className="inline-flex items-center gap-1.5 rounded-full bg-forest-700 px-4 py-2 text-xs font-semibold text-cream-50 hover:bg-forest-800 md:px-5 md:py-2.5 md:text-sm"
         >
           Shop vermicompost <ArrowUpRight className="h-3.5 w-3.5" />

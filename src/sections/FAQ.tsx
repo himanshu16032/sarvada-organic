@@ -33,8 +33,12 @@ const FAQS: { q: string; a: string }[] = [
     a: "We feed organic cow dung and farm waste to native earthworm species. Over 60–90 days they convert it into rich castings. We then sun-cure and hand-sieve every batch — never adding silt, sand or preservatives — and pack it fresh in breathable bags so microbes stay alive.",
   },
   {
+    q: "Is Sarvada vermicompost lab tested?",
+    a: "Yes. Sarvada vermicompost was tested by SV Testing Laboratories Pvt. Ltd. (NABL accredited, ISO 9001:2015), report SVTL-10-260604-01 dated 09.06.2026. Key results include Nitrogen 3.16%, Potassium 0.94%, Organic carbon 15.0% and pH 6.85. The full PDF is on our Lab report page.",
+  },
+  {
     q: "What are the available pack sizes and prices?",
-    a: "Sarvada Organic vermicompost is currently available as a 5 kg pack for ₹249 on Amazon.",
+    a: "Sarvada Organic vermicompost is available as 1 kg (₹149), 5 kg (₹249), 10 kg (₹1,099) and 25 kg (₹2,499) packs. The 5 kg pack is the bestseller for home gardens.",
   },
   {
     q: "Does Sarvada Organic offer Cash on Delivery and returns?",

@@ -14,12 +14,12 @@ const NAV: { label: string; href: string; sub?: { label: string; href: string }[
     label: "Shop",
     href: "#products",
     sub: [
-      { label: "Vermicompost", href: "#products" },
-      { label: "Potting Mix", href: "#products" },
-      { label: "Plant Growth Serum", href: "#products" },
-      { label: "Vermiwash", href: "#products" },
-      { label: "Neem-Karanja Cake", href: "#products" },
-      { label: "Bundles", href: "#products" },
+      { label: "Vermicompost", href: "/collections/vermicompost" },
+      { label: "Potting Mix", href: "/collections/potting-mix" },
+      { label: "Plant Growth Serum", href: "/products/plant-growth-serum" },
+      { label: "Vermiwash", href: "/products/liquid-vermiwash" },
+      { label: "Neem-Karanja Cake", href: "/products/neem-karanja-cake" },
+      { label: "Bundles", href: "/collections/bundles" },
     ],
   },
   { label: "Why Sarvada", href: "#about" },
@@ -116,22 +116,39 @@ export default function Header() {
               {n.sub && (
                 <div className="absolute left-0 top-full hidden min-w-52 pt-2 group-hover:block">
                   <div className="overflow-hidden rounded-2xl border border-cream-200 bg-cream-50 p-2 shadow-soft">
-                    {n.sub.map((s) => (
-                      <a
-                        key={s.label}
-                        href={s.href}
-                        onClick={() =>
-                          track("header_subnav_clicked", {
-                            parent: n.label,
-                            label: s.label,
-                            href: s.href,
-                          })
-                        }
-                        className="block rounded-xl px-3 py-2 text-sm text-forest-800 hover:bg-cream-200/70"
-                      >
-                        {s.label}
-                      </a>
-                    ))}
+                    {n.sub.map((s) =>
+                      s.href.startsWith("/") ? (
+                        <Link
+                          key={s.label}
+                          to={s.href}
+                          onClick={() =>
+                            track("header_subnav_clicked", {
+                              parent: n.label,
+                              label: s.label,
+                              href: s.href,
+                            })
+                          }
+                          className="block rounded-xl px-3 py-2 text-sm text-forest-800 hover:bg-cream-200/70"
+                        >
+                          {s.label}
+                        </Link>
+                      ) : (
+                        <a
+                          key={s.label}
+                          href={s.href}
+                          onClick={() =>
+                            track("header_subnav_clicked", {
+                              parent: n.label,
+                              label: s.label,
+                              href: s.href,
+                            })
+                          }
+                          className="block rounded-xl px-3 py-2 text-sm text-forest-800 hover:bg-cream-200/70"
+                        >
+                          {s.label}
+                        </a>
+                      )
+                    )}
                   </div>
                 </div>
               )}

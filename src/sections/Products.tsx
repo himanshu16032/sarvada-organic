@@ -188,6 +188,7 @@ function ProductCard({
 
         <a
           href={AMAZON_PRODUCT_URL}
+          rel="nofollow sponsored"
           onClick={() => track("product_add_to_cart_clicked", baseProps)}
           className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-full bg-forest-700 px-3 py-2 text-[11px] font-semibold text-cream-50 transition-colors hover:bg-forest-800 md:py-2.5 md:text-sm"
         >

@@ -68,6 +68,53 @@ export default function Footer() {
               Organic vermicompost made on our farm since 2018. Pure castings,
               no silt, no preservatives.
             </p>
+            <p className="mt-4 max-w-sm text-xs leading-relaxed text-cream-200/60">
+              Official references:{" "}
+              <a
+                href="https://icar.org.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream-100 underline underline-offset-2 hover:text-peach-300"
+              >
+                ICAR
+              </a>
+              {" · "}
+              <a
+                href="https://agritech.tnau.ac.in/org_farm/orgfarm_vermicompost.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream-100 underline underline-offset-2 hover:text-peach-300"
+              >
+                TNAU vermicompost guide
+              </a>
+              {" · "}
+              <a
+                href="https://www.agriwelfare.gov.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream-100 underline underline-offset-2 hover:text-peach-300"
+              >
+                Ministry of Agriculture
+              </a>
+              {" · "}
+              <a
+                href="https://svtestinglaboratories.co.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream-100 underline underline-offset-2 hover:text-peach-300"
+              >
+                SV Testing Laboratories
+              </a>
+              {" · "}
+              <a
+                href="/lab-reports/svtl-10-260604-01.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-cream-100 underline underline-offset-2 hover:text-peach-300"
+              >
+                Lab report PDF
+              </a>
+            </p>
 
             <ul className="mt-6 space-y-3 text-sm">
               <li className="flex items-center gap-3">

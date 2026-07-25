@@ -35,13 +35,13 @@ export default function BlogIndex() {
   const rest = filtered.filter((p) => p.slug !== featured.slug);
   const latestUpdate = POSTS_META.reduce(
     (latest, post) => (post.updatedDate > latest ? post.updatedDate : latest),
-    POSTS_META[0]?.updatedDate || "2026-06-30"
+    POSTS_META[0]?.updatedDate || "2026-07-25"
   );
 
   useDocumentMeta({
-    title: "Sarvada Organic Blog | Organic Gardening India",
+    title: "Sarvada Organic Blog 2026 | Vermicompost & Gardening India",
     description:
-      "Read practical Indian gardening guides on vermicompost, potting mix, kitchen gardens, plant care mistakes and real Sarvada Organic grower stories.",
+      "Updated July 2026: Indian gardening guides on vermicompost, potting mix, kitchen gardens, plant care mistakes and Sarvada Organic grower stories.",
     canonical: "https://sarvadaorganic.com/blog",
     image: "https://sarvadaorganic.com/sarvada-logo-horizontal.webp",
     type: "website",
