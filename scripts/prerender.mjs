@@ -5,7 +5,7 @@ import { preview } from "vite";
 const DIST = path.resolve(process.cwd(), "dist");
 const PORT = 4173;
 const HOST = "127.0.0.1";
-const ON_VERCEL = Boolean(process.env.VERCEL || process.env.CI);
+const ON_VERCEL = Boolean(process.env.VERCEL);
 
 const SITEMAPS = [
   "sitemap-pages.xml",
