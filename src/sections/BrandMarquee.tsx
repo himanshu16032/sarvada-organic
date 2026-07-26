@@ -3,7 +3,7 @@ export default function BrandMarquee() {
   return (
     <section
       aria-hidden
-      className="relative overflow-hidden border-y border-cream-300/60 bg-cream-200/40 py-4 md:py-6"
+      className="relative min-h-[4.25rem] overflow-hidden border-y border-cream-300/60 bg-cream-200/40 py-4 md:min-h-[5.75rem] md:py-6"
     >
       <div className="flex animate-[bm_28s_linear_infinite] gap-8 whitespace-nowrap md:gap-12">
         {items.concat(items).map((_, i) => (

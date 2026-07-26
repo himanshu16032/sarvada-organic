@@ -42,27 +42,28 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="preload"
+      href="/fonts/fraunces-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/fonts/plus-jakarta-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link
       rel="preload"
       as="image"
-      href="/sarvada-pack-balcony.webp"
       type="image/webp"
+      imagesrcset="/sarvada-pack-balcony-400.webp 400w, /sarvada-pack-balcony-560.webp 560w, /sarvada-pack-balcony.webp 720w"
+      imagesizes="(min-width: 1024px) 280px, min(88vw, 22rem)"
       fetchpriority="high"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
-    <noscript>
-      <link
-        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Plus+Jakarta+Sans:wght@400;600&display=swap"
-        rel="stylesheet"
-      />
-    </noscript>
 
     <meta property="og:site_name" content="Sarvada Organic" />
     <meta property="og:type" content="website" />

@@ -67,13 +67,15 @@ export default function Hero() {
                 }
                 className="group block max-w-[22rem] overflow-hidden rounded-[1.5rem] bg-cream-50 shadow-soft ring-1 ring-cream-50/15 md:rounded-[1.75rem] lg:max-w-none"
               >
-                <div className="aspect-[4/5] max-h-[22rem] md:aspect-[5/4] lg:aspect-[4/5] lg:max-h-[18rem]">
+                <div className="aspect-[4/5] max-h-[22rem] w-full md:aspect-[5/4] lg:aspect-[4/5] lg:max-h-[18rem]">
                   <img
-                    src="/sarvada-pack-balcony.webp"
+                    src="/sarvada-pack-balcony-560.webp"
+                    srcSet="/sarvada-pack-balcony-400.webp 400w, /sarvada-pack-balcony-560.webp 560w, /sarvada-pack-balcony.webp 720w"
+                    sizes="(min-width: 1024px) 280px, min(88vw, 22rem)"
                     alt="Sarvada Organic vermicompost 5 kg pack"
                     className="h-full w-full object-cover"
-                    width={900}
-                    height={1125}
+                    width={560}
+                    height={700}
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
@@ -106,13 +108,13 @@ export default function Hero() {
                 }
                 className="hidden overflow-hidden rounded-[1.5rem] bg-cream-50 shadow-soft ring-1 ring-cream-50/15 lg:block"
               >
-                <div className="aspect-[4/5] max-h-[18rem]">
+                <div className="aspect-[4/5] max-h-[18rem] w-full">
                   <img
                     src="/sarvada-pack-table.webp"
                     alt="Sarvada Organic vermicompost pack on a table"
                     className="h-full w-full object-cover"
-                    width={900}
-                    height={1125}
+                    width={719}
+                    height={900}
                     loading="lazy"
                     decoding="async"
                   />
