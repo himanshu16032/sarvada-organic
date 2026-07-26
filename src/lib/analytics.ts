@@ -1,4 +1,3 @@
-import posthog from "posthog-js";
 import { useEffect, useRef } from "react";
 
 export const ANALYTICS_ENABLED = Boolean(
@@ -6,6 +5,11 @@ export const ANALYTICS_ENABLED = Boolean(
 );
 
 type Props = Record<string, unknown>;
+type CaptureFn = (event: string, props?: Props) => void;
+
+let captureImpl: CaptureFn | null = null;
+let identifyImpl: ((id: string, props?: Props) => void) | null = null;
+const eventQueue: Array<[string, Props]> = [];
 
 function safeWindowProps(): Props {
   if (typeof window === "undefined") return {};
@@ -16,31 +20,48 @@ function safeWindowProps(): Props {
   };
 }
 
-export function track(event: string, props: Props = {}) {
-  try {
-    posthog.capture(event, { ...safeWindowProps(), ...props });
-  } catch {
-    /* swallow — analytics must never break UX */
+export function attachPosthog(api: {
+  capture: CaptureFn;
+  identify: (id: string, props?: Props) => void;
+}) {
+  captureImpl = api.capture;
+  identifyImpl = api.identify;
+  while (eventQueue.length) {
+    const [event, props] = eventQueue.shift()!;
+    try {
+      captureImpl(event, props);
+    } catch {
+      /* swallow */
+    }
   }
+}
+
+export function track(event: string, props: Props = {}) {
+  const payload = { ...safeWindowProps(), ...props };
+  if (captureImpl) {
+    try {
+      captureImpl(event, payload);
+    } catch {
+      /* swallow — analytics must never break UX */
+    }
+    return;
+  }
+  if (eventQueue.length < 50) eventQueue.push([event, payload]);
 }
 
 export function trackPageView(path?: string) {
   if (typeof window === "undefined") return;
-  try {
-    posthog.capture("$pageview", {
-      $current_url: window.location.href,
-      page_path: path ?? window.location.pathname + window.location.hash,
-      page_title: document.title,
-      referrer: document.referrer,
-    });
-  } catch {
-    /* swallow */
-  }
+  track("$pageview", {
+    $current_url: window.location.href,
+    page_path: path ?? window.location.pathname + window.location.hash,
+    page_title: document.title,
+    referrer: document.referrer,
+  });
 }
 
 export function identifyVisitor(distinctId: string, props: Props = {}) {
   try {
-    posthog.identify(distinctId, props);
+    identifyImpl?.(distinctId, props);
   } catch {
     /* swallow */
   }
@@ -146,16 +167,6 @@ export function installVisibilityTracker() {
   });
 }
 
-/**
- * Delegated tracker: walks up from the clicked element looking for the
- * nearest ancestor with a `data-event` attribute. Any sibling attributes
- * of the form `data-event-<key>` become event properties (kebab-case is
- * converted to snake_case, JSON values are parsed).
- *
- * Usage in any future component — no import, no `track()` call needed:
- *   <a data-event="cta_clicked" data-event-cta="hero_shop" data-event-position="0">
- *   <button data-event="filter_applied" data-event-tags='["wood","fresh"]'>
- */
 export function installDataAttributeTracker() {
   if (typeof document === "undefined") return;
   document.addEventListener(
