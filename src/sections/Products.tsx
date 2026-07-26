@@ -123,11 +123,14 @@ function ProductCard({
     position,
   };
 
-  const ref = useTrackVisible<HTMLElement>("product_card_viewed", baseProps);
+  const ref = useTrackVisible<HTMLAnchorElement>("product_card_viewed", baseProps);
 
   return (
-    <article
+    <a
       ref={ref}
+      href={AMAZON_PRODUCT_URL}
+      rel="nofollow sponsored"
+      onClick={() => track("product_card_clicked", baseProps)}
       className="group relative overflow-hidden rounded-2xl border border-cream-200 bg-cream-50 transition-all hover:-translate-y-1 hover:shadow-soft md:rounded-3xl"
     >
       <div className="relative aspect-square overflow-hidden bg-sage-100">
@@ -161,19 +164,8 @@ function ProductCard({
             ({product.reviews})
           </span>
         </div>
-        <h3 className="mt-1.5 text-sm font-semibold text-forest-800 md:text-base">
-          <Link
-            to={`/products/${product.slug}`}
-            onClick={() =>
-              track("product_details_clicked", {
-                slug: product.slug,
-                position,
-              })
-            }
-            className="hover:text-peach-500"
-          >
-            {product.name}
-          </Link>
+        <h3 className="mt-1.5 text-sm font-semibold text-forest-800 group-hover:text-peach-500 md:text-base">
+          {product.name}
         </h3>
         <p className="text-[11px] text-muted md:text-xs">{product.weight}</p>
 
@@ -186,16 +178,11 @@ function ProductCard({
           </p>
         </div>
 
-        <a
-          href={AMAZON_PRODUCT_URL}
-          rel="nofollow sponsored"
-          onClick={() => track("product_add_to_cart_clicked", baseProps)}
-          className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-full bg-forest-700 px-3 py-2 text-[11px] font-semibold text-cream-50 transition-colors hover:bg-forest-800 md:py-2.5 md:text-sm"
-        >
+        <span className="mt-3 flex w-full items-center justify-center gap-1.5 rounded-full bg-forest-700 px-3 py-2 text-[11px] font-semibold text-cream-50 transition-colors group-hover:bg-forest-800 md:py-2.5 md:text-sm">
           <ShoppingBag className="h-3.5 w-3.5 md:h-4 md:w-4" />
           Add to cart
-        </a>
+        </span>
       </div>
-    </article>
+    </a>
   );
 }

@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 import { useDocumentMeta } from "../blog/BlogChrome";
 import { COLLECTION_DATA, CollectionData } from "../data/collections";
 import { PRODUCT_DATA, ProductData } from "../data/products";
+import { AMAZON_PRODUCT_URL } from "../lib/amazon";
 import { track } from "../lib/analytics";
 import {
   SITE_URL,
@@ -159,8 +160,9 @@ function CollectionProductCard({
       : 0;
 
   return (
-    <Link
-      to={`/products/${product.slug}`}
+    <a
+      href={AMAZON_PRODUCT_URL}
+      rel="nofollow sponsored"
       onClick={() =>
         track("collection_product_clicked", {
           collection: collectionSlug,
@@ -221,7 +223,7 @@ function CollectionProductCard({
           <p className="mt-2 text-xs font-semibold text-peach-500">Coming soon</p>
         )}
       </div>
-    </Link>
+    </a>
   );
 }
 
