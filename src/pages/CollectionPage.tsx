@@ -8,6 +8,7 @@ import { PRODUCT_DATA, ProductData } from "../data/products";
 import { AMAZON_PRODUCT_URL } from "../lib/amazon";
 import { track } from "../lib/analytics";
 import {
+  SITE_LASTMOD,
   SITE_URL,
   breadcrumbSchema,
   organizationSchema,
@@ -243,6 +244,7 @@ function CollectionMeta({
     description: collection.description,
     canonical,
     type: "website",
+    modifiedTime: SITE_LASTMOD,
     keywords: [
       collection.name.toLowerCase(),
       `buy ${collection.name.toLowerCase()} online india`,
@@ -261,6 +263,8 @@ function CollectionMeta({
         url: canonical,
         isPartOf: { "@id": `${SITE_URL}/#website` },
         publisher: { "@id": `${SITE_URL}/#organization` },
+        dateModified: SITE_LASTMOD,
+        inLanguage: "en-IN",
         ...(availableProducts.length > 0 && {
           mainEntity: {
             "@type": "ItemList",

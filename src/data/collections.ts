@@ -22,7 +22,7 @@ export const COLLECTION_DATA: Record<string, CollectionData> = {
     slug: "organic-fertilizer",
     name: "Organic Fertilizer",
     description:
-      "Buy organic fertilizer online in India — vermicompost and plant nutrition for home gardens, balcony plants and small farms. Safe, silt-free. Updated July 2026.",
+      "Buy organic fertilizer online in India — vermicompost and plant nutrition for home gardens, balcony plants and small farms. Safe, silt-free. Updated 26 July 2026.",
     productSlugs: [
       "vermicompost-1kg",
       "vermicompost-5kg",

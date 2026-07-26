@@ -11,6 +11,7 @@ import {
   Table,
   BlogFAQ,
 } from "../Prose";
+import { AMAZON_PRODUCT_URL } from "../../lib/amazon";
 
 export default function Post() {
   return (
@@ -19,7 +20,8 @@ export default function Post() {
         For most potted plants, use vermicompost like a topping, not like soil:
         2-3 teaspoons for a tiny nursery pot, 4-5 tablespoons for a 6-inch pot,
         half a teacup for an 8-inch pot, and one full teacup for a 12-inch pot.
-        Sprinkle it on top, lightly mix the surface, and water once.
+        Sprinkle it on top, lightly mix the surface, and water once. Repeat
+        every 30-45 days during active growth.
       </Lead>
 
       <P>
@@ -35,16 +37,17 @@ export default function Post() {
         everything; a heap does not make the plant twice as happy.
       </P>
 
-      <Callout title="Start here" tone="peach">
+      <Callout title="Quick answer" tone="peach">
         <strong>
-          Use 4-5 tablespoons for a 6-inch pot, half a teacup for an 8-inch pot,
-          and one full teacup for a 12-inch pot.
+          How much per plant? Match the pot, not the plant name: 4-5 tablespoons
+          for a 6-inch pot, half a teacup for an 8-inch pot, one full teacup for
+          a 12-inch pot.
         </strong>{" "}
-        Repeat every 30-45 days during active growth. Spread it like a thin
-        brown blanket on top, leaving one finger of space around the stem.
+        How often? Every 30-45 days for most pots; every 20-30 days for fruiting
+        tomatoes and chillies; every 45-60 days for slow indoor plants.
       </Callout>
 
-      <H2>How much vermicompost should I use per pot?</H2>
+      <H2>How much vermicompost per pot? (spoon chart)</H2>
       <P>
         Use this table for top dressing existing pots. Do not press the compost
         down like cement. Sprinkle it, spread it, and mix only the top layer so
@@ -105,6 +108,58 @@ export default function Post() {
           ],
         ]}
       />
+
+      <Callout title="Buy the pack that matches your balcony" tone="sage">
+        Most mixed balconies finish a 1 kg pack too fast. Start with{" "}
+        <strong>Sarvada 5 kg at ₹249</strong> if you have 15+ pots or any grow
+        bags. Lab-certified N 3.16%, no silt.{" "}
+        <a
+          href={AMAZON_PRODUCT_URL}
+          rel="nofollow sponsored"
+          className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+        >
+          Buy vermicompost on Amazon →
+        </a>
+      </Callout>
+
+      <H2>How much vermicompost per plant?</H2>
+      <P>
+        Gardeners search “per plant,” but the safe answer is still pot size. One
+        tomato in an 18-inch grow bag needs far more than one tulsi in a 6-inch
+        pot. Use the spoon chart above, then nudge up only for heavy feeders in
+        active fruiting.
+      </P>
+      <UL>
+        <LI>
+          <strong>One plant in a 6-inch pot:</strong> 4-5 tablespoons every
+          30-45 days.
+        </LI>
+        <LI>
+          <strong>One plant in an 8-10 inch pot:</strong> half to
+          three-quarter teacup every 30-45 days.
+        </LI>
+        <LI>
+          <strong>One tomato / chilli in a grow bag:</strong> 4-5 teacups every
+          20-30 days while fruiting, if drainage is excellent.
+        </LI>
+        <LI>
+          <strong>Several seedlings in one tray:</strong> mix lightly into soil
+          before sowing; do not top-dress each seedling heavily.
+        </LI>
+      </UL>
+
+      <H2>How often to apply vermicompost to potted plants?</H2>
+      <P>
+        For most Indian balcony pots, every <strong>30 days</strong> is the
+        default during active growth. Stretch to 45-60 days for indoor foliage
+        in low light. Compress to 20-30 days only for fruiting vegetables in
+        large pots or grow bags.
+      </P>
+      <P>
+        Weekly feeding is almost never useful in home containers. It packs the
+        topsoil with organic matter, holds water, and invites fungus gnats —
+        especially in monsoon.
+      </P>
 
       <Pull>
         If the pot is small enough to lift with one hand, do not pour in half a
@@ -281,9 +336,16 @@ export default function Post() {
 
       <Callout title="Sarvada buying guide" tone="sage">
         If you have fewer than 10 small pots, start with 1 kg. If you have 15-25
-        mixed pots or even two fruiting grow bags, pick 5 kg. If you are filling
-        new pots from scratch, use the bowl rule: 1 bowl vermicompost for every
-        3-4 bowls of base potting mix.
+        mixed pots or even two fruiting grow bags, pick 5 kg at ₹249. If you are
+        filling new pots from scratch, use the bowl rule: 1 bowl vermicompost for
+        every 3-4 bowls of base potting mix.{" "}
+        <a
+          href={AMAZON_PRODUCT_URL}
+          rel="nofollow sponsored"
+          className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+        >
+          Buy on Amazon →
+        </a>
       </Callout>
 
       <H2>When should you not apply vermicompost?</H2>
@@ -309,6 +371,14 @@ export default function Post() {
       <BlogFAQ
         postSlug="how-much-vermicompost-to-use"
         items={[
+          {
+            q: "How much vermicompost per plant for potted plants?",
+            a: "Match the pot size, not only the plant name. A 6-inch pot needs 4-5 tablespoons every 30-45 days; an 8-inch pot needs about half a teacup; a 12-inch pot needs one full teacup.",
+          },
+          {
+            q: "How often to apply vermicompost to potted plants every 30 days?",
+            a: "Yes — every 30 days is the default for most balcony pots in active growth. Use 30-45 days for average pots, 20-30 days for fruiting vegetables, and 45-60 days for slow indoor plants.",
+          },
           {
             q: "How much vermicompost do I use for a 6-inch pot?",
             a: "Use 4-5 tablespoons, roughly one loose handful, every 30-45 days. Sprinkle it on top, lightly mix the top finger-depth of soil, and water once.",

@@ -1,6 +1,5 @@
 # robots.txt for Sarvada Organic — sarvadaorganic.com (also serves sarvadaorganic.shop)
-# We welcome all responsible crawlers, search engines and AI assistants
-# to index our pages so plant parents can discover us easily.
+# Last updated: 2026-07-26 — site actively maintained; see sitemap lastmod dates.
 
 User-agent: *
 Allow: /

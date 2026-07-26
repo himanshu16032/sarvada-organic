@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { track } from "../lib/analytics";
+import { SITE_LASTMOD, SITE_LASTMOD_LABEL } from "../lib/aeo";
 
 const COLS = [
   {
@@ -220,7 +221,9 @@ export default function Footer() {
 
         <div className="mt-12 flex flex-col gap-5 border-t border-cream-50/10 pt-6 md:flex-row md:items-center md:justify-between">
           <p className="text-xs text-cream-200/60 md:text-sm">
-            © {new Date().getFullYear()} Sarvada Organic Pvt. Ltd. · Made slowly. Packed fresh.
+            © {new Date().getFullYear()} Sarvada Organic Pvt. Ltd. · Made
+            slowly. Packed fresh. ·{" "}
+            <time dateTime={SITE_LASTMOD}>Updated {SITE_LASTMOD_LABEL}</time>
           </p>
           <div className="flex flex-wrap items-center gap-2">
             {["UPI", "Visa", "Mastercard", "RuPay", "Razorpay", "COD"].map(

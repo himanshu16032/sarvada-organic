@@ -9,6 +9,7 @@ import { AMAZON_PRODUCT_URL } from "../lib/amazon";
 import { track } from "../lib/analytics";
 import {
   ORG_ID,
+  SITE_LASTMOD,
   SITE_URL,
   breadcrumbSchema,
   merchantReturnPolicy,
@@ -219,6 +220,7 @@ function ProductMeta({
         "@type": "Offer",
         priceCurrency: "INR",
         price: product.price,
+        priceValidUntil: "2027-07-26",
         availability: "https://schema.org/InStock",
         url: canonical,
         itemCondition: "https://schema.org/NewCondition",
@@ -249,6 +251,7 @@ function ProductMeta({
     sku: `SARV-${product.slug.toUpperCase()}`,
     category: product.category,
     countryOfOrigin: "IN",
+    dateModified: SITE_LASTMOD,
     material: product.category === "Vermicompost" ? "Earthworm castings" : undefined,
     additionalProperty:
       product.category === "Vermicompost"
@@ -331,6 +334,7 @@ function ProductMeta({
     canonical,
     image: imageUrl,
     type: "product",
+    modifiedTime: SITE_LASTMOD,
     keywords: product.keywords,
     jsonLd: [
       organizationSchema(),

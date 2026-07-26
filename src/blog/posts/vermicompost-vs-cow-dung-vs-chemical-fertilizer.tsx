@@ -1,12 +1,13 @@
 import { Prose, H2, P, Lead, UL, LI, Pull, Callout, Table, BlogFAQ } from "../Prose";
+import { AMAZON_PRODUCT_URL } from "../../lib/amazon";
 
 export default function Post() {
   return (
     <Prose>
       <Lead>
-        For most Indian balcony and terrace pots, vermicompost is the safest
-        regular food. Cow dung manure is better for outdoor beds when it is
-        fully decomposed. Chemical fertilizer is the fastest fix for a known
+        For most Indian balcony and terrace pots, vermicompost is better than
+        cow dung manure. Cow dung wins for outdoor beds when it is fully
+        decomposed. Chemical fertilizer is the fastest fix for a known
         deficiency, but it is also the easiest one to overdo in a small pot.
       </Lead>
 
@@ -24,11 +25,11 @@ export default function Post() {
         down by worms, mild, and easy for roots to handle.
       </P>
 
-      <Callout title="Start here" tone="peach">
-        Use vermicompost every 30-45 days for normal potted plants. Use
-        well-rotted cow dung manure when preparing outdoor beds. Use chemical
-        fertilizer only when you know the exact problem you are treating, such
-        as a nitrogen, calcium, or potassium deficiency.
+      <Callout title="Quick verdict" tone="peach">
+        <strong>Vermicompost or cow dung — which is better?</strong> For pots,
+        indoor plants and terrace vegetables: vermicompost. For large outdoor
+        beds: well-rotted cow dung manure. Chemical fertilizer only when you
+        know the exact deficiency.
       </Callout>
 
       <H2>Vermicompost vs cow dung vs chemical fertilizer</H2>
@@ -75,6 +76,44 @@ export default function Post() {
           ],
         ]}
       />
+
+      <H2>Vermicompost or cow manure — which is better?</H2>
+      <P>
+        If your plants live in pots, choose vermicompost. Cow manure (cow dung
+        khaad) is better when you are building or refreshing large outdoor soil
+        and you can wait for full decomposition. The difference is not “organic
+        vs organic” — it is pot volume vs bed volume, and burn risk.
+      </P>
+      <UL>
+        <LI>
+          <strong>Balcony / terrace pots:</strong> vermicompost wins — mild,
+          already processed, low burn risk.
+        </LI>
+        <LI>
+          <strong>Indoor plants:</strong> vermicompost in light doses.
+        </LI>
+        <LI>
+          <strong>Outdoor beds / farm patches:</strong> well-rotted cow dung
+          manure for bulk organic matter.
+        </LI>
+        <LI>
+          <strong>Fresh cow dung in pots:</strong> avoid — ammonia, salts and
+          heat can damage roots.
+        </LI>
+      </UL>
+
+      <Callout title="Buy pure vermicompost for pots" tone="sage">
+        If pots are your main garden, skip guessing on khaad quality.{" "}
+        <strong>Sarvada 5 kg at ₹249</strong> — lab-certified Nitrogen 3.16%, no
+        silt.{" "}
+        <a
+          href={AMAZON_PRODUCT_URL}
+          rel="nofollow sponsored"
+          className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+        >
+          Buy Sarvada vermicompost on Amazon →
+        </a>
+      </Callout>
 
       <H2>Why vermicompost is easiest for pots</H2>
       <P>
@@ -325,8 +364,20 @@ export default function Post() {
         postSlug="vermicompost-vs-cow-dung-vs-chemical-fertilizer"
         items={[
           {
-            q: "Which is better for home plants, vermicompost or cow dung manure?",
-            a: "For potted home plants, vermicompost is usually better because it is mild, already processed, and easy to use in small soil volume. Cow dung manure is better for outdoor beds when it is fully decomposed.",
+            q: "Vermicompost or cow manure which is better?",
+            a: "For potted home plants, vermicompost is better because it is mild, already processed, and safer in small soil volume. Cow manure is better for outdoor beds when it is fully decomposed.",
+          },
+          {
+            q: "Which is better, vermicompost or cow dung manure?",
+            a: "Vermicompost for balcony, terrace and indoor pots. Well-rotted cow dung manure for raised beds and outdoor soil preparation. Do not use fresh cow dung in pots.",
+          },
+          {
+            q: "What is the difference between vermicompost and cow dung manure?",
+            a: "Vermicompost is worm-processed castings — ready to use and gentle. Cow dung manure is bulkier farmyard organic matter that needs months to decompose before it is safe and useful near roots.",
+          },
+          {
+            q: "Vermicompost or cow dung which is better for plants?",
+            a: "For most Indian home pots, vermicompost. For large outdoor beds with time to prepare soil, well-rotted cow dung. Chemical fertilizer only for a diagnosed deficiency.",
           },
           {
             q: "Is chemical fertilizer bad for plants?",
@@ -341,16 +392,8 @@ export default function Post() {
             a: "No. Fresh cow dung can contain ammonia, salts, weed seeds and harmful bacteria. In a small pot it can smell, heat up, and damage young roots.",
           },
           {
-            q: "How long should cow dung decompose before use?",
-            a: "Plan in months, not days. Traditional farmyard manure often takes around four to five months to become ready, and fresh manure for food gardens should be composted well before planting.",
-          },
-          {
             q: "Can vermicompost replace chemical fertilizer?",
             a: "For most balcony, terrace and indoor plants, yes, vermicompost can be the regular fertilizer. It will not replace a fast targeted treatment when a plant has a confirmed nutrient deficiency.",
-          },
-          {
-            q: "Is vermicompost stronger than cow dung manure?",
-            a: "It is not simply stronger; it is more processed and easier for pots. Cow dung manure is bulky and slow, while vermicompost is worm-processed, mild, and better suited for regular top dressing.",
           },
           {
             q: "What is the best fertilizer for terrace gardens in summer?",

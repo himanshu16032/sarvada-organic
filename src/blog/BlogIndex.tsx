@@ -35,16 +35,17 @@ export default function BlogIndex() {
   const rest = filtered.filter((p) => p.slug !== featured.slug);
   const latestUpdate = POSTS_META.reduce(
     (latest, post) => (post.updatedDate > latest ? post.updatedDate : latest),
-    POSTS_META[0]?.updatedDate || "2026-07-25"
+    POSTS_META[0]?.updatedDate || "2026-07-26"
   );
 
   useDocumentMeta({
     title: "Sarvada Organic Blog 2026 | Vermicompost & Gardening India",
     description:
-      "Updated July 2026: Indian gardening guides on vermicompost, potting mix, kitchen gardens, plant care mistakes and Sarvada Organic grower stories.",
+      "Updated July 2026: Indian gardening guides on vermicompost dosage, cow dung vs vermicompost, potting mix and Sarvada Organic grower stories. Last refreshed 26 July 2026.",
     canonical: "https://sarvadaorganic.com/blog",
     image: "https://sarvadaorganic.com/sarvada-logo-horizontal.webp",
     type: "website",
+    modifiedTime: latestUpdate,
     keywords: [
       "sarvada organic blog",
       "vermicompost guide India",

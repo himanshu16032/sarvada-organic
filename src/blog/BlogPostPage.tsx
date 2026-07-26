@@ -5,6 +5,7 @@ import { getPostBySlug, getRelatedPosts, type BlogEntry } from "./posts";
 import { BlogHeader, BlogFooter, useDocumentMeta } from "./BlogChrome";
 import BlogLoader from "./BlogLoader";
 import { track } from "../lib/analytics";
+import { AMAZON_PRODUCT_URL } from "../lib/amazon";
 import {
   ORG_ID,
   SITE_URL,
@@ -130,25 +131,26 @@ export default function BlogPostPage() {
                   Try Sarvada Organic
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-semibold leading-tight text-forest-800 md:text-3xl">
-                  100% pure vermicompost. No silt, no preservatives.
+                  Pure vermicompost from ₹249 · Lab N 3.16%
                 </h3>
                 <p className="mt-3 text-sm text-muted md:text-base">
-                  If this helped, start with clean, hand-screened
-                  vermicompost. Free delivery above ₹499 and Cash on Delivery
-                  available.
+                  No silt, no preservatives. Free delivery above ₹499 and Cash
+                  on Delivery on Amazon.
                 </p>
-                <Link
-                  to="/collections/vermicompost"
+                <a
+                  href={AMAZON_PRODUCT_URL}
+                  rel="nofollow sponsored"
                   onClick={() =>
                     track("blog_post_shop_cta_clicked", {
                       from_slug: post.slug,
                       from_title: post.title,
+                      destination: "amazon",
                     })
                   }
                   className="mt-6 inline-flex items-center gap-2 rounded-full bg-forest-700 px-6 py-3 text-sm font-semibold text-cream-50 hover:bg-forest-800 md:text-base"
                 >
-                  <ShoppingBag className="h-4 w-4" /> Shop now
-                </Link>
+                  <ShoppingBag className="h-4 w-4" /> Buy on Amazon
+                </a>
               </div>
             </div>
           </div>

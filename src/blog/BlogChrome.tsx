@@ -216,7 +216,10 @@ export function useDocumentMeta(meta: {
     setMeta("name", "twitter:url", meta.canonical);
     if (meta.image) setMeta("name", "twitter:image", meta.image);
     if (meta.publishedTime) setMeta("property", "article:published_time", meta.publishedTime);
-    if (meta.modifiedTime) setMeta("property", "article:modified_time", meta.modifiedTime);
+    if (meta.modifiedTime) {
+      setMeta("property", "article:modified_time", meta.modifiedTime);
+      setMeta("property", "og:updated_time", meta.modifiedTime);
+    }
     if (meta.section) setMeta("property", "article:section", meta.section);
     meta.tags?.forEach((tag) => appendMeta("property", "article:tag", tag));
     if (meta.author) setMeta("name", "author", meta.author);

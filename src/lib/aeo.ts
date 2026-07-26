@@ -3,6 +3,8 @@ export const ORG_ID = `${SITE_URL}/#organization`;
 export const WEBSITE_ID = `${SITE_URL}/#website`;
 export const STORE_ID = `${SITE_URL}/#store`;
 export const EMAIL = "sarvadaorganic@gmail.com";
+export const SITE_LASTMOD = "2026-07-26";
+export const SITE_LASTMOD_LABEL = "26 July 2026";
 export const SOCIAL_LINKS = [
   "https://sarvadaorganic.shop",
   "https://www.instagram.com/sarvadaorganic",
@@ -68,6 +70,7 @@ export function websiteSchema() {
       "Buy 100% pure vermicompost online in India. No silt, no preservatives.",
     publisher: { "@id": ORG_ID },
     inLanguage: "en-IN",
+    dateModified: SITE_LASTMOD,
   };
 }
 
@@ -85,6 +88,7 @@ export function storeSchema() {
     areaServed: { "@type": "Country", name: "India" },
     parentOrganization: { "@id": ORG_ID },
     hasMerchantReturnPolicy: merchantReturnPolicy(),
+    dateModified: SITE_LASTMOD,
     aggregateRating: {
       "@type": "AggregateRating",
       ratingValue: "4.8",
