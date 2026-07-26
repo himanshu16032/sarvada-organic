@@ -1,4 +1,5 @@
 import { ArrowRight, Star, Truck, ShieldCheck } from "lucide-react";
+import { Link } from "react-router-dom";
 import SectionBg from "../components/SectionBg";
 import { AMAZON_PRODUCT_URL } from "../lib/amazon";
 import { track } from "../lib/analytics";
@@ -39,6 +40,18 @@ export default function Hero() {
                 >
                   Shop now <ArrowRight className="h-4 w-4" />
                 </a>
+                <Link
+                  to="/collections/vermicompost"
+                  onClick={() =>
+                    track("hero_cta_clicked", {
+                      cta: "buy_vermicompost_hub",
+                      location: "hero_main",
+                    })
+                  }
+                  className="rounded-full border border-cream-50/20 px-4 py-2 text-xs font-semibold text-cream-100 hover:border-cream-50/40 md:text-sm"
+                >
+                  Buy vermicompost packs
+                </Link>
                 <span className="rounded-full border border-cream-50/20 px-4 py-2 text-xs font-semibold text-cream-100 md:text-sm">
                   5 kg at ₹249
                 </span>

@@ -114,11 +114,18 @@ export default function Post() {
         <strong>Sarvada 5 kg at ₹249</strong> if you have 15+ pots or any grow
         bags. Lab-certified N 3.16%, no silt.{" "}
         <a
+          href="/collections/vermicompost"
+          className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
+        >
+          See all packs →
+        </a>{" "}
+        or{" "}
+        <a
           href={AMAZON_PRODUCT_URL}
           rel="nofollow sponsored"
           className="font-semibold text-forest-700 underline decoration-peach-300 underline-offset-4"
         >
-          Buy vermicompost on Amazon →
+          buy on Amazon →
         </a>
       </Callout>
 

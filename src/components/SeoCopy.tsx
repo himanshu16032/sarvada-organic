@@ -31,8 +31,11 @@ export default function SeoCopy() {
             and fruit plants.
           </p>
           <p className="mt-4 text-sm leading-relaxed text-muted md:text-base">
-            Looking to <strong>buy vermicompost online in India</strong>,{" "}
-            <strong>buy organic fertilizer</strong>, or start a monthly
+            Looking to{" "}
+            <a href="/collections/vermicompost" className={OUT_LINK}>
+              buy vermicompost online in India
+            </a>
+            , <strong>buy organic fertilizer</strong>, or start a monthly
             vermicompost subscription? Sarvada Organic delivers fresh from our
             farm across India, with next-day dispatch and batch testing. Our
             vermicompost is lab certified by{" "}

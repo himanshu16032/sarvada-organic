@@ -2,6 +2,9 @@ export type CollectionData = {
   slug: string;
   name: string;
   description: string;
+  seoTitle?: string;
+  h1?: string;
+  keywords?: string[];
   productSlugs: string[];
 };
 
@@ -9,8 +12,21 @@ export const COLLECTION_DATA: Record<string, CollectionData> = {
   vermicompost: {
     slug: "vermicompost",
     name: "Vermicompost",
+    h1: "Buy Vermicompost Online in India",
+    seoTitle: "Buy Vermicompost Online India | 5 kg from ₹249",
     description:
-      "Buy lab-certified vermicompost online in India — Nitrogen 3.16% (SV Testing Laboratories, report SVTL-10-260604-01). 1–25 kg packs, no silt, no preservatives. Free delivery above ₹499.",
+      "Buy pure vermicompost online in India — lab-certified Nitrogen 3.16% (SV Testing Laboratories). 1 kg ₹149, bestseller 5 kg ₹249, plus 10 kg and 25 kg. No silt, no preservatives. Free delivery above ₹499.",
+    keywords: [
+      "buy vermicompost",
+      "buy vermicompost online",
+      "buy vermicompost online india",
+      "vermicompost 5kg",
+      "vermicompost price",
+      "vermicompost online shopping",
+      "organic vermicompost india",
+      "lab tested vermicompost",
+      "sarvada organic vermicompost",
+    ],
     productSlugs: [
       "vermicompost-1kg",
       "vermicompost-5kg",

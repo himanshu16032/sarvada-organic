@@ -66,13 +66,13 @@ export default function Products() {
             </h2>
           </div>
           <Link
-            to="/collections/bestsellers"
+            to="/collections/vermicompost"
             onClick={() =>
               track("products_view_all_clicked", { device: "desktop" })
             }
             className="hidden text-sm font-semibold text-forest-700 hover:text-peach-500 md:inline"
           >
-            View all →
+            Buy vermicompost →
           </Link>
         </div>
 
@@ -83,13 +83,13 @@ export default function Products() {
         </div>
 
         <Link
-          to="/collections/bestsellers"
+          to="/collections/vermicompost"
           onClick={() =>
             track("products_view_all_clicked", { device: "mobile" })
           }
           className="mx-auto mt-8 flex w-fit items-center gap-2 rounded-full border border-forest-700/20 bg-cream-50 px-6 py-3 text-sm font-semibold text-forest-700 hover:border-forest-700/40 md:hidden"
         >
-          View all products →
+          Buy vermicompost online →
         </Link>
       </div>
     </section>
