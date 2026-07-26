@@ -72,8 +72,11 @@ export default function Hero() {
                     src="/sarvada-pack-balcony.webp"
                     alt="Sarvada Organic vermicompost 5 kg pack"
                     className="h-full w-full object-cover"
+                    width={900}
+                    height={1125}
                     loading="eager"
                     fetchPriority="high"
+                    decoding="async"
                   />
                 </div>
                 <div className="flex items-center justify-between gap-3 px-4 py-3 text-forest-800">
@@ -108,8 +111,10 @@ export default function Hero() {
                     src="/sarvada-pack-table.webp"
                     alt="Sarvada Organic vermicompost pack on a table"
                     className="h-full w-full object-cover"
-                    loading="eager"
-                    fetchPriority="high"
+                    width={900}
+                    height={1125}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
                 <div className="flex items-center justify-between gap-3 px-4 py-3 text-forest-800">

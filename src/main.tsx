@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useEffect } from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot, hydrateRoot } from "react-dom/client";
 import {
   BrowserRouter,
   Routes,
@@ -108,9 +108,8 @@ function AppShell() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById("root")!);
-
-root.render(
+const container = document.getElementById("root")!;
+const app = (
   <React.StrictMode>
     {POSTHOG_KEY ? (
       <PostHogProvider apiKey={POSTHOG_KEY} options={posthogOptions}>
@@ -121,3 +120,9 @@ root.render(
     )}
   </React.StrictMode>
 );
+
+if (container.hasChildNodes()) {
+  hydrateRoot(container, app);
+} else {
+  createRoot(container).render(app);
+}

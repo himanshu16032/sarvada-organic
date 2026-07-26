@@ -73,17 +73,35 @@ async function main() {
     for (const route of routes) {
       const page = await browser.newPage();
       try {
-        await page.goto(`${base}${route}`, {
-          waitUntil: "domcontentloaded",
-          timeout: 30000,
-        });
-        await page.waitForFunction(
-          () => (document.getElementById("root")?.childElementCount ?? 0) > 0,
-          { timeout: 15000 }
-        );
-        await new Promise((resolve) => setTimeout(resolve, 300));
-        const html = await page.content();
-        rendered.push({ route, html });
+      await page.setRequestInterception(true);
+      page.on("request", (req) => {
+        const url = req.url();
+        if (
+          /posthog|i\.posthog|us-assets\.i\.posthog|_vercel\/insights|_vercel\/speed-insights|google-analytics|googletagmanager/i.test(
+            url
+          )
+        ) {
+          return req.abort();
+        }
+        return req.continue();
+      });
+      await page.goto(`${base}${route}`, {
+        waitUntil: "domcontentloaded",
+        timeout: 30000,
+      });
+      await page.waitForFunction(
+        () => (document.getElementById("root")?.childElementCount ?? 0) > 0,
+        { timeout: 15000 }
+      );
+      await new Promise((resolve) => setTimeout(resolve, 300));
+      let html = await page.content();
+      html = html
+        .replace(
+          /<script[^>]+src="[^"]*(?:posthog|_vercel\/insights|_vercel\/speed-insights)[^"]*"[^>]*><\/script>/gi,
+          ""
+        )
+        .replace(/<script[^>]*>window\.posthog[\s\S]*?<\/script>/gi, "");
+      rendered.push({ route, html });
         console.log(`[prerender] ok   ${route}`);
       } catch (err) {
         console.warn(`[prerender] skip ${route}: ${err.message}`);
